@@ -26,6 +26,7 @@ $blue7: #283757;
 
 html {
 	height: 100.1%;
+	-webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -101,7 +102,7 @@ footer[role="contentinfo"] {
 }
 
 .work-list {
-	margin: 0 -10px;
+	margin: 0 -25px;
 }
 
 .carddd {
@@ -114,5 +115,25 @@ footer[role="contentinfo"] {
 	background: #304064;
 	box-shadow: 0 30px 30px rgba(0,0,0,.1);
 	padding: 20px;
-	margin: 10px;
+	margin: 25px;
+}
+.label__highlight {
+	color: #FEA33B;
+}
+label {
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: 'baskerville';
+}
+
+.btn--lg {
+	border: solid 3px #3E4D6F !important;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 900;
+	font-family: 'circular std';
+	display: block;
+	width: 100%;
+	color: #fff !important;
+	border-radius: 0 !important;
 }
