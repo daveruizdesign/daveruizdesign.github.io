@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PhotoSwipe Documentation: Getting Started</title>
+  <meta name="description" content="UX Design">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/js/PhotoSwipe-master/website/documentation/getting-started.html">
+  <link rel="alternate" type="application/rss+xml" title="Dave Reward" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Dave Reward</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/api.html">PhotoSwipe API</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/custom-html-in-slides.html">Custom HTML Content in PhotoSwipe Slides</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/faq.html">PhotoSwipe FAQ</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/getting-started.html">PhotoSwipe Documentation: Getting Started</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/">PhotoSwipe: Responsive JavaScript Image Gallery</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/options.html">PhotoSwipe Options</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/performance-tips.html">PhotoSwipe Performance Tips</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/responsive-images.html">Serving responsive images in PhotoSwipe</a>
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/seo.html">SEO Friendly JavaScript Image Gallery Markup</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/js/PhotoSwipe-master/website/documentation/updates.html">PhotoSwipe Update Notifications &amp;amp; Changelog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>First things that you should know before you start:</p>
+
+<ul>
+  <li>PhotoSwipe is not a simple jQuery plugin, at least basic JavaScript knowledge is required to install.</li>
+  <li>PhotoSwipe requires predefined image dimensions (<a href="faq.html#image-size">more about this</a>).</li>
+  <li>If you use PhotoSwipe on non-responsive website – controls will be scaled on mobile (as the whole page is scaled). So you’ll need to implement custom controls (e.g. single large close button in top right corner).</li>
+  <li>All code in the documentation is pure Vanilla JS and supports IE 8 and above. If your website or app uses some JavaScript framework (like jQuery or MooTools) or you don’t need to support old browsers – feel free to simplify the code.</li>
+  <li>Avoid serving big images (larger than 2000x1500px) for mobile, as they will dramatically reduce animation performance and can cause crash (especially on iOS Safari). Possible solutions: <a href="responsive-images.html">serve responsive images</a>, or open image on a separate page, or use libraries that support image tiling (like <a href="http://leafletjs.com/">Leaflet</a>) (<a href="faq.html#mobile-crash">more in FAQ</a>).</li>
+</ul>
+
+<h2 id="-initialization"><a name="initialization"></a> Initialization</h2>
+
+<h3 id="step-1-include-js-and-css-files"><a name="init-include-files"></a>Step 1: include JS and CSS files</h3>
+
+<p>You can find them in <a href="https://github.com/dimsemenov/PhotoSwipe/tree/master/dist">dist/</a> folder of <a href="https://github.com/dimsemenov/PhotoSwipe">GitHub</a> repository. Sass and uncompiled JS files are in folder <a href="https://github.com/dimsemenov/PhotoSwipe/tree/master/src">src/</a>. I recommend using Sass if you’re planning to modify existing styles, as code there is structured and commented.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- Core CSS file --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/photoswipe.css"</span><span class="nt">&gt;</span> 
+
+<span class="c">&lt;!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+	 In the folder of skin CSS file there are also:
+	 - .png and .svg icons sprite, 
+	 - preloader.gif (for browsers that do not support CSS animations) --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"path/to/default-skin/default-skin.css"</span><span class="nt">&gt;</span> 
+
+<span class="c">&lt;!-- Core JS file --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/photoswipe.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span> 
+
+<span class="c">&lt;!-- UI JS file --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/photoswipe-ui-default.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span> 
+</code></pre>
+</div>
+
+<p>It doesn’t matter how and where will you include JS and CSS files. Code is executed only when you call <code class="highlighter-rouge">new PhotoSwipe()</code>. So feel free to defer loading of files if you don’t need PhotoSwipe to be opened initially.</p>
+
+<p>PhotoSwipe also supports AMD loaders (like RequireJS) and CommonJS, use them like so:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">require</span><span class="p">([</span> 
+		<span class="s1">'path/to/photoswipe.js'</span><span class="p">,</span> 
+		<span class="s1">'path/to/photoswipe-ui-default.js'</span> 
+	<span class="p">],</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">PhotoSwipe</span><span class="p">,</span> <span class="nx">PhotoSwipeUI_Default</span> <span class="p">)</span> <span class="p">{</span>
+
+	<span class="c1">//  	var gallery = new PhotoSwipe( someElement, PhotoSwipeUI_Default ...</span>
+	<span class="c1">//  	gallery.init() </span>
+	<span class="c1">//  	...</span>
+
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>And also, you can install it via Bower (<code class="highlighter-rouge">bower install photoswipe</code>), or <a href="https://www.npmjs.com/package/photoswipe">NPM</a> (<code class="highlighter-rouge">npm install photoswipe</code>).</p>
+
+<h3 id="step-2-add-photoswipe-pswp-element-to-dom"><a name="init-add-pswp-to-dom"></a>Step 2: add PhotoSwipe (.pswp) element to DOM</h3>
+
+<p>You can add HTML code dynamically via JS (directly before the initialization), or have it in the page initially (like it’s done on the demo page). This code can be appended anywhere, but ideally before the closing <code class="highlighter-rouge">&lt;/body&gt;</code>. You may reuse it across multiple galleries (as long as you use same UI class).</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- Root element of PhotoSwipe. Must have class pswp. --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+
+	<span class="c">&lt;!-- Background of PhotoSwipe. 
+		 It's a separate element as animating opacity is faster than rgba(). --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__bg"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+	<span class="c">&lt;!-- Slides wrapper with overflow:hidden. --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__scroll-wrap"</span><span class="nt">&gt;</span>
+
+		<span class="c">&lt;!-- Container that holds slides. 
+			PhotoSwipe keeps only 3 of them in the DOM to save memory.
+			Don't modify these 3 pswp__item elements, data is added later on. --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__container"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__item"</span><span class="nt">&gt;&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+
+		<span class="c">&lt;!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. --&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__ui pswp__ui--hidden"</span><span class="nt">&gt;</span>
+
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__top-bar"</span><span class="nt">&gt;</span>
+
+				<span class="c">&lt;!--  Controls are self-explanatory. Order can be changed. --&gt;</span>
+				
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__counter"</span><span class="nt">&gt;&lt;/div&gt;</span>
+
+				<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--close"</span> <span class="na">title=</span><span class="s">"Close (Esc)"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+				<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--share"</span> <span class="na">title=</span><span class="s">"Share"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+				<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--fs"</span> <span class="na">title=</span><span class="s">"Toggle fullscreen"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+				<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--zoom"</span> <span class="na">title=</span><span class="s">"Zoom in/out"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+				<span class="c">&lt;!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR --&gt;</span>
+				<span class="c">&lt;!-- element will get class pswp__preloader--active when preloader is running --&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__preloader"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__preloader__icn"</span><span class="nt">&gt;</span>
+					  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__preloader__cut"</span><span class="nt">&gt;</span>
+					    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__preloader__donut"</span><span class="nt">&gt;&lt;/div&gt;</span>
+					  <span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+				<span class="nt">&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+
+	        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__share-modal pswp__share-modal--hidden pswp__single-tap"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__share-tooltip"</span><span class="nt">&gt;&lt;/div&gt;</span> 
+	        <span class="nt">&lt;/div&gt;</span>
+
+			<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--arrow--left"</span> <span class="na">title=</span><span class="s">"Previous (arrow left)"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;/button&gt;</span>
+			
+			<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"pswp__button pswp__button--arrow--right"</span> <span class="na">title=</span><span class="s">"Next (arrow right)"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;/button&gt;</span>
+
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__caption"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pswp__caption__center"</span><span class="nt">&gt;&lt;/div&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+
+	    <span class="nt">&lt;/div&gt;</span>
+
+	<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+
+
+</code></pre>
+</div>
+
+<p>Order of <code class="highlighter-rouge">pswp__bg</code>, <code class="highlighter-rouge">pswp__scroll-wrap</code>, <code class="highlighter-rouge">pswp__container</code> and <code class="highlighter-rouge">pswp__item</code> elements should not be changed.</p>
+
+<p>You might ask, why PhotoSwipe doesn’t add this code automatically via JS, reason is simple – just to save file size, in case if you need some modification of layout.</p>
+
+<h3 id="step-3-initialize">Step 3: initialize</h3>
+
+<p>Execute <code class="highlighter-rouge">PhotoSwipe</code> constructor. It accepts 4 arguments:</p>
+
+<ol>
+  <li><code class="highlighter-rouge">.pswp</code> element from step 2 (it must be added to DOM).</li>
+  <li>PhotoSwipe UI class. If you included default <code class="highlighter-rouge">photoswipe-ui-default.js</code>, class will be <code class="highlighter-rouge">PhotoSwipeUI_Default</code>. Can be <code class="highlighter-rouge">false</code>.</li>
+  <li>Array with objects (slides).</li>
+  <li><a href="options.html">Options</a>.</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">pswpElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.pswp'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="c1">// build items array</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="p">{</span>
+		<span class="na">src</span><span class="p">:</span> <span class="s1">'https://placekitten.com/600/400'</span><span class="p">,</span>
+		<span class="na">w</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span>
+		<span class="na">h</span><span class="p">:</span> <span class="mi">400</span>
+	<span class="p">},</span>
+	<span class="p">{</span>
+		<span class="na">src</span><span class="p">:</span> <span class="s1">'https://placekitten.com/1200/900'</span><span class="p">,</span>
+		<span class="na">w</span><span class="p">:</span> <span class="mi">1200</span><span class="p">,</span>
+		<span class="na">h</span><span class="p">:</span> <span class="mi">900</span>
+	<span class="p">}</span>
+<span class="p">];</span>
+
+<span class="c1">// define options (if needed)</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="c1">// optionName: 'option value'</span>
+	<span class="c1">// for example:</span>
+	<span class="na">index</span><span class="p">:</span> <span class="mi">0</span> <span class="c1">// start at first slide</span>
+<span class="p">};</span>
+
+<span class="c1">// Initializes and opens PhotoSwipe</span>
+<span class="kd">var</span> <span class="nx">gallery</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PhotoSwipe</span><span class="p">(</span> <span class="nx">pswpElement</span><span class="p">,</span> <span class="nx">PhotoSwipeUI_Default</span><span class="p">,</span> <span class="nx">items</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="nx">gallery</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>At the end you should get something like this:</p>
+
+<div class="codepen-embed">
+	<p data-height="600" data-theme-id="10447" data-slug-hash="gbadPv" data-default-tab="result" data-user="dimsemenov" class="codepen">
+		<a href="http://codepen.io/dimsemenov/pen/gbadPv/" target="_blank"><strong>View example on CodePen &rarr;</strong></a>
+	</p>
+	<!-- <script async src="//assets.codepen.io/assets/embed/ei.js"></script> -->
+</div>
+
+<h2 id="-creating-an-array-of-slide-objects"><a name="creating-slide-objects-array"></a> Creating an Array of Slide Objects</h2>
+
+<p>Each object in the array should contain data about slide, it can be anything that you wish to display in PhotoSwipe - path to image, caption string, number of shares, comments, etc.</p>
+
+<p>By default PhotoSwipe uses just 5 properties: <code class="highlighter-rouge">src</code> (path to image), <code class="highlighter-rouge">w</code> (image width), <code class="highlighter-rouge">h</code> (image height), <code class="highlighter-rouge">msrc</code> (path to small image placeholder, large image will be loaded on top), <code class="highlighter-rouge">html</code> (custom HTML, <a href="custom-html-in-slides.html">more about it</a>).</p>
+
+<p>During the navigation, PhotoSwipe adds its own properties to this object (like <code class="highlighter-rouge">minZoom</code> or <code class="highlighter-rouge">loaded</code>).</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">slides</span> <span class="o">=</span> <span class="p">[</span>
+
+	<span class="c1">// slide 1</span>
+	<span class="p">{</span>
+
+		<span class="na">src</span><span class="p">:</span> <span class="s1">'path/to/image1.jpg'</span><span class="p">,</span> <span class="c1">// path to image</span>
+		<span class="na">w</span><span class="p">:</span> <span class="mi">1024</span><span class="p">,</span> <span class="c1">// image width</span>
+		<span class="na">h</span><span class="p">:</span> <span class="mi">768</span><span class="p">,</span> <span class="c1">// image height</span>
+
+		<span class="na">msrc</span><span class="p">:</span> <span class="s1">'path/to/small-image.jpg'</span><span class="p">,</span> <span class="c1">// small image placeholder,</span>
+						<span class="c1">// main (large) image loads on top of it,</span>
+						<span class="c1">// if you skip this parameter - grey rectangle will be displayed,</span>
+						<span class="c1">// try to define this property only when small image was loaded before</span>
+
+
+
+		<span class="na">title</span><span class="p">:</span> <span class="s1">'Image Caption'</span>  <span class="c1">// used by Default PhotoSwipe UI</span>
+								<span class="c1">// if you skip it, there won't be any caption</span>
+								
+
+		<span class="c1">// You may add more properties here and use them.</span>
+		<span class="c1">// For example, demo gallery uses "author" property, which is used in the caption.</span>
+		<span class="c1">// author: 'John Doe'</span>
+		
+	<span class="p">},</span>
+
+	<span class="c1">// slide 2</span>
+	<span class="p">{</span>
+		<span class="na">src</span><span class="p">:</span> <span class="s1">'path/to/image2.jpg'</span><span class="p">,</span> 
+		<span class="na">w</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span> 
+		<span class="na">h</span><span class="p">:</span> <span class="mi">600</span>
+
+		<span class="c1">// etc.</span>
+	<span class="p">}</span>
+
+	<span class="c1">// etc.</span>
+
+<span class="p">];</span>
+</code></pre>
+</div>
+
+<p>You may dynamically define slide object properties directly before PhotoSwipe reads them, use <code class="highlighter-rouge">gettingData</code> event (more info in <a href="api.html">API section of docs</a>). For example, this technique can be used to <a href="responsive-images.html">serve different images</a> for different screen sizes.</p>
+
+<h2 id="-how-to-build-an-array-of-slides-from-a-list-of-links"><a class="anchor" name="dom-to-slide-objects"></a> How to build an array of slides from a list of links</h2>
+
+<p>Let’s assume that you have a list of links/thumbnails that look like this (<a href="seo.html">more info about markup of gallery</a>):</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"my-gallery"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageGallery"</span><span class="nt">&gt;</span>
+
+	<span class="nt">&lt;figure</span> <span class="na">itemprop=</span><span class="s">"associatedMedia"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"large-image.jpg"</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> <span class="na">data-size=</span><span class="s">"600x400"</span><span class="nt">&gt;</span>
+		    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"small-image.jpg"</span> <span class="na">itemprop=</span><span class="s">"thumbnail"</span> <span class="na">alt=</span><span class="s">"Image description"</span> <span class="nt">/&gt;</span>
+		<span class="nt">&lt;/a&gt;</span>
+		<span class="nt">&lt;figcaption</span> <span class="na">itemprop=</span><span class="s">"caption description"</span><span class="nt">&gt;</span>Image caption<span class="nt">&lt;/figcaption&gt;</span>
+	<span class="nt">&lt;/figure&gt;</span>
+
+	<span class="nt">&lt;figure</span> <span class="na">itemprop=</span><span class="s">"associatedMedia"</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">"http://schema.org/ImageObject"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"large-image.jpg"</span> <span class="na">itemprop=</span><span class="s">"contentUrl"</span> <span class="na">data-size=</span><span class="s">"600x400"</span><span class="nt">&gt;</span>
+		    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"small-image.jpg"</span> <span class="na">itemprop=</span><span class="s">"thumbnail"</span> <span class="na">alt=</span><span class="s">"Image description"</span> <span class="nt">/&gt;</span>
+		<span class="nt">&lt;/a&gt;</span>
+		<span class="nt">&lt;figcaption</span> <span class="na">itemprop=</span><span class="s">"caption description"</span><span class="nt">&gt;</span>Image caption<span class="nt">&lt;/figcaption&gt;</span>
+	<span class="nt">&lt;/figure&gt;</span>
+
+
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>… and you want click on the thumbnail to open PhotoSwipe with large image (like it’s done on a demo page). All you need to do is:</p>
+
+<ol>
+  <li>Bind click event to links/thumbnails.</li>
+  <li>After user clicked on thumbnail, find its index.</li>
+  <li>Create an array of slide objects from DOM elements – loop through all links and retrieve <code class="highlighter-rouge">href</code> attribute (large image url), <code class="highlighter-rouge">data-size</code> attribute (its size), <code class="highlighter-rouge">src</code> of thumbnail, and contents of caption.</li>
+</ol>
+
+<p>PhotoSwipe doesn’t really care how will you do this. If you use frameworks like jQuery or MooTools, or if you don’t need to support IE8, code can be simplified dramatically.</p>
+
+<p>Here is pure Vanilla JS implementation with IE8 support:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">initPhotoSwipeFromDOM</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">gallerySelector</span><span class="p">)</span> <span class="p">{</span>
+
+	<span class="c1">// parse slide data (url, title, size ...) from DOM elements </span>
+	<span class="c1">// (children of gallerySelector)</span>
+	<span class="kd">var</span> <span class="nx">parseThumbnailElements</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">thumbElements</span> <span class="o">=</span> <span class="nx">el</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">,</span>
+			<span class="nx">numNodes</span> <span class="o">=</span> <span class="nx">thumbElements</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+			<span class="nx">items</span> <span class="o">=</span> <span class="p">[],</span>
+			<span class="nx">figureEl</span><span class="p">,</span>
+			<span class="nx">linkEl</span><span class="p">,</span>
+			<span class="nx">size</span><span class="p">,</span>
+			<span class="nx">item</span><span class="p">;</span>
+
+		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numNodes</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+			<span class="nx">figureEl</span> <span class="o">=</span> <span class="nx">thumbElements</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span> <span class="c1">// &lt;figure&gt; element</span>
+
+			<span class="c1">// include only element nodes </span>
+			<span class="k">if</span><span class="p">(</span><span class="nx">figureEl</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">continue</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="nx">linkEl</span> <span class="o">=</span> <span class="nx">figureEl</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// &lt;a&gt; element</span>
+			
+			<span class="nx">size</span> <span class="o">=</span> <span class="nx">linkEl</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-size'</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">'x'</span><span class="p">);</span>
+
+			<span class="c1">// create slide object</span>
+			<span class="nx">item</span> <span class="o">=</span> <span class="p">{</span>
+				<span class="na">src</span><span class="p">:</span> <span class="nx">linkEl</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'href'</span><span class="p">),</span>
+				<span class="na">w</span><span class="p">:</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">size</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">10</span><span class="p">),</span>
+				<span class="na">h</span><span class="p">:</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">size</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10</span><span class="p">)</span>
+			<span class="p">};</span>
+
+			
+
+			<span class="k">if</span><span class="p">(</span><span class="nx">figureEl</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// &lt;figcaption&gt; content</span>
+				<span class="nx">item</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">figureEl</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">;</span> 
+			<span class="p">}</span>
+ 
+			<span class="k">if</span><span class="p">(</span><span class="nx">linkEl</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// &lt;img&gt; thumbnail element, retrieving thumbnail url</span>
+				<span class="nx">item</span><span class="p">.</span><span class="nx">msrc</span> <span class="o">=</span> <span class="nx">linkEl</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'src'</span><span class="p">);</span>
+			<span class="p">}</span> 
+		   
+			<span class="nx">item</span><span class="p">.</span><span class="nx">el</span> <span class="o">=</span> <span class="nx">figureEl</span><span class="p">;</span> <span class="c1">// save link to element for getThumbBoundsFn</span>
+			<span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="k">return</span> <span class="nx">items</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="c1">// find nearest parent element</span>
+	<span class="kd">var</span> <span class="nx">closest</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">closest</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">el</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">?</span> <span class="nx">el</span> <span class="p">:</span> <span class="nx">closest</span><span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="p">);</span>
+	<span class="p">};</span>
+
+	<span class="c1">// triggers when user clicks on thumbnail</span>
+	<span class="kd">var</span> <span class="nx">onThumbnailsClick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span> <span class="p">?</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="p">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">returnValue</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+		<span class="kd">var</span> <span class="nx">eTarget</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">srcElement</span><span class="p">;</span>
+
+		<span class="c1">// find root element of slide</span>
+		<span class="kd">var</span> <span class="nx">clickedListItem</span> <span class="o">=</span> <span class="nx">closest</span><span class="p">(</span><span class="nx">eTarget</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">&amp;&amp;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">tagName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="o">===</span> <span class="s1">'FIGURE'</span><span class="p">);</span>
+		<span class="p">});</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">clickedListItem</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="c1">// find index of clicked item by looping through all child nodes</span>
+		<span class="c1">// alternatively, you may define index via data- attribute</span>
+		<span class="kd">var</span> <span class="nx">clickedGallery</span> <span class="o">=</span> <span class="nx">clickedListItem</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">,</span>
+			<span class="nx">childNodes</span> <span class="o">=</span> <span class="nx">clickedListItem</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">childNodes</span><span class="p">,</span>
+			<span class="nx">numChildNodes</span> <span class="o">=</span> <span class="nx">childNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+			<span class="nx">nodeIndex</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+			<span class="nx">index</span><span class="p">;</span>
+
+		<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numChildNodes</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span><span class="p">(</span><span class="nx">childNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">nodeType</span> <span class="o">!==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> 
+				<span class="k">continue</span><span class="p">;</span> 
+			<span class="p">}</span>
+
+			<span class="k">if</span><span class="p">(</span><span class="nx">childNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">clickedListItem</span><span class="p">)</span> <span class="p">{</span>
+				<span class="nx">index</span> <span class="o">=</span> <span class="nx">nodeIndex</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="nx">nodeIndex</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+
+
+
+		<span class="k">if</span><span class="p">(</span><span class="nx">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">// open PhotoSwipe if valid index found</span>
+			<span class="nx">openPhotoSwipe</span><span class="p">(</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">clickedGallery</span> <span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="c1">// parse picture index and gallery index from URL (#&amp;pid=1&amp;gid=2)</span>
+	<span class="kd">var</span> <span class="nx">photoswipeParseHash</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+		<span class="nx">params</span> <span class="o">=</span> <span class="p">{};</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="nx">params</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="kd">var</span> <span class="nx">vars</span> <span class="o">=</span> <span class="nx">hash</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'&amp;'</span><span class="p">);</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">vars</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">vars</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+				<span class="k">continue</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="kd">var</span> <span class="nx">pair</span> <span class="o">=</span> <span class="nx">vars</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">'='</span><span class="p">);</span>  
+			<span class="k">if</span><span class="p">(</span><span class="nx">pair</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+				<span class="k">continue</span><span class="p">;</span>
+			<span class="p">}</span>           
+			<span class="nx">params</span><span class="p">[</span><span class="nx">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="nx">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">gid</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">params</span><span class="p">.</span><span class="nx">gid</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">gid</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+		<span class="p">}</span>
+
+		<span class="k">return</span> <span class="nx">params</span><span class="p">;</span>
+	<span class="p">};</span>
+
+	<span class="kd">var</span> <span class="nx">openPhotoSwipe</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">galleryElement</span><span class="p">,</span> <span class="nx">disableAnimation</span><span class="p">,</span> <span class="nx">fromURL</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">pswpElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.pswp'</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+			<span class="nx">gallery</span><span class="p">,</span>
+			<span class="nx">options</span><span class="p">,</span>
+			<span class="nx">items</span><span class="p">;</span>
+
+		<span class="nx">items</span> <span class="o">=</span> <span class="nx">parseThumbnailElements</span><span class="p">(</span><span class="nx">galleryElement</span><span class="p">);</span>
+
+		<span class="c1">// define options (if needed)</span>
+		<span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+
+			<span class="c1">// define gallery index (for URL)</span>
+			<span class="na">galleryUID</span><span class="p">:</span> <span class="nx">galleryElement</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-pswp-uid'</span><span class="p">),</span>
+
+			<span class="na">getThumbBoundsFn</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+				<span class="c1">// See Options -&gt; getThumbBoundsFn section of documentation for more info</span>
+				<span class="kd">var</span> <span class="nx">thumbnail</span> <span class="o">=</span> <span class="nx">items</span><span class="p">[</span><span class="nx">index</span><span class="p">].</span><span class="nx">el</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'img'</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="c1">// find thumbnail</span>
+					<span class="nx">pageYScroll</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">pageYOffset</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">,</span>
+					<span class="nx">rect</span> <span class="o">=</span> <span class="nx">thumbnail</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">();</span> 
+
+				<span class="k">return</span> <span class="p">{</span><span class="na">x</span><span class="p">:</span><span class="nx">rect</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span><span class="nx">rect</span><span class="p">.</span><span class="nx">top</span> <span class="o">+</span> <span class="nx">pageYScroll</span><span class="p">,</span> <span class="na">w</span><span class="p">:</span><span class="nx">rect</span><span class="p">.</span><span class="nx">width</span><span class="p">};</span>
+			<span class="p">}</span>
+
+		<span class="p">};</span>
+
+		<span class="c1">// PhotoSwipe opened from URL</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">fromURL</span><span class="p">)</span> <span class="p">{</span>
+	    	<span class="k">if</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">galleryPIDs</span><span class="p">)</span> <span class="p">{</span>
+	    		<span class="c1">// parse real index when custom PIDs are used </span>
+	    		<span class="c1">// http://photoswipe.com/documentation/faq.html#custom-pid-in-url</span>
+	    		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	    			<span class="k">if</span><span class="p">(</span><span class="nx">items</span><span class="p">[</span><span class="nx">j</span><span class="p">].</span><span class="nx">pid</span> <span class="o">==</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+	    				<span class="nx">options</span><span class="p">.</span><span class="nx">index</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+	    				<span class="k">break</span><span class="p">;</span>
+	    			<span class="p">}</span>
+	    		<span class="p">}</span>
+		    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		    	<span class="c1">// in URL indexes start from 1</span>
+		    	<span class="nx">options</span><span class="p">.</span><span class="nx">index</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+		    <span class="p">}</span>
+	    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	    	<span class="nx">options</span><span class="p">.</span><span class="nx">index</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+	    <span class="p">}</span>
+
+	    <span class="c1">// exit if index not found</span>
+	    <span class="k">if</span><span class="p">(</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+	    	<span class="k">return</span><span class="p">;</span>
+	    <span class="p">}</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="nx">disableAnimation</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">options</span><span class="p">.</span><span class="nx">showAnimationDuration</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="c1">// Pass data to PhotoSwipe and initialize it</span>
+		<span class="nx">gallery</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PhotoSwipe</span><span class="p">(</span> <span class="nx">pswpElement</span><span class="p">,</span> <span class="nx">PhotoSwipeUI_Default</span><span class="p">,</span> <span class="nx">items</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+		<span class="nx">gallery</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+	<span class="p">};</span>
+
+	<span class="c1">// loop through all gallery elements and bind events</span>
+	<span class="kd">var</span> <span class="nx">galleryElements</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span> <span class="nx">gallerySelector</span> <span class="p">);</span>
+
+	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">galleryElements</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">galleryElements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-pswp-uid'</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+		<span class="nx">galleryElements</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">onThumbnailsClick</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Parse URL and open gallery if it contains #&amp;pid=3&amp;gid=1</span>
+	<span class="kd">var</span> <span class="nx">hashData</span> <span class="o">=</span> <span class="nx">photoswipeParseHash</span><span class="p">();</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">hashData</span><span class="p">.</span><span class="nx">pid</span> <span class="o">&amp;&amp;</span> <span class="nx">hashData</span><span class="p">.</span><span class="nx">gid</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">openPhotoSwipe</span><span class="p">(</span> <span class="nx">hashData</span><span class="p">.</span><span class="nx">pid</span> <span class="p">,</span>  <span class="nx">galleryElements</span><span class="p">[</span> <span class="nx">hashData</span><span class="p">.</span><span class="nx">gid</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">],</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// execute above function</span>
+<span class="nx">initPhotoSwipeFromDOM</span><span class="p">(</span><span class="s1">'.my-gallery'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Example on CodePen (<code class="highlighter-rouge">focus</code> &amp; <code class="highlighter-rouge">history</code> options are disabled due to embed issues):</p>
+
+<div class="codepen-embed">
+	<p data-height="600" data-theme-id="10447" data-slug-hash="ZYbPJM" data-default-tab="result" data-user="dimsemenov" class="codepen">
+		<a href="http://codepen.io/dimsemenov/pen/ZYbPJM/" target="_blank"><strong>View example on CodePen &rarr;</strong></a>
+	</p>
+</div>
+
+<p>Tip: you may download example from CodePen to play with it locally (<code class="highlighter-rouge">Edit on CodePen</code> -&gt; <code class="highlighter-rouge">Share</code> -&gt; <code class="highlighter-rouge">Export .zip</code>).</p>
+
+<ul>
+  <li>If you’re using markup that differs from this example, you’ll need to edit function <code class="highlighter-rouge">parseThumbnailElements</code>.</li>
+  <li>If you’re not experienced in pure JavaScript and don’t know how to parse DOM, refer to <a href="http://quirksmode.org/dom/core/#gettingelements">QuirksMode</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element.getElementsByTagName">documentation on MDN</a>.</li>
+  <li>
+    <p>Note that IE8 does not support HTML5 <code class="highlighter-rouge">&lt;figure&gt;</code> and <code class="highlighter-rouge">&lt;figcaption&gt;</code> elements, so you need to include <a href="https://github.com/aFarkas/html5shiv">html5shiv</a> in <code class="highlighter-rouge">&lt;head&gt;</code> section (<a href="http://cdnjs.com/libraries/html5shiv/">cdnjs hosted version</a> is used in example):</p>
+
+    <div class="language-html highlighter-rouge"><pre class="highlight"><code>  <span class="c">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;</span>
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h2 id="about">About</h2>
+
+<p>Please <a href="faq.html#keep-updated">keep script updated</a>, report bugs through <a href="https://github.com/dimsemenov/PhotoSwipe">GitHub</a>, suggest features on <a href="https://photoswipe.uservoice.com/forums/275302-feature-requests-ideas">UserVoice</a> and ask questions through <a href="http://stackoverflow.com/questions/ask?tags=javascript,photoswipe">StackOverflow</a>.</p>
+
+<p>Know how this page can be improved? Found a typo? <a href="https://github.com/dimsemenov/PhotoSwipe/blob/master/website/documentation/getting-started.md">Suggest an edit!</a></p>
+
+<iframe src="http://ghbtns.com/github-btn.html?user=dimsemenov&amp;repo=photoswipe&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="155" height="30" style=""></iframe>
+
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Dave Reward</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Dave Reward
+            
+            </li>
+            
+            <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">jekyll</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/jekyllrb"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">jekyllrb</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>UX Design</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

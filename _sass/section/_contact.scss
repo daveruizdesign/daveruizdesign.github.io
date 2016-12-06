@@ -1,0 +1,26 @@
+/* =========================================
+
+	Section: Contact
+
+========================================= */
+
+.section--contact {
+	background: $blue6;
+	color: #fff;
+}
+
+.drd__input,
+input[type="email"] {
+	background: none !important;
+	border: none !important;
+	border-bottom: solid 1px #8899BD !important;
+	border-radius: 0;
+	color: #8899BD;
+	text-align: left;
+	width: 100%;
+	border-radius: 0;
+}
+
+label {
+	font-family: 'Baskerville';
+}

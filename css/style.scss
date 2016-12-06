@@ -1,0 +1,118 @@
+---
+---
+
+/* =========================================
+
+	Variables
+
+========================================= */
+
+$orange: #F67C47;
+$yellow: #FEA33B;
+$purple: #A971D2;
+$blue1: #2553B1;
+$blue2: #8899BD;
+$blue3: #B5C2DE;
+$blue4: #1D2D4F;
+$blue5: #475677;
+$blue6: #04153C; //
+$blue7: #283757;
+
+/* =========================================
+
+	Base styles
+
+========================================= */
+
+html {
+	height: 100.1%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	font-weight: normal;
+	font-family: 'Circular Std';
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Grid */
+
+@import "grid";
+
+/* Sections */
+
+.section {
+	padding: 100px 0;
+}
+
+	@import "section/hero";
+	@import "section/history";
+	@import "section/quote";
+	@import "section/work";
+	@import "section/contact";
+
+
+.text--uppercase {
+	text-transform: uppercase;
+}
+
+.site__name {
+	font-size: 32px;
+	text-shadow: 0 0 20px rgba(8,18,42,.3);
+}
+
+.site__description {
+	display: block;
+	font-size: 60px;
+	font-weight: 900;
+	text-shadow: 0 0 40px rgba(22,50,92,.21);
+}
+
+	@media(min-width: 992px) {
+		.site__description {
+			font-size: 194px;
+			letter-spacing: 3px;
+		}
+	}
+
+.site__bio {
+	font-size: 32px;
+	font-family: "baskerville";
+}
+
+.card--work {
+}
+
+
+header[role="banner"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+footer[role="contentinfo"] {
+	padding: 20px 0;
+}
+
+.work-list {
+	margin: 0 -10px;
+}
+
+.carddd {
+	width: 25%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.card--work  {
+	background: #304064;
+	box-shadow: 0 30px 30px rgba(0,0,0,.1);
+	padding: 20px;
+	margin: 10px;
+}

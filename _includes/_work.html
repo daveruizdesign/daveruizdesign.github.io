@@ -1,0 +1,28 @@
+<div class="section section--work">
+	<div class="container">
+		<header class="section__header">
+			<h2>
+				I sweat every pixel. Every experience.
+			</h2>
+			<p>
+				Here are some projects that I really enjoyed working on.
+			</p>
+		</header>
+		<div class="section__body">
+			<ol class="work-list">
+				{% for work in site.portfolio %}
+					<li class="carddd" data-weight="{{ work.weight }}">
+						<article class="card card--work">
+							<h3>
+								{{ work.title }}
+							</h3>
+							{{ work.customer }}
+							{{ work.year }}
+							{{ work.content }}
+						</article>
+					</li>
+				{% endfor %}
+			</ol>
+		</div>
+	</div>
+</div>
