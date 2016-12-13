@@ -8,9 +8,6 @@
 	background: $blue6;
 	color: #fff;
 	text-align: center;
-	background-image: url('/img/backgrounds/history/timeline.png');
-	background-repeat: repeat-x;
-	background-position: bottom left;
 	overflow: hidden;
 	position: relative;
 }
@@ -33,4 +30,15 @@
 	font-weight: 900;
 	display: inline-block;
 	margin-left: -1074px;
+}
+
+.section__timeline {
+	background-image: url('/img/backgrounds/history/timeline.png');
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	height: 20px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
