@@ -32,7 +32,7 @@ html {
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	font-weight: normal;
-	font-family: 'Circular Std';
+	font-family: 'Circular Std','Work Sans', sans-serif;
 }
 
 	h2.small-light {
@@ -92,6 +92,8 @@ ol, ul {
 
 .site__bio {
 	font-size: 32px;
+		font-family: 'Libre Baskerville', serif;
+
 	font-family: "baskerville";
 }
 
@@ -132,6 +134,7 @@ footer[role="contentinfo"] {
 label {
 	font-size: 18px;
 	letter-spacing: 2px;
+	font-family: 'Libre Baskerville', serif;
 	font-family: 'baskerville';
 }
 

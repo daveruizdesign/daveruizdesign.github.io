@@ -11,16 +11,33 @@
 	<link rel="stylesheet" href="/css/skeleton.css">
 	<link rel="stylesheet" href="/css/style.css">
 
+<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Work+Sans:400,500,700,900" rel="stylesheet">
+
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="icon" type="image/png" href="/img/favicon-76x76.png" />
+
+
+<!--
+<link rel="apple-touch-icon" href="ios/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon-76x76.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="">
+<link rel="apple-touch-icon" sizes="152x152" href="">
+<link rel="apple-touch-startup-image" href="ios/startup.png">
+-->
+
 </head>
 <body>
 
 	{% include _header.html %}
 	{% include _hero.html %}
 	{% include _history.html %}
+
+	{% comment %}
 	{% include _quote.html %}
 	{% include _work.html %}
 	{% include _contact.html %}
 	{% include _footer.html %}
+	{% endcomment %}
 
 	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="/js/isotope-3.0.1.min.js"></script>

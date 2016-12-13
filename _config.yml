@@ -13,10 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Dave Reward
+title: Dave Ruiz
 description: UX Design
 bio: I'm an experienced Digital Product Designer based in Canada, and I have a strong passion for UX and visual design.
 email: your-email@domain.com
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

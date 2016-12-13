@@ -8,6 +8,11 @@
 	background: $blue6;
 	color: #fff;
 	text-align: center;
+	background-image: url('/img/backgrounds/history/timeline.png');
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	overflow: hidden;
+	position: relative;
 }
 
 	/* Cards */
@@ -15,3 +20,17 @@
 	.card--history {
 		text-align: left;
 	}
+
+
+.section--history h1 {
+	color: #04153C;
+	font-size: 600px;
+	text-shadow: 0 75px 300px rgba(0,0,0,.6);
+	position: absolute;
+	bottom: -230px;
+	left: 50%;
+	right: 50%;
+	font-weight: 900;
+	display: inline-block;
+	margin-left: -1074px;
+}
