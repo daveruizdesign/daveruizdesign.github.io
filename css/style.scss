@@ -131,31 +131,6 @@ ol, ul {
 
 
 
-.site__name {
-	font-size: 32px;
-	text-shadow: 0 0 20px rgba(8,18,42,.3);
-}
-
-.site__description {
-	display: block;
-	font-size: 60px;
-	font-weight: 900;
-	text-shadow: 0 0 40px rgba(22,50,92,.21);
-}
-
-	@media(min-width: 992px) {
-		.site__description {
-			font-size: 194px;
-			letter-spacing: 3px;
-		}
-	}
-
-.site__bio {
-	font-size: 32px;
-	font-family: $serif;
-}
-
-
 
 header[role="banner"] {
 	position: absolute;

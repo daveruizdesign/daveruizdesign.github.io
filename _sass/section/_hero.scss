@@ -12,6 +12,56 @@
 	text-align: center;
 }
 
-.section--hero img {
-	height: auto;
+/* Signature */
+
+.site__title {
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	img {
+		height: auto;
+	}
 }
+
+/* Site description */
+
+.site__description--large {
+	display: block;
+	font-size: 60px;
+	font-weight: 900;
+	text-shadow: 0 0 40px rgba(22,50,92,.21);
+	line-height: 1em;
+}
+
+	@media(min-width: 992px) {
+		.site__description--large {
+			font-size: 194px;
+			letter-spacing: 3px;
+		}
+	}
+
+/* Site bio */
+
+.site__description--small {
+	font-size: 32px;
+	font-family: $serif;
+}
+
+
+
+.logo {
+	background: $yellow;
+	width: 70px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+	.logo--initials {
+		font-size: 32px;
+		font-weight: 600;
+		color: #fff;
+		padding: 60px 0 10px;
+		display: inline-block;
+		line-height: 1em;
+	}
