@@ -20,10 +20,62 @@ $blue5: #475677;
 $blue6: #04153C; //
 $blue7: #283757;
 
-/* Fonts */
+/* Font families */
 
 $serif: "baskerville", 'Libre Baskerville', serif;
 $sans-serif: 'Circular Std','Work Sans', sans-serif;
+
+/* Font sizes */
+
+@mixin fonts--lead() {
+	font-size: 24px;
+	line-height: 34px;
+}
+
+@mixin text--uppercase() {
+	text-transform: uppercase;
+}
+
+/*
+
+font-size: 12px;
+line-height: 15px;
+letter-spacing: .015em;
+
+font-size: 16px;
+line-height: 18px;
+letter-spacing: .0267em;
+
+font-size: 18px;
+line-height: 23px;
+letter-spacing: .1em;
+
+font-size: 18px;
+line-height: 29px;
+
+font-size: 24px;
+line-height: 30px;
+
+font-size: 24px;
+line-height: 46px;
+letter-spacing: .533em;
+
+font-size: 24px;
+line-height: 34px;
+
+font-size: 32px;
+line-height: 54px;
+
+font-size: 48px;
+line-height: 62px;
+
+font-size: 48px;
+line-height: 60px;
+
+*/
+
+
+// @include border-radius
 
 /* =========================================
 
@@ -33,13 +85,13 @@ $sans-serif: 'Circular Std','Work Sans', sans-serif;
 
 html {
 	height: 100.1%;
+	font-family: $sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	font-weight: normal;
-	font-family: $sans-serif;
 }
 
 	h2.small-light {
@@ -47,7 +99,6 @@ h1, h2, h3, h4, h5, h6, p {
 		font-size: 18px;
 		text-transform: uppercase;
 		letter-spacing: 10px;
-		font-family: $sans-serif;
 		font-weight: 900;
 	}
 
@@ -55,6 +106,10 @@ ol, ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.text--uppercase {
+	text-transform: uppercase;
 }
 
 /* Grid */
@@ -74,9 +129,7 @@ ol, ul {
 	@import "section/contact";
 
 
-.text--uppercase {
-	text-transform: uppercase;
-}
+
 
 .site__name {
 	font-size: 32px;
@@ -102,8 +155,6 @@ ol, ul {
 	font-family: $serif;
 }
 
-.card--work {
-}
 
 
 header[role="banner"] {
@@ -147,7 +198,6 @@ label {
 	font-size: 18px;
 	text-align: center;
 	font-weight: 900;
-	font-family: $sans-serif;
 	display: block;
 	width: 100%;
 	color: #fff !important;
@@ -159,10 +209,40 @@ div.error {
 	color: #CF4F43;
 	text-transform: uppercase;
 	letter-spacing: .085em;
-	font-family: $sans-serif;
 	font-weight: 900;
 }
 
 .hide {
 	display: none;
 }
+
+/* Primary navigation */
+
+.menu--primary {
+	list-style: none;
+	text-align: right;
+	display: block;
+}
+
+	.menu--primary li {
+		display: inline-block;
+	}
+
+		.menu--primary a {
+			font-size: 16px;
+			line-height: 20px 30px;
+			letter-spacing: 2.8px;
+			@include text--uppercase();
+			color: #fff;
+			text-decoration: none;
+			padding: 20px;
+			font-weight: 600;
+			display: inline-block;
+
+			&:hover,
+			&:focus,
+			&.active {
+				color: $orange;
+			}
+
+		}
