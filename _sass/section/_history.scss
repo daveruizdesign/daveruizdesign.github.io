@@ -35,25 +35,52 @@
 		margin-left: -1074px;
 	}
 
-	/* Cards */
+/* Header */
 
-	.card--history {
-		text-align: left;
-	}
-
-
-.section--history h1 {
-	color: #04153C;
-	font-size: 600px;
-	text-shadow: 0 75px 300px rgba(0,0,0,.6);
-	position: absolute;
-	bottom: -230px;
-	left: 50%;
-	right: 50%;
+.section__heading {
+	font-size: 18px;
+	line-height: 23px;
+	color: $blue2;
+	letter-spacing: 10px;
+	text-transform: uppercase;
 	font-weight: 900;
-	display: inline-block;
-	margin-left: -1074px;
+	padding: 2px 0 70px 0;
 }
+
+.section__subheading {
+	font-size: 48px;
+	line-height: 62px;
+	font-weight: 600;
+	padding: 0 280px 83px;
+}
+
+/* Cards */
+
+.card--history {
+	text-align: left;
+	padding: 0 30px;
+}
+
+.card__title--history {
+	
+}
+
+.card__title__heading {
+	font-size: 16px;
+	display: block;
+	font-family: 'baskerville';
+	color: $orange;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+}
+
+.card__title__subheading {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+
+
 
 .section__timeline {
 	background-image: url('/img/backgrounds/history/timeline.png');
@@ -64,27 +91,4 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-}
-
-.card__title--company {
-	font-size: 16px;
-	display: block;
-	font-family: 'baskerville';
-	color: $orange;
-	letter-spacing: .02em;
-}
-
-.card__title--position {
-	font-size: 24px;
-	font-weight: 600;
-}
-
-.section__heading {
-	font-size: 12px;
-	line-height: 62px;
-}
-
-.section__subheading {
-	font-size: 48px;
-	line-height: 62px;
 }
