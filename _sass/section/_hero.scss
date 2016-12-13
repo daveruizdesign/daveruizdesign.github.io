@@ -31,6 +31,21 @@
 	font-weight: 900;
 	text-shadow: 0 0 40px rgba(22,50,92,.21);
 	line-height: 1em;
+	@include text--uppercase();
+
+	&:after {
+		position: absolute;
+		content: '';
+		display: inline-block;
+		height: 3px;
+		background: $blue1;
+		width: 160px;
+		bottom: 0;
+		left: 50%;
+		right: 50%;
+		margin-left: -80px;
+	}
+
 }
 
 	@media(min-width: 992px) {
@@ -45,23 +60,6 @@
 .site__description--small {
 	font-size: 32px;
 	font-family: $serif;
+	max-width: 820px;
+	margin: 0 auto;
 }
-
-
-
-.logo {
-	background: $yellow;
-	width: 70px;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-}
-
-	.logo--initials {
-		font-size: 32px;
-		font-weight: 600;
-		color: #fff;
-		padding: 60px 0 10px;
-		display: inline-block;
-		line-height: 1em;
-	}

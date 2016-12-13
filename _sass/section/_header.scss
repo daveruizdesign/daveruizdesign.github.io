@@ -1,0 +1,56 @@
+
+header[role="banner"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.logo {
+	background: $yellow;
+	width: 70px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+	.logo--initials {
+		font-size: 32px;
+		font-weight: 600;
+		color: #fff;
+		padding: 60px 0 10px;
+		display: inline-block;
+		line-height: 1em;
+	}
+
+
+/* Primary navigation */
+
+.menu--primary {
+	list-style: none;
+	text-align: right;
+	display: block;
+}
+
+	.menu--primary li {
+		display: inline-block;
+	}
+
+		.menu--primary a {
+			font-size: 16px;
+			line-height: 20px 30px;
+			letter-spacing: 2.8px;
+			@include text--uppercase();
+			color: #fff;
+			text-decoration: none;
+			padding: 20px;
+			font-weight: 600;
+			display: inline-block;
+
+			&:hover,
+			&:focus,
+			&.active {
+				color: $orange;
+			}
+
+		}

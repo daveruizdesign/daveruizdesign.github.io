@@ -30,3 +30,36 @@ label {
 	font-family: 'Baskerville';
 	cursor: pointer;
 }
+
+.label__highlight {
+	color: #FEA33B;
+}
+label {
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: $serif;
+}
+
+.btn--lg {
+	border: solid 3px #3E4D6F !important;
+	font-size: 18px;
+	text-align: center;
+	font-weight: 900;
+	display: block;
+	width: 100%;
+	color: #fff !important;
+	border-radius: 0 !important;
+}
+
+div.error {
+	font-size: 11px;
+	color: #CF4F43;
+	text-transform: uppercase;
+	letter-spacing: .085em;
+	font-weight: 900;
+}
+
+.hide {
+	display: none;
+}
+

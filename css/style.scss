@@ -32,6 +32,8 @@ $sans-serif: 'Circular Std','Work Sans', sans-serif;
 	line-height: 34px;
 }
 
+/* Font styles */
+
 @mixin text--uppercase() {
 	text-transform: uppercase;
 }
@@ -108,10 +110,6 @@ ol, ul {
 	padding: 0;
 }
 
-.text--uppercase {
-	text-transform: uppercase;
-}
-
 /* Grid */
 
 @import "grid";
@@ -122,102 +120,10 @@ ol, ul {
 	padding: 100px 0;
 }
 
+	@import "section/header";
 	@import "section/hero";
 	@import "section/history";
 	@import "section/quote";
 	@import "section/work";
 	@import "section/contact";
-
-
-
-
-
-header[role="banner"] {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-footer[role="contentinfo"] {
-	padding: 20px 0;
-}
-
-.work-list {
-	margin: 0 -25px;
-}
-
-.carddd {
-	width: 25%;
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-.card--work  {
-	background: #304064;
-	box-shadow: 0 30px 30px rgba(0,0,0,.1);
-	padding: 20px;
-	margin: 25px;
-}
-.label__highlight {
-	color: #FEA33B;
-}
-label {
-	font-size: 18px;
-	letter-spacing: 2px;
-	font-family: $serif;
-}
-
-.btn--lg {
-	border: solid 3px #3E4D6F !important;
-	font-size: 18px;
-	text-align: center;
-	font-weight: 900;
-	display: block;
-	width: 100%;
-	color: #fff !important;
-	border-radius: 0 !important;
-}
-
-div.error {
-	font-size: 11px;
-	color: #CF4F43;
-	text-transform: uppercase;
-	letter-spacing: .085em;
-	font-weight: 900;
-}
-
-.hide {
-	display: none;
-}
-
-/* Primary navigation */
-
-.menu--primary {
-	list-style: none;
-	text-align: right;
-	display: block;
-}
-
-	.menu--primary li {
-		display: inline-block;
-	}
-
-		.menu--primary a {
-			font-size: 16px;
-			line-height: 20px 30px;
-			letter-spacing: 2.8px;
-			@include text--uppercase();
-			color: #fff;
-			text-decoration: none;
-			padding: 20px;
-			font-weight: 600;
-			display: inline-block;
-
-			&:hover,
-			&:focus,
-			&.active {
-				color: $orange;
-			}
-
-		}
+	@import "section/footer";
