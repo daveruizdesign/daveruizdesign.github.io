@@ -42,3 +42,16 @@
 	bottom: 0;
 	left: 0;
 }
+
+.card__title--company {
+	font-size: 16px;
+	display: block;
+	font-family: 'baskerville';
+	color: $orange;
+	letter-spacing: .02em;
+}
+
+.card__title--position {
+	font-size: 24px;
+	font-weight: 600;
+}

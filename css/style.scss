@@ -7,6 +7,8 @@
 
 ========================================= */
 
+/* Colors */
+
 $orange: #F67C47;
 $yellow: #FEA33B;
 $purple: #A971D2;
@@ -17,6 +19,11 @@ $blue4: #1D2D4F;
 $blue5: #475677;
 $blue6: #04153C; //
 $blue7: #283757;
+
+/* Fonts */
+
+$serif: "baskerville", 'Libre Baskerville', serif;
+$sans-serif: 'Circular Std','Work Sans', sans-serif;
 
 /* =========================================
 
@@ -32,7 +39,7 @@ html {
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	font-weight: normal;
-	font-family: 'Circular Std','Work Sans', sans-serif;
+	font-family: $sans-serif;
 }
 
 	h2.small-light {
@@ -40,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p {
 		font-size: 18px;
 		text-transform: uppercase;
 		letter-spacing: 10px;
-		font-family: 'circular std';
+		font-family: $sans-serif;
 		font-weight: 900;
 	}
 
@@ -92,9 +99,7 @@ ol, ul {
 
 .site__bio {
 	font-size: 32px;
-		font-family: 'Libre Baskerville', serif;
-
-	font-family: "baskerville";
+	font-family: $serif;
 }
 
 .card--work {
@@ -134,8 +139,7 @@ footer[role="contentinfo"] {
 label {
 	font-size: 18px;
 	letter-spacing: 2px;
-	font-family: 'Libre Baskerville', serif;
-	font-family: 'baskerville';
+	font-family: $serif;
 }
 
 .btn--lg {
@@ -143,7 +147,7 @@ label {
 	font-size: 18px;
 	text-align: center;
 	font-weight: 900;
-	font-family: 'circular std';
+	font-family: $sans-serif;
 	display: block;
 	width: 100%;
 	color: #fff !important;
@@ -155,7 +159,7 @@ div.error {
 	color: #CF4F43;
 	text-transform: uppercase;
 	letter-spacing: .085em;
-	font-family: 'circular std';
+	font-family: $sans-serif;
 	font-weight: 900;
 }
 

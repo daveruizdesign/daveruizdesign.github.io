@@ -15,9 +15,13 @@
 				<li class="history__item four columns">
 					<article class="card card--history">
 						<header>
-							<h3>
-								<span class="text--uppercase">{{ job.company }}</span>
-								{{ job.position }}
+							<h3 class="card__title card__title--history">
+								<span class="card__title--company text--uppercase">
+									{{ job.company }}
+								</span>
+								<span class="card__title--position">
+									{{ job.position }}
+								</span>
 							</h3>
 						</header>
 						{{ job.content }}
