@@ -1,11 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+
 	<title>UX Design | Dave Reward</title>
 	<link rel="stylesheet" href="/css/normalize.css">
 	<link rel="stylesheet" href="/css/skeleton.css">
 	<link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
 
@@ -52,7 +57,7 @@
 	<div class="section section--history">
 	<div class="container">
 		<header class="section__header">
-			<h2>
+			<h2 class="small-light">
 				My History
 			</h2>
 			<p>
@@ -108,15 +113,22 @@
 
 	<div class="section section--quote">
 	<div class="container">
-		<blockquote>
-			<p>
-				Dave is a consummate professional and a expert in user experience on the web. Unlike so many designers, he spends the time to understand your business goals and needs. With Dave, the design is always a vehicle to grow your business and to reduce friction for your users. The rarity and value of the skills he possesses cannot be overstated.
-			</p>
-			<cite class="text--uppercase">
-				J. M. davis - president
-				scrapbook.com
-			</cite>
-		</blockquote>
+		<header class="section__header hide">
+			<h2 class="small-light">
+				Quotes
+			</h2>
+		</header>
+		<div class="section__body">
+			<blockquote>
+				<p>
+					Dave is a consummate professional and a expert in user experience on the web. Unlike so many designers, he spends the time to understand your business goals and needs. With Dave, the design is always a vehicle to grow your business and to reduce friction for your users. The rarity and value of the skills he possesses cannot be overstated.
+				</p>
+				<cite class="text--uppercase">
+					J. M. davis - president
+					scrapbook.com
+				</cite>
+			</blockquote>
+		</div>
 	</div>
 </div>
 
@@ -196,11 +208,11 @@
 					<li class="carddd" data-weight="3">
 						<article class="card card--work">
 							<h3>
-								Marketin
+								Mobile Concepts
 							</h3>
-							Mixpanel
-							2013
-							<p>I was recruited to redesign the desk.com Business Insights platform, but there were so many interesting projects that we just kept going. I lead redesign efk.cm currently at Service Cloud (desk.com’s bigger sibling) designing their mobile case management app.</p>
+							Various
+							2012-2016
+							
 
 						</article>
 					</li>
@@ -208,11 +220,11 @@
 					<li class="carddd" data-weight="4">
 						<article class="card card--work">
 							<h3>
-								4.desk Marketing Site
+								Marketing site
 							</h3>
-							
-							
-							<p>I was recruited to redesign the desk.com Business Insights platform, but there were so many interesting projects that we just kept going. I lead the marketing site redesign efforts and created desk.com’s mobile app. I’m currently at Service Cloud (desk.com’s bigger sibling) designing their mobile case management app.</p>
+							Desk.com
+							2014
+							<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
 
 						</article>
 					</li>
@@ -220,11 +232,11 @@
 					<li class="carddd" data-weight="5">
 						<article class="card card--work">
 							<h3>
-								5
+								Photography Themes
 							</h3>
+							Various
+							2012-2013
 							
-							
-							<p>I was recruited to redesign the desk.com Business Insights platform, but there were so many interesting projects that we just kept going. I lead the marketing site redesign efforts and created desk.com’s mobile app. I’m currently at Service Cloud (desk.com’s bigger sibling) designing their mobile case management app.</p>
 
 						</article>
 					</li>
@@ -232,11 +244,11 @@
 					<li class="carddd" data-weight="6">
 						<article class="card card--work">
 							<h3>
-								sdfsdfdsdfs
+								Business Insights
 							</h3>
 							Desk.com
-							2015
-							<p>360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.</p>
+							2014
+							
 
 						</article>
 					</li>
@@ -288,16 +300,16 @@
 			<h2>
 				Get in touch
 			</h2>
-			<h3>
+			<p>
 				I would really like to hear from you.
-			</h3>
+			</p>
 			<p>
 				Whether you have a project that you think we would work well together on, a full-time
 				position that you think I would accel in, leave a message below, or email me.
 			</p>
 		</header>
 		<div class="section__body">
-			<form action="https://formspree.io/" method="POST" class="row">
+			<form action="https://formspree.io/nfranklin@salesforce.com" method="POST" class="row" id="drd__form">
 				<div class="four columns">
 					<div class="input-group">
 						<label class="drd__label text--uppercase" for="name">
@@ -353,8 +365,8 @@
 			<div class="four columns">
 				Accepting new projects on a limited basis.
 			</div>
-			<div class="four columns">
-				Signature
+			<div class="four columns text-center">
+				<img src="/img/signature.png" width="264" height="48" alt="" />
 			</div>
 			<div class="four columns">
 				© 2016 Dave Ruiz. Please don’t steal.
@@ -377,6 +389,7 @@
 
 	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="/js/isotope-3.0.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
 
 </body>
