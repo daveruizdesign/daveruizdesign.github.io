@@ -87,8 +87,11 @@ line-height: 60px;
 
 html {
 	height: 100.1%;
-	font-family: $sans-serif;
 	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {

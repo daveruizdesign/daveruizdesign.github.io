@@ -16,9 +16,9 @@ header[role="banner"] {
 
 	.logo--initials {
 		font-size: 32px;
-		font-weight: 600;
+		font-weight: 700;
 		color: #fff;
-		padding: 60px 0 10px;
+		padding: 70px 0px 18px;
 		display: inline-block;
 		line-height: 1em;
 	}
@@ -30,10 +30,22 @@ header[role="banner"] {
 	list-style: none;
 	text-align: right;
 	display: block;
+	margin: 45px -12px 0 0;
 }
 
 	.menu--primary li {
 		display: inline-block;
+		padding: 23px;
+
+		&:last-child {
+			padding-right: 0;
+
+			a {
+				padding-right: 0;
+			}
+
+		}
+
 	}
 
 		.menu--primary a {
@@ -43,7 +55,7 @@ header[role="banner"] {
 			@include text--uppercase();
 			color: #fff;
 			text-decoration: none;
-			padding: 20px;
+			padding: 10px;
 			font-weight: 600;
 			display: inline-block;
 
