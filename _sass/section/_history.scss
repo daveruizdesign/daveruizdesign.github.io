@@ -46,49 +46,55 @@
 	letter-spacing: 10px;
 	text-transform: uppercase;
 	font-weight: 900;
-	padding: 2px 0 70px 0;
+
+	@media(min-width: 1500px) {
+		padding: 2px 0 70px 0;
+	}
+
 }
 
 .section__subheading {
 	font-size: 48px;
 	line-height: 62px;
 	font-weight: 600;
-	padding: 0 280px 83px;
+
+	@media(min-width: 1500px) {
+		padding: 0 280px 83px;
+	}
+
 }
+
 
 /* Cards */
 
 .card--history {
 	text-align: left;
 	padding: 0 30px;
-}
 
-.card__title--history {
+	.card__title__heading {
+		font-size: 16px;
+		display: block;
+		font-family: 'baskerville';
+		color: $orange;
+		letter-spacing: .2em;
+		text-transform: uppercase;
+		padding-bottom: 6px;
+	}
 	
-}
+	.card__title__subheading {
+		font-size: 24px;
+		font-weight: 400;
+		padding-bottom: 18px;
+		display: block;
+		letter-spacing: 0;
+	}
 
-.card__title__heading {
-	font-size: 16px;
-	display: block;
-	font-family: 'baskerville';
-	color: $orange;
-	letter-spacing: .2em;
-	text-transform: uppercase;
-	padding-bottom: 6px;
-}
+	p {
+		font-size: 18px;
+		line-height: 29px;
+		color: $blue2;
+	}
 
-.card__title__subheading {
-	font-size: 24px;
-	font-weight: 400;
-	padding-bottom: 18px;
-	display: block;
-	letter-spacing: 0;
-}
-
-.card__body--history p {
-	font-size: 18px;
-	line-height: 29px;
-	color: $blue2;
 }
 
 
