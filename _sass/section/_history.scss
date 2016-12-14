@@ -71,13 +71,21 @@
 
 .card--history {
 	text-align: left;
-	padding: 0 30px;
+	padding: 0 50px 0 30px;
+
+	&.card--history-2 {
+		padding: 0 30px 0 47px;
+	}
+
+	&.card--history-3 {
+		padding: 0 20px 0 65px;
+	}
 
 	.card__title__heading {
 		font-size: 16px;
 		display: block;
 		font-family: 'baskerville';
-		color: $orange;
+		color: #FEA33B;
 		letter-spacing: .2em;
 		text-transform: uppercase;
 		padding-bottom: 6px;
@@ -86,7 +94,7 @@
 	.card__title__subheading {
 		font-size: 24px;
 		font-weight: 400;
-		padding-bottom: 18px;
+		padding-bottom: 19px;
 		display: block;
 		letter-spacing: 0;
 	}
@@ -127,17 +135,28 @@
 .tooltip--history {
 	display: inline-block;
 	position: absolute;
-	left: 219px;
 	bottom: 20px;
 	width: 120px;
 	padding-bottom: 6px;
+
+	&.tooltip--f6 {
+		left: 219px;
+	}
+
+	&.tooltip--mixpanel {
+		left: 429px;
+	}
+
+	&.tooltip--salesforce {
+		left: 1059px;
+	}
 
 	&:after {
 		content: '';
 		display: block;
 		width: 2px;
 		height: 20px;
-		background: #F67C47;
+		background: #F19424;
 		position: absolute;
 		left: 50%;
 		bottom: -30px;
@@ -176,7 +195,7 @@
 }
 
 .tooltip__heading {
-	color: $orange;
+	color: #FEA33B;
 	display: block;
 	position: relative;
 	top: -2px;

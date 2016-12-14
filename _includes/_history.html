@@ -14,7 +14,7 @@
 			<ol class="history row">
 				{% for job in site.jobs %}
 				<li class="history__item four columns">
-					<article class="card card--history">
+					<article class="card card--history card--history-{% cycle '1', '2', '3' %}">
 						<header>
 							<h3 class="card__title card__title--history">
 								<span class="card__title__heading">
@@ -37,7 +37,7 @@
 	<div class="section__timeline">
 		<div class="section__timeline--bg"></div>
 		<ul class="section__timeline__items">
-			<li class="tooltip tooltip--history">
+			<li class="tooltip tooltip--history tooltip--f6">
 				<div class="tooltip__inner tooltip__inner--history">
 					<span class="tooltip__heading">
 						F6
@@ -47,18 +47,26 @@
 					</span>
 				</div>
 			</li>
-<!--
-			<li class="tooltip tooltip--history">
+			<li class="tooltip tooltip--history tooltip--mixpanel">
 				<div class="tooltip__inner tooltip__inner--history">
-					SF
+					<span class="tooltip__heading">
+						Mixpanel
+					</span>
+					<span class="tooltip__subheading">
+						2012-2014
+					</span>
 				</div>
 			</li>
-			<li class="tooltip tooltip--history">
+			<li class="tooltip tooltip--history tooltip--salesforce">
 				<div class="tooltip__inner tooltip__inner--history">
-					SF
+					<span class="tooltip__heading">
+						Salesforce
+					</span>
+					<span class="tooltip__subheading">
+						2014-Now
+					</span>
 				</div>
 			</li>
--->
 		</ul>
 	</div>
 </div>
