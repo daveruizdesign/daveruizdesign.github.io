@@ -8,7 +8,7 @@
 
 	<title>{{ site.description }} | {{ site.title }}</title>
 	<meta name="description" content="I'm an experienced Digital Product Designer based in Canada, and I have a strong passion for UX and visual design." />
-	
+
 	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="icon" type="image/png" href="/img/favicon-76x76.png" />
 	<!--
@@ -29,18 +29,17 @@
 <body>
 
 	{% comment %}
-	{% endcomment %}
-
 	{% include _header.html %}
 	{% include _hero.html %}
-
 	{% include _history.html %}
+	{% endcomment %}
 
 	{% include _quote.html %}
+
+	{% comment %}
 	{% include _work.html %}
 	{% include _contact.html %}
 	{% include _footer.html %}
-	{% comment %}
 	{% endcomment %}
 
 	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>

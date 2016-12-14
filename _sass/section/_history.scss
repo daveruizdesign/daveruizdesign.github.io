@@ -8,8 +8,6 @@
 	background: $blue6;
 	color: #fff;
 	text-align: center;
-	overflow: hidden;
-	position: relative;
 	background: #031235; /* Old browsers */
 	background: -moz-linear-gradient(top,  #031235 0%, #041640 60%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  #031235 0%,#041640 60%); /* Chrome10-25,Safari5.1-6 */
@@ -76,7 +74,7 @@
 		text-transform: uppercase;
 		padding-bottom: 6px;
 	}
-	
+
 	.card__title__subheading {
 		font-size: 24px;
 		font-weight: 400;

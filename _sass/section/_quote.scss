@@ -6,6 +6,7 @@
 	background: linear-gradient(to bottom,  #f19a25 0%,#f2a228 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f19a25', endColorstr='#f2a228',GradientType=0 ); /* IE6-9 */
 	text-align: center;
+	padding: 132px 0;
 
 	.section__bg-heading:after {
 		content: "Quote";
@@ -15,7 +16,7 @@
 
 }
 
-blockquote p {
+.blockquote__quote {
 	font-size: 32px;
 	font-family: 'Circular Std';
 	line-height: 54px;
@@ -24,7 +25,35 @@ blockquote p {
 	padding: 0 10%;
 }
 
-cite {
+.blockquote__divider {
+	font-size: 100px;
+	color: #fff;
+	position: relative;
+	margin: 45px auto 0;
+	display: block;
+	width: 740px;
+	line-height: 1em;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		width: 320px;
+		height: 2px;
+		background: #fff;
+		background: rgba(255,255,255,.25);
+		position: absolute;
+		top: 27px;
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+
+}
+
+.blockquote__cite {
 	font-size: 24px;
 	line-height: 46px;
 	font-family: 'Baskerville';
