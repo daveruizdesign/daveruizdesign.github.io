@@ -8,9 +8,14 @@
 	background-color: $blue1;
 	background-image: url('/img/backgrounds/hero/landscape@1x-80p.jpg');
 	background-size: cover;
+	background-repeat: no-repeat;
 	color: #fff;
 	text-align: center;
 	padding: 209px 0 384px;
+	@media(min-width: 2300px) {
+		background-image: url('/img/backgrounds/hero/landscape@2x-80p.jpg');
+		background-position: 0 -210px;
+	}
 }
 
 /* Signature */
