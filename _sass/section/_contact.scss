@@ -27,7 +27,7 @@ input[type="email"] {
 }
 
 label {
-	font-family: 'Baskerville';
+	font-family: $serif;
 	cursor: pointer;
 }
 
@@ -38,6 +38,7 @@ label {
 	font-size: 18px;
 	letter-spacing: 2px;
 	font-family: $serif;
+	text-transform: uppercase;
 }
 
 .btn--lg {
