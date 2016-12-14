@@ -19,8 +19,6 @@
 	<link rel="apple-touch-startup-image" href="ios/startup.png">
 	-->
 
-	<link rel="stylesheet" href="/css/normalize.css">
-	<link rel="stylesheet" href="/css/skeleton.css">
 	<link rel="stylesheet" href="/css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Work+Sans:400,500,700,900" rel="stylesheet">
@@ -29,17 +27,18 @@
 <body>
 
 	{% comment %}
+	{% endcomment %}
+
 	{% include _header.html %}
 	{% include _hero.html %}
 	{% include _history.html %}
-	{% endcomment %}
 
 	{% include _quote.html %}
 
-	{% comment %}
 	{% include _work.html %}
 	{% include _contact.html %}
 	{% include _footer.html %}
+	{% comment %}
 	{% endcomment %}
 
 	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
