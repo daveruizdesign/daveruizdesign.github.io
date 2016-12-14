@@ -7,6 +7,11 @@
 .section--work {
 	background: $blue7;
 	color: #fff;
+	padding: 79px 0;
+
+	.btn {
+		float: right;
+	}
 }
 
 .work-list {
@@ -25,4 +30,22 @@
 	padding: 20px;
 	margin: 25px;
 	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.section--work__heading {
+	font-size: 48px;
+	line-height: 60px;
+	font-weight: 700;
+	letter-spacing: .002em;
+	margin: 0 0 1px 0;
+
+}
+
+.section--work__subheading {
+	font-size: 24px;
+	line-height: 34px;
+	color: #91A2C9;
+	font-family: $serif;
 }
