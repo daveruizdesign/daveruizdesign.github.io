@@ -1,6 +1,18 @@
 .section--quote {
 	background: $yellow;
+	background: #f19a25; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f19a25 0%, #f2a228 60%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f19a25 0%,#f2a228 60%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f19a25 0%,#f2a228 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f19a25', endColorstr='#f2a228',GradientType=0 ); /* IE6-9 */
 	text-align: center;
+
+	.section__bg-heading:after {
+		content: "Quote";
+		color: #F29F27;
+		text-shadow: 0 75px 300px rgba(0,0,0,.12);
+	}
+
 }
 
 blockquote p {
