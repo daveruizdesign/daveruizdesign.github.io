@@ -12,14 +12,14 @@
 			<ol class="work-list">
 				{% for work in site.portfolio %}
 					<li class="carddd" data-weight="{{ work.weight }}">
-						<article class="card card--work">
+						<a href="#" class="card card--work">
 							<h3>
 								{{ work.title }}
 							</h3>
 							{{ work.customer }}
 							{{ work.year }}
 							{{ work.content }}
-						</article>
+						</a>
 					</li>
 				{% endfor %}
 			</ol>
