@@ -1,8 +1,8 @@
 ---
-weight: 10
+weight: 3
 type: project
-title: Something
-customer: Desk.com
-year: 2015
+title: Mobile Concepts
+customer: Various
+year: 2012-2016
 ---
 360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.

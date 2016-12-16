@@ -8,14 +8,14 @@
 			<p class="section__subheading section--work__subheading">
 				Here are some projects that I really enjoyed working on.
 			</p>
-			<button class="btn">
+			<!-- <button class="btn">
 				View all
-			</button>
+			</button> -->
 		</header>
 		<div class="section__body">
 			<ol class="work-list">
 				{% for work in site.portfolio %}
-					<li class="carddd" data-weight="{{ work.weight }}">
+					<li class="carddd" data-number="{{ work.weight }}">
 						<a href="#" class="card card--work">
 							<h3>
 								{{ work.title }}

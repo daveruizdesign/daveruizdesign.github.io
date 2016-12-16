@@ -2,14 +2,11 @@ var $grid = $('.work-list');
 
 $grid.isotope({
 	itemSelector: '.carddd',
-	percentPosition: true,
-	masonry: {
-		columnWidth: '.carddd'
-	},
+	layoutMode: 'packery',
 	getSortData: {
-		weight: '[data-weight] parseInt'
+		number: '[data-number] parseInt',
 	},
-	sortBy : 'weight',
+	sortBy : 'number',
 	sortAscending: true
 });
 
