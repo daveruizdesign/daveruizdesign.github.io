@@ -6,8 +6,11 @@
 
 .section--work {
 	background: $blue7;
+	background-image: url('/img/backgrounds/work/landscape@1x.jpg');
 	color: #fff;
 	padding: 79px 0;
+	background-size: cover;
+	background-position: center center;
 
 	.btn {
 		float: right;
