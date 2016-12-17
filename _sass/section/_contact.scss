@@ -123,15 +123,26 @@ form {
 
 	/* Button */
 
-	.drd__button {
-		border: solid 3px #3E4D6F !important;
+	.btn.drd__button {
+		padding: 14px 0 12px;
+		height: auto;
+		border: solid 3px #3E4D6F;
 		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: .2em;
 		text-align: center;
 		font-weight: 900;
 		display: block;
 		width: 100%;
 		color: #fff !important;
 		border-radius: 0 !important;
+		max-width: 420px;
+
+		&:hover,
+		&:focus {
+			border-color: #fff;
+		}
+
 	}
 
 	/* Form errors */
