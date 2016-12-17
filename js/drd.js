@@ -36,14 +36,3 @@ $("#drd__form").validate({
 	},
 	errorElement: "div",
 });
-
-$(function(){
-	$('#example0').Chocolat({
-		imageSize: 'contain'
-	});
-$('#example1').Chocolat({
-	loop           : true,
-	imageSize     : 'cover',
-	overlayOpacity : 0.9
-});
-});
