@@ -18,6 +18,7 @@
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	line-height: 23px;
+	font-weight: 600;
 }
 
 .section--contact__subheading {
@@ -72,8 +73,8 @@ input[type="email"] {
 	border-radius: 0 !important;
 	font-size: 20px;
 	color: #fff;
-	padding: 20px 0;
-	height: auto;
+	padding: 10px 1px 12px !important;
+	height: auto !important;
 }
 
 	.drd__input::-webkit-input-placeholder {
@@ -92,6 +93,9 @@ input[type="email"] {
    color: #8899BD;
 }
 
+.input-group {
+	margin-bottom: 71px;
+}
 
 
 	.drd__input:focus {
