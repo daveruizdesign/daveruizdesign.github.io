@@ -72,11 +72,31 @@ input[type="email"] {
 	border-radius: 0 !important;
 	font-size: 20px;
 	color: #fff;
-	padding: 10px;
+	padding: 20px 0;
+	height: auto;
 }
+
+	.drd__input::-webkit-input-placeholder {
+   color: #8899BD;
+}
+
+.drd__input:-moz-placeholder { /* Firefox 18- */
+   color: #8899BD;
+}
+
+.drd__input::-moz-placeholder {  /* Firefox 19+ */
+   color: #8899BD;
+}
+
+.drd__input:-ms-input-placeholder {
+   color: #8899BD;
+}
+
+
 
 	.drd__input:focus {
 		border-color: #2553B1 !important;
+		color: #fff;
 	}
 
 label {
