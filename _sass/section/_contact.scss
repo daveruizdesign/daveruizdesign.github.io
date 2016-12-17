@@ -113,7 +113,7 @@ form {
 	}
 
  	.input-group--text {
-		margin-bottom: 59px;
+		margin-bottom: 43px;
 	}
 
 		.drd__input,
@@ -128,7 +128,6 @@ form {
 			font-size: 20px;
 			color: #fff;
 			padding: 8px 1px 14px !important;
-			height: auto !important;
 
 			&:focus,
 			&:active {
@@ -153,11 +152,14 @@ form {
 				margin-top: 45px;
 				padding-top: 18px !important;
 				line-height: 30px;
+				resize: none;
+				height: 200px;
 			}
 
 			.drd__input {
 				border-bottom: solid 2px #8899BD !important;
 				padding: 8px 1px 14px;
+				height: auto !important;
 			}
 
 	/* Button */
