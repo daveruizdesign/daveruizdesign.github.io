@@ -4,6 +4,24 @@
 
 ========================================= */
 
+@media(min-width: 1650px) {
+	.column--first {
+		padding: 0 20px 0 0px;
+		margin: 0 -8px !important;
+	}
+
+	.column--second {
+		margin: 0 0 0 83px !important;
+		padding: 0 20px 0 0;
+	}
+
+	.column--third {
+		margin: 0 0 0 47px !important;
+		position: relative;
+		left: 8px;
+	}
+}
+
 .section--contact {
 	padding: 103px 0;
 	background: $blue6;
@@ -102,6 +120,10 @@ form {
 				color: #fff;
 			}
 
+			&.error {
+				border-color: #CF4F43 !important;
+			}
+
 		}
 
 		/* Placeholder text */
@@ -113,7 +135,7 @@ form {
 			.drd__text {
 				border-top: solid 2px #8899BD !important;
 				margin-top: 45px;
-				padding-top: 22px !important;
+				padding-top: 21px !important;
 			}
 
 			.drd__input {
@@ -145,6 +167,10 @@ form {
 
 	}
 
+		.btn-group {
+			padding-top: 20px;
+		}
+
 	/* Form errors */
 
 	div.error {
@@ -153,6 +179,7 @@ form {
 		text-transform: uppercase;
 		letter-spacing: .085em;
 		font-weight: 900;
+		position: absolute;
 	}
 
 /* Map with beacon */
@@ -166,6 +193,7 @@ form {
 	background-size: contain;
 	max-width: 418px;
 	position: relative;
+	margin: 40px 0 6px;
 }
 
 	.beacon{
