@@ -84,6 +84,7 @@ form {
 
 		.drd__input,
 		.drd__text {
+			font-family: $sans-serif;
 			background: none !important;
 			border: none !important;
 			border-radius: 0;
@@ -92,7 +93,7 @@ form {
 			border-radius: 0 !important;
 			font-size: 20px;
 			color: #fff;
-			padding: 10px 1px 12px !important;
+			padding: 8px 1px 14px !important;
 			height: auto !important;
 
 			&:focus,
@@ -103,19 +104,21 @@ form {
 
 		}
 
-			.drd__field::-webkit-input-placeholder,
-			.drd__field::-moz-placeholder,
-			.drd__field::-moz-placeholder,
-			.drd__field:-ms-input-placeholder  {
-				color: #8899BD !important;
-			}
+		/* Placeholder text */
+
+		::-webkit-input-placeholder {
+			color: #8899BD !important;
+		}
 
 			.drd__text {
 				border-top: solid 2px #8899BD !important;
+				margin-top: 45px;
+				padding-top: 22px !important;
 			}
 
 			.drd__input {
 				border-bottom: solid 2px #8899BD !important;
+				padding: 8px 1px 14px;
 			}
 
 	/* Button */
@@ -140,7 +143,6 @@ form {
 		letter-spacing: .085em;
 		font-weight: 900;
 	}
-
 
 /* Map with beacon */
 
