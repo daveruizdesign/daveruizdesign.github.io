@@ -203,6 +203,30 @@ form {
 
 /* Map with beacon */
 
+.map__location {
+	padding: 1px 16px;
+}
+
+.map__city {
+	font-size: 18px;
+	line-height: 23px;
+	color: #FEA33B;
+	letter-spacing: .16em;
+	margin: 0;
+	padding: 0;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.map__coordinates {
+	font-size: 18px;
+	line-height: 29px;
+	font-family: $serif;
+	padding: 7px 0 0;
+	display: block;
+}
+
 .map {
 	display: block;
 	width: 100%;
