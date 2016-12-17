@@ -27,10 +27,17 @@
 	background: $blue6;
 	color: #fff;
 	text-align: center;
+
+	.section__bg-heading:after {
+		content: "Contact";
+		color: #04153C;
+		text-shadow: 0 75px 300px rgba(0,0,0,.6);
+	}
+
 }
 
 	.section--contact__body {
-		padding: 110px 0;
+		padding: 110px 0 8px;
 	}
 
 /* Headings */
@@ -100,6 +107,13 @@ form {
 
 	.input-group {
 		margin-bottom: 71px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+ 	.input-group--text {
+		margin-bottom: 59px;
 	}
 
 		.drd__input,
@@ -137,7 +151,8 @@ form {
 			.drd__text {
 				border-top: solid 2px #8899BD !important;
 				margin-top: 45px;
-				padding-top: 21px !important;
+				padding-top: 18px !important;
+				line-height: 30px;
 			}
 
 			.drd__input {
@@ -170,7 +185,7 @@ form {
 	}
 
 		.btn-group {
-			padding-top: 20px;
+			padding-top: 0px;
 		}
 
 	/* Form errors */
