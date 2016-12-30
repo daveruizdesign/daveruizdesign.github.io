@@ -17,8 +17,8 @@
 		<div class="section__body">
 			<ul class="work-list">
 				{% for work in site.portfolio %}
-					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}">
-						<a href="#" class="card__inner">
+					<li class="card card--work card--{{ work.type }} chocolat-parent" data-chocolat-title="set title" data-number="{{ work.weight }}">
+						<a href="/img/work/{{ work.featured-image }}" class="card__inner chocolat-image">
 							{% if work.featured-image %}
 								<div class="card__layout">
 									<div class="card__front">
