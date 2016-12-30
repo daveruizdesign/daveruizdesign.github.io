@@ -1,8 +1,14 @@
 $(document).ready(function(){
-    $('.chocolat-parent').Chocolat();
+    $('.chocolat-parent').Chocolat({
+		images : [
+			{ src:'/img/work/mixpanel-marketing-pages.png', title: 'title1' },
+			{ src:'/img/work/various-mobile-concepts.png', title: 'title2' }
+		]
+	});
 });
-var $grid = $('.work-list');
 
+
+var $grid = $('.work-list');
 $grid.isotope({
 	itemSelector: '.card--work',
 	layoutMode: 'packery',
@@ -12,6 +18,8 @@ $grid.isotope({
 	sortBy : 'number',
 	sortAscending: true
 });
+
+
 
 $("#drd__form").validate({
 	rules: {
