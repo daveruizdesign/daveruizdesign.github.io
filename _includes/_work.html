@@ -34,12 +34,17 @@
 									</div>
 								</div>
 							{% else %}
-								<h3>
-									{{ work.title }}
-								</h3>
-								{{ work.customer }}
-								{{ work.year }}
-								{{ work.content }}
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										{{ work.title }}
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										{{ work.customer }} {{ work.year }}
+									</p>
+									<div class="card__content card--work__content">
+										{{ work.content }}
+									</div>
+								</div>
 							{% endif %}
 						</a>
 					</li>
