@@ -38,11 +38,25 @@
 }
 
 .card__inner:hover .card__back {
-	display: block;
+	display: table-cell;
 	position: absolute;
 	top: 0;
 	z-index: 100;
 }
+
+.card__layout {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+	.card__front,
+	.card__back {
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+	}
+
 
 	.card__inner  {
 		background: #304064;

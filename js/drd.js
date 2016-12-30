@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    $('.chocolat-parent').Chocolat();
+});
 var $grid = $('.work-list');
 
 $grid.isotope({
