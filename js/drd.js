@@ -1,7 +1,7 @@
 var $grid = $('.work-list');
 
 $grid.isotope({
-	itemSelector: '.carddd',
+	itemSelector: '.card--work',
 	layoutMode: 'packery',
 	getSortData: {
 		number: '[data-number] parseInt',

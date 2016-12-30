@@ -11,10 +11,6 @@
 	padding: 79px 0;
 	background-size: cover;
 	background-position: center center;
-
-	.btn {
-		float: right;
-	}
 }
 
 .work-list {
@@ -22,7 +18,9 @@
 	-webkit-margin-after: 0 !important;
 }
 
-.carddd {
+// card--animated, card--default
+
+.card--work {
 	width: 100%;
 	float: left;
 	margin: 0;
@@ -35,19 +33,29 @@
 
 }
 
-
-.card--work  {
-	background: #304064;
-	box-shadow: 0 30px 30px rgba(0,0,0,.1);
-	padding: 0px;
-	margin: 25px;
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	text-align: left;
+.card__back {
+	display: none;
 }
 
-.card--work img {
+.card__inner:hover .card__back {
+	display: block;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+	.card__inner  {
+		background: #304064;
+		box-shadow: 0 30px 30px rgba(0,0,0,.1);
+		padding: 0px;
+		margin: 25px;
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		text-align: left;
+	}
+
+.card__inner img {
 	width: 100%;
 	max-width: 100%;
 	height: auto;

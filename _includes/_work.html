@@ -17,18 +17,32 @@
 		<div class="section__body">
 			<ul class="work-list">
 				{% for work in site.portfolio %}
-					<li class="carddd" data-number="{{ work.weight }}">
-						<a href="#" class="card card--work">
-							<img src="/img/work/mixpanel-marketing-pages.png" alt="" />
+					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}">
+						<a href="#" class="card__inner">
+							{% if work.featured-image %}
+								<div class="card__layout">
+									<div class="card__front">
+										<img src="/img/work/{{ work.featured-image }}" alt="" />
+									</div>
+									<div class="card__back">
+										<h3>
+											{{ work.title }}
+										</h3>
+										{{ work.customer }}
+										{{ work.year }}
+										{{ work.content }}
+									</div>
+								</div>
+							{% else %}
+								<h3>
+									{{ work.title }}
+								</h3>
+								{{ work.customer }}
+								{{ work.year }}
+								{{ work.content }}
 
-							<h3>
-								{{ work.title }}
-							</h3>
 
-							{{ work.customer }}
-							{{ work.year }}
-							{{ work.content }}
-
+							{% endif %}
 
 						</a>
 					</li>
