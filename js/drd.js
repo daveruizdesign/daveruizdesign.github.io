@@ -10,7 +10,6 @@ $grid.isotope({
 	sortAscending: true
 });
 
-
 $("#drd__form").validate({
 	rules: {
 		name: {

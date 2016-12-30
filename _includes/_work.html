@@ -15,20 +15,25 @@
 			-->
 		</header>
 		<div class="section__body">
-			<ol class="work-list">
+			<ul class="work-list">
 				{% for work in site.portfolio %}
 					<li class="carddd" data-number="{{ work.weight }}">
 						<a href="#" class="card card--work">
+							<img src="/img/work/mixpanel-marketing-pages.png" alt="" />
+
 							<h3>
 								{{ work.title }}
 							</h3>
+
 							{{ work.customer }}
 							{{ work.year }}
 							{{ work.content }}
+
+
 						</a>
 					</li>
 				{% endfor %}
-			</ol>
+			</ul>
 		</div>
 	</div>
 </div>

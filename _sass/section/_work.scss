@@ -19,6 +19,7 @@
 
 .work-list {
 	margin: 0 -25px;
+	-webkit-margin-after: 0 !important;
 }
 
 .carddd {
@@ -26,6 +27,7 @@
 	float: left;
 	margin: 0;
 	padding: 0;
+	display: block;
 
 	@media(min-width: 992px) {
 		width: 25%;
@@ -34,16 +36,24 @@
 }
 
 
-
-
 .card--work  {
 	background: #304064;
 	box-shadow: 0 30px 30px rgba(0,0,0,.1);
-	padding: 20px;
+	padding: 0px;
 	margin: 25px;
 	display: block;
 	text-decoration: none;
 	color: #fff;
+	text-align: left;
+}
+
+.card--work img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	padding: 0 !important;
+	margin: 0 !important;
+	display: block;
 }
 
 .section--work__heading {
