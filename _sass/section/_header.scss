@@ -62,6 +62,7 @@ header[role="banner"] {
 			padding: 10px;
 			font-weight: 600;
 			display: inline-block;
+			-webkit-transition: all .375s ease;
 
 			&:hover,
 			&:focus,

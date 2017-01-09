@@ -14,6 +14,10 @@ $("#drd__form").validate({
 			required: true,
 			minlength: 2
 		},
+		message: {
+			required: true,
+			minlength: 2
+		}
 	},
 	messages: {
 		name: "Please specify your name",

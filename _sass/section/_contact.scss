@@ -71,12 +71,11 @@
 
 	.section--contact__lead a {
 		color: #fff;
-
+		-webkit-transition: color .375s ease;
 		&:hover,
 		&focus {
 			color: #FEA33B;
 		}
-
 	}
 
 /* Form */
