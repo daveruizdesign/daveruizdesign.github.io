@@ -22,6 +22,8 @@ $blue4: #1D2D4F;
 $blue5: #475677;
 $blue6: #04153C; //
 $blue7: #283757;
+// D6DBE4 - very light blue
+// 233764 - dark blue
 
 /* Font families */
 
@@ -42,6 +44,10 @@ $sans-serif: 'Circular Std','Work Sans', sans-serif;
 }
 
 // @include border-radius
+
+.text-center {
+	text-align: center;
+}
 
 /* =========================================
 

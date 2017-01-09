@@ -1,5 +1,7 @@
+/* Galleries */
+
 $(document).ready(function(){
-    $('.chocolat-parent').Chocolat({
+	$('.chocolat-parent').Chocolat({
 		images : [
 			{ src:'/img/work/mixpanel-marketing-pages.png', title: 'title1' },
 			{ src:'/img/work/various-mobile-concepts.png', title: 'title2' }
@@ -8,6 +10,10 @@ $(document).ready(function(){
 });
 
 
+
+/* Portfolio layout */
+
+/*
 var $grid = $('.work-list');
 $grid.isotope({
 	itemSelector: '.card--work',
@@ -18,8 +24,11 @@ $grid.isotope({
 	sortBy : 'number',
 	sortAscending: true
 });
+*/
 
 
+
+/* Form validation */
 
 $("#drd__form").validate({
 	rules: {

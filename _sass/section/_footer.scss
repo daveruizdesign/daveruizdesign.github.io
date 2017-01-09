@@ -1,3 +1,88 @@
 footer[role="contentinfo"] {
 	padding: 20px 0;
 }
+
+/* Availability */
+
+.availability {
+	margin: 33px 0 0 -8px;
+	display: block;
+	font-size: 16px;
+	color: #7987A6;
+}
+
+.availability__beacon {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	border-radius: 100px;
+	margin: 0px 11px 0 0;
+	position: relative;
+	top: 1px;
+}
+
+	.availability__beacon--limited {
+		background: $yellow;
+	}
+
+/* Signature */
+
+.signature--footer {
+	position: relative;
+	top: 20px;
+}
+
+/* Social links */
+
+.social-links {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.social-link {
+	display: inline-block;
+}
+
+	.social-link__wrapper {
+		display: block;
+		width: 46px;
+		height: 46px;
+		border: solid 2px #D6DBE4;
+		border-radius: 300px;
+		position: relative;
+		-webkit-transition: all .35s ease;
+
+		&:focus,
+		&:hover {
+			border-color: #233764;
+		}
+
+	}
+
+		.social-link__icon {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			background-image: url('/img/sprites/sprites.png');
+			background-repeat: no-repeat;
+			top: 50%;
+			bottom: 50%;
+			left: 50%;
+			right: 50%;
+			margin-top: -10px;
+			margin-left: -10px;
+
+			&.social-link__icon--twitter {
+				background-position: -9px -51px;
+
+			}
+
+			&.social-link__icon--dribble {
+				background-position: -10px -10px;
+			}
+
+			&.social-link__icon--email {
+				background-position: -10px -90px;
+			}
+
+		}
