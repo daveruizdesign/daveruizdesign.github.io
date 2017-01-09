@@ -32,21 +32,37 @@ footer[role="contentinfo"] {
 	top: 20px;
 }
 
+/* Copyright */
+
+.copyright {
+	font-size: 16px;
+	color: #7987A6;
+	margin: 0 0 0 -5px;
+	display: inline-block;
+	position: relative;
+	left: -10px;
+	top: 4px;
+}
+
 /* Social links */
 
 .social-links {
 	display: inline-block;
 	vertical-align: middle;
+	margin: 21px 0px 0 0px;
+	position: relative;
+	right: -8px;
 }
 
 .social-link {
 	display: inline-block;
+	margin-left: 9px;
 }
 
 	.social-link__wrapper {
 		display: block;
-		width: 46px;
-		height: 46px;
+		width: 44px;
+		height: 44px;
 		border: solid 2px #D6DBE4;
 		border-radius: 300px;
 		position: relative;

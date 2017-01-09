@@ -22,6 +22,9 @@ header[role="banner"] {
 		padding: 70px 0px 18px;
 		display: inline-block;
 		line-height: 1em;
+		letter-spacing: -.125em;
+		position: relative;
+		left: -2px;
 	}
 
 
@@ -31,7 +34,7 @@ header[role="banner"] {
 	list-style: none;
 	text-align: right;
 	display: block;
-	margin: 45px -12px 0 0;
+	margin: 45px -4px 0 0;
 }
 
 	.menu--primary li {
