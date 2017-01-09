@@ -1,30 +1,42 @@
+/* Gallery layout based on viewport */
+
+enquire.register("screen and (min-width: 0px) and (max-width:1649px)", {
+	match : function() {
+		var $grid = $('.work-list');
+		$grid.isotope({
+			itemSelector: '.card--work',
+			layoutMode: 'packery',
+			getSortData: {
+				number: '[data-number] parseInt',
+			},
+			sortBy : 'number',
+			sortAscending: true
+		});
+	},
+	unmatch : function() {
+		var $grid = $('.work-list');
+		$grid.isotope('destroy');
+	}
+});
+
+
+
 /* Galleries */
 
 $(document).ready(function(){
 	$('.chocolat-parent').Chocolat({
+		setTitle: 'Desk.com 2014',
 		images : [
-			{ src:'/img/work/mixpanel-marketing-pages.png', title: 'title1' },
+			{ src:'/img/work/mixpanel-marketing-pages.png', title: 'Dashboard Concept' },
 			{ src:'/img/work/various-mobile-concepts.png', title: 'title2' }
-		]
+		],
+		afterMarkup: function () {
+			this.elems.setTitle.prependTo(this.elems.content);
+			this.elems.description.prependTo(this.elems.setTitle);
+			console.log(this.elems);
+		}
 	});
 });
-
-
-
-/* Portfolio layout */
-
-/*
-var $grid = $('.work-list');
-$grid.isotope({
-	itemSelector: '.card--work',
-	layoutMode: 'packery',
-	getSortData: {
-		number: '[data-number] parseInt',
-	},
-	sortBy : 'number',
-	sortAscending: true
-});
-*/
 
 
 

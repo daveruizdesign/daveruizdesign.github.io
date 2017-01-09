@@ -1,31 +1,47 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Dave Ruiz
-description: UX Design
-bio: I'm an experienced Digital Product Designer based in Canada, and I have a strong passion for UX and visual design.
-email: your-email@domain.com
+# Dave Ruiz Design
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+email: your-email@domain.com
+
+# SEO/Meta
+title: Dave Ruiz
+description: I'm an experienced Digital Product Designer based in Canada, and I have a strong passion for UX and visual design.
+
+# Hero
+hero:
+  heading: UX Design
+  subheading: I'm an experienced Digital Product Designer based in Canada, and I have a strong passion for UX and visual design.
+
+# History
+history:
+  heading: My history
+  subheading: I've been fortunate enough to work with some really great teams.
+
+# Availability (Colors: Red, Green, Yellow)
+availability:
+  text: Accepting new projects on a limited basis.
+  color: yellow
+
+# Quote
+quote:
+  heading: Quotes
+  text: Dave is a consummate professional and a expert in user experience on the web. Unlike so many designers, he spends the time to understand your business goals and needs. With Dave, the design is always a vehicle to grow your business and to reduce friction for your users. The rarity and value of the skills he possesses cannot be overstated.
+  source:
+    name: J. M. Davis - President
+    company: Scrapbook.com
+
+# Copyright
+copyright: © 2016 Dave Ruiz. Please don’t steal.
+
+# Social links
 twitter_username: jekyllrb
-github_username:  jekyll
+
+
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 gems:
   - jekyll-feed
 exclude:
@@ -35,6 +51,9 @@ sass:
   sass_dir: _sass
   style: compressed
 
+
+
+# Collections
 collections:
   jobs:
     output: true
