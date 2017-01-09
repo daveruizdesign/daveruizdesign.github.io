@@ -23,9 +23,10 @@ $("#drd__form").validate({
 		name: "Please specify your name",
 		email: {
 			required: "We need your email address to contact you",
-			email: "Your email address must be in the format of name@domain.com"
+			email: "Please enter a valid email"
 		},
-		subject: "Please specify a subject"
+		subject: "Please specify a subject",
+		message: "Please write a message"
 	},
 	errorElement: "div",
 });
@@ -62,7 +63,7 @@ $(document).ready(function(){
 		setTitle: 'Desk.com 2014',
 		images : [
 			//{ src:'/img/work/mixpanel-marketing-pages.png', title: 'Dashboard Concept' },
-			{ src:'/img/work/various-mobile-concepts.png', title: 'title2' }
+			{ src:'http://placehold.it/800x800', title: 'Dashboard Concept' }
 		],
 		afterMarkup: function () {
 			this.elems.setTitle.prependTo(this.elems.content);
