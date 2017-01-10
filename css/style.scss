@@ -126,3 +126,58 @@ ol, ul {
 	@import "section/work";
 	@import "section/contact";
 	@import "section/footer";
+
+/* Section dividers */
+
+.divider {
+	width: 88px;
+	height: 88px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	top: -44px;
+	text-align: center;
+	margin: 0 0 -88px -44px;
+	z-index: 100;
+	display: table;
+}
+
+	.divider__arrow {
+		font-size: 35px;
+		color: #fff;
+		font-family: 'times new roman';
+		line-height: 1em;
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		top: -3px;
+	}
+
+	@-webkit-keyframes divider_history {
+		0%   {
+			-webkit-transform: rotate(-45deg);
+		}
+		100% {
+			-webkit-transform: rotate(45deg);
+		}
+	}
+
+	.divider--history {
+		background: $yellow;
+		-webkit-transform-origin: 50% 50%;
+		-webkit-animation: divider_history .25s normal forwards;
+		.divider__arrow {
+			-webkit-transform: rotate(-45deg);
+			-webkit-transform-origin: 50% 50%;
+		}
+	}
+
+	.divider--contact {
+		background: $blue1;
+		-webkit-transform-origin: 50% 50%;
+		-webkit-animation: divider_history .25s normal forwards;
+		.divider__arrow {
+			-webkit-transform: rotate(-45deg);
+			-webkit-transform-origin: 50% 50%;
+		}
+	}
