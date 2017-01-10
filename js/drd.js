@@ -2,6 +2,13 @@
 
 new WOW().init();
 
+skrollr.init({
+    render: function(data) {
+        //Log the current scroll position.
+        console.log(data.curTop);
+    }
+});
+
 /* Form validation */
 
 $("#drd__form").validate({
