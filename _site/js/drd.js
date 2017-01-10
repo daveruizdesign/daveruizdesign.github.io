@@ -53,21 +53,3 @@ enquire.register("screen and (min-width: 0px) and (max-width:1649px)", {
 		$grid.isotope('destroy');
 	}
 });
-
-
-
-/* Galleries */
-
-$(document).ready(function(){
-	$('#test').Chocolat({
-		setTitle: 'Desk.com 2014',
-		images : [
-			//{ src:'/img/work/mixpanel-marketing-pages.png', title: 'Dashboard Concept' },
-			{ src:'http://placehold.it/800x800', title: 'Dashboard Concept' }
-		],
-		afterMarkup: function () {
-			this.elems.setTitle.prependTo(this.elems.content);
-			this.elems.description.prependTo(this.elems.content);
-		}
-	});
-});

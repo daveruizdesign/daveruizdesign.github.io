@@ -50,6 +50,24 @@
 	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/Chocolat-0.4.14/dist/js/jquery.chocolat.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			{% for work in site.portfolio %}
+				/* Gallery: {{ work.title }} */
+				$('#{{ work.title|slugify }}').Chocolat({
+					setTitle: '{{ work.customer }} {{ work.year }}',
+					images : [
+						//{ src:'/img/work/mixpanel-marketing-pages.png', title: 'Dashboard Concept' },
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			{% endfor %}
+		});
+	</script>
 
 </body>
 </html>

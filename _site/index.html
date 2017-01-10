@@ -250,7 +250,7 @@
 		<div class="section__body">
 			<ul class="work-list">
 				
-					<li class="card card--work card--default" data-number="1" id="test">
+					<li class="card card--work card--default" data-number="1" id="360-mobile-app">
 						<a href="#" class="card__inner chocolat-image">
 							
 								<div class="card__layout">
@@ -262,145 +262,6 @@
 									</p>
 									<div class="card__content card--work__content">
 										<p>360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.</p>
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--animated" data-number="2" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<div class="card__front">
-										<img src="/img/work/mixpanel-marketing-pages.png" alt="" />
-									</div>
-									<div class="card__back">
-										<h3>
-											Marketing Pages
-										</h3>
-										Mixpanel
-										2013
-										<p>360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers. 360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.</p>
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--animated" data-number="3" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<div class="card__front">
-										<img src="/img/work/various-mobile-concepts.png" alt="" />
-									</div>
-									<div class="card__back">
-										<h3>
-											Mobile Concepts
-										</h3>
-										Various
-										2012-2016
-										
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--default" data-number="4" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<h3 class="card__heading card--work__heading">
-										Marketing site
-									</h3>
-									<p class="card__subheading card--work__subheading">
-										Desk.com 2014
-									</p>
-									<div class="card__content card--work__content">
-										<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--project" data-number="6" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<h3 class="card__heading card--work__heading">
-										Business Insights
-									</h3>
-									<p class="card__subheading card--work__subheading">
-										Desk.com 2014
-									</p>
-									<div class="card__content card--work__content">
-										
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--project" data-number="8" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<h3 class="card__heading card--work__heading">
-										Illustrations
-									</h3>
-									<p class="card__subheading card--work__subheading">
-										Various 2012-2014
-									</p>
-									<div class="card__content card--work__content">
-										
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--project" data-number="7" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<h3 class="card__heading card--work__heading">
-										Mixpanel Analytics
-									</h3>
-									<p class="card__subheading card--work__subheading">
-										Mixpanel 2013
-									</p>
-									<div class="card__content card--work__content">
-										
-
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
-					<li class="card card--work card--animated" data-number="5" id="">
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<div class="card__front">
-										<img src="/img/work/various-photography-themes.png" alt="" />
-									</div>
-									<div class="card__back">
-										<h3>
-											Photography Themes
-										</h3>
-										Various
-										2012-2013
-										<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
 
 									</div>
 								</div>
@@ -543,6 +404,24 @@
 	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/Chocolat-0.4.14/dist/js/jquery.chocolat.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+				/* Gallery: 360 Mobile App */
+				$('#360-mobile-app').Chocolat({
+					setTitle: 'Desk.com 2015',
+					images : [
+						//{ src:'/img/work/mixpanel-marketing-pages.png', title: 'Dashboard Concept' },
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+		});
+	</script>
 
 </body>
 </html>
