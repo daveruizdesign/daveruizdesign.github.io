@@ -1,3 +1,7 @@
+/* WOW */
+
+new WOW().init();
+
 /* Form validation */
 
 $("#drd__form").validate({

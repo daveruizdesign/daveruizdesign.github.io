@@ -20,9 +20,9 @@
 	<link rel="apple-touch-startup-image" href="ios/startup.png">
 	-->
 
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/js/Chocolat-0.4.14/dist/css/chocolat.css">
-
+	<link rel="stylesheet" href="/css/animate.css-master/animate.min.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/js/Chocolat-0.4.14/dist/css/chocolat.css" />
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Work+Sans:400,500,700,900" rel="stylesheet">
 
 </head>
@@ -250,7 +250,7 @@
 		<div class="section__body">
 			<ul class="work-list">
 				
-					<li class="card card--work card--default" data-number="1" id="360-mobile-app">
+					<li class="animated fadeInUp wow card card--work card--default" data-number="1" id="360-mobile-app" data-wow-delay="0s">
 						<a href="#" class="card__inner chocolat-image">
 							
 								<div class="card__layout">
@@ -262,6 +262,105 @@
 									</p>
 									<div class="card__content card--work__content">
 										<p>360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.</p>
+
+									</div>
+								</div>
+							
+						</a>
+					</li>
+				
+					<li class="animated fadeInUp wow card card--work card--animated" data-number="2" id="marketing-pages" data-wow-delay=".25s">
+						<a href="#" class="card__inner chocolat-image">
+							
+								<div class="card__layout">
+									<div class="card__front">
+										<img src="/img/work/mixpanel-marketing-pages.png" alt="" />
+									</div>
+									<div class="card__back">
+										<h3>
+											Marketing Pages
+										</h3>
+										Mixpanel
+										2013
+										<p>360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers. 360 can manage all of your business needs, from customer support to managing leads. A 360° view of your customers.</p>
+
+									</div>
+								</div>
+							
+						</a>
+					</li>
+				
+					<li class="animated fadeInUp wow card card--work card--animated" data-number="3" id="mobile-concepts" data-wow-delay=".5s">
+						<a href="#" class="card__inner chocolat-image">
+							
+								<div class="card__layout">
+									<div class="card__front">
+										<img src="/img/work/various-mobile-concepts.png" alt="" />
+									</div>
+									<div class="card__back">
+										<h3>
+											Mobile Concepts
+										</h3>
+										Various
+										2012-2016
+										
+
+									</div>
+								</div>
+							
+						</a>
+					</li>
+				
+					<li class="animated fadeInUp wow card card--work card--default" data-number="4" id="marketing-site" data-wow-delay=".75s">
+						<a href="#" class="card__inner chocolat-image">
+							
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										Marketing site
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Desk.com 2014
+									</p>
+									<div class="card__content card--work__content">
+										<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
+
+									</div>
+								</div>
+							
+						</a>
+					</li>
+				
+					<li class="animated fadeInUp wow card card--work card--project" data-number="6" id="business-insights" data-wow-delay="1s">
+						<a href="#" class="card__inner chocolat-image">
+							
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										Business Insights
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Desk.com 2014
+									</p>
+									<div class="card__content card--work__content">
+										
+
+									</div>
+								</div>
+							
+						</a>
+					</li>
+				
+					<li class="animated fadeInUp wow card card--work card--project" data-number="8" id="illustrations" data-wow-delay="1.25s">
+						<a href="#" class="card__inner chocolat-image">
+							
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										Illustrations
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Various 2012-2014
+									</p>
+									<div class="card__content card--work__content">
+										
 
 									</div>
 								</div>
@@ -411,6 +510,71 @@
 				/* Gallery: 360 Mobile App */
 				$('#360-mobile-app').Chocolat({
 					setTitle: 'Desk.com 2015',
+					images : [
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+				/* Gallery: Marketing Pages */
+				$('#marketing-pages').Chocolat({
+					setTitle: 'Mixpanel 2013',
+					images : [
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+				/* Gallery: Mobile Concepts */
+				$('#mobile-concepts').Chocolat({
+					setTitle: 'Various 2012-2016',
+					images : [
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+				/* Gallery: Marketing site */
+				$('#marketing-site').Chocolat({
+					setTitle: 'Desk.com 2014',
+					images : [
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+				/* Gallery: Business Insights */
+				$('#business-insights').Chocolat({
+					setTitle: 'Desk.com 2014',
+					images : [
+						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						this.elems.setTitle.prependTo(this.elems.content);
+						this.elems.description.prependTo(this.elems.content);
+					}
+				});
+			
+				/* Gallery: Illustrations */
+				$('#illustrations').Chocolat({
+					setTitle: 'Various 2012-2014',
 					images : [
 						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
 						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
