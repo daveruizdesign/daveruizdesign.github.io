@@ -10,6 +10,10 @@
 
 ========================================= */
 
+.hidden {
+	opacity: 0;
+}
+
 /* Colors */
 
 $orange: #F67C47;
@@ -52,6 +56,15 @@ $sans-serif: 'Circular Std','Work Sans', sans-serif;
 .text--right {
 	text-align: right;
 }
+
+/*
+	Bootstrap breakpoints
+	320px
+	480px
+	768px
+	992px
+	1200px
+*/
 
 /* =========================================
 
