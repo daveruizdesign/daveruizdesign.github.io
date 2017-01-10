@@ -103,20 +103,22 @@ ol, ul {
 	overflow: hidden;
 }
 
-	.section__bg-heading:after {
-		width: 100%;
-		line-height: 1em;
-		font-size: 600px;
-		font-family: $sans-serif;
-		font-weight: 900;
-		letter-spacing: -6px;
-		text-transform: uppercase;
-		position: absolute;
-		bottom: -123px;
-		left: 50%;
-		right: 50%;
-		display: inline-block;
-		margin-left: -1085px;
+	@media(min-width: 992px) {
+		.section__bg-heading:after {
+			width: 100%;
+			line-height: 1em;
+			font-size: 600px;
+			font-family: $sans-serif;
+			font-weight: 900;
+			letter-spacing: -6px;
+			text-transform: uppercase;
+			position: absolute;
+			bottom: -123px;
+			left: 50%;
+			right: 50%;
+			display: inline-block;
+			margin-left: -1085px;
+		}
 	}
 
 	@import "section/header";
