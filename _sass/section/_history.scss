@@ -1,3 +1,43 @@
+
+.divider {
+	width: 88px;
+	height: 88px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	top: -44px;
+	background: #2553B1;
+	text-align: center;
+	margin: 0 0 -88px -44px;
+	z-index: 100;
+	display: table;
+	//-webkit-transform: rotate(-45deg);
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation: divider_history .25s normal forwards;
+}
+
+	.divider__arrow {
+		font-size: 35px;
+		color: #fff;
+		font-family: 'times new roman';
+		line-height: 1em;
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		top: -3px;
+		-webkit-transform: rotate(-45deg);
+		-webkit-transform-origin: 50% 50%;
+	}
+
+	@-webkit-keyframes divider_history {
+		0%   {
+			-webkit-transform: rotate(-45deg);
+		}
+		100% {
+			-webkit-transform: rotate(45deg);
+		}
+	}
+
 /* =========================================
 
 	Section: History
