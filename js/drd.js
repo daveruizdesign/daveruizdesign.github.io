@@ -58,6 +58,10 @@ enquire.register("screen and (min-width: 0px) and (max-width:1649px)", {
 			sortBy : 'number',
 			sortAscending: true
 		});
+		$(window).on('resize', function(){
+			$grid.isotope('reloadItems');
+			console.log("Window resized.");
+		});
 	},
 	unmatch : function() {
 		var $grid = $('.work-list');
