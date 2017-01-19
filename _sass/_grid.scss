@@ -7,6 +7,12 @@
 	}
 }
 
+@media(min-width: 1400px) {
+	.container {
+		max-width: 1380px;
+	}
+}
+
 @media(min-width: 1450px) {
 	.container {
 		max-width: 1435px;

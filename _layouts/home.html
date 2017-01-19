@@ -29,17 +29,17 @@
 <body>
 
 	{% comment %}
-	{% endcomment %}
-
 	{% include _header.html %}
 	{% include _hero.html %}
 	{% include _history.html %}
 	{% include _quote.html %}
+	{% endcomment %}
+
 	{% include _work.html %}
-	{% include _contact.html %}
-	{% include _footer.html %}
 
 	{% comment %}
+	{% include _contact.html %}
+	{% include _footer.html %}
 	{% endcomment %}
 
 	<!-- @TODO: minifiy via Gulp -->
@@ -56,10 +56,11 @@
 		$(document).ready(function(){
 			{% for work in site.portfolio %}
 				/* Gallery: {{ work.title }} */
-				$('#{{ work.title|slugify }}').Chocolat({
+				$('#card--{{ work.title|slugify }}').Chocolat({
 					setTitle: '{{ work.customer }} {{ work.year }}',
+					enableZoom: true,
 					images : [
-						{ src:'http://placehold.it/800x800', title: 'Dashboard Concept #1' },
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
 						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
 					],
 					afterMarkup: function () {

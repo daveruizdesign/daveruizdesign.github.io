@@ -136,3 +136,20 @@
     background-color: #000 !important;
     opacity: 0.65 !important;
 }
+
+.card__view-project-cta {
+	font-family: $serif;
+	font-size: 15px;
+	letter-spacing: .3em;
+	line-height: 29px;
+	text-transform: uppercase;
+}
+
+#card--360-mobile-app {
+	.card__inner {
+		padding-top: 110px;
+		background-image: url('/img/backgrounds/work/phone/phone@1x.png');
+		background-position: -60px 30px;
+		background-repeat: no-repeat;
+	}
+}
