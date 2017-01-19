@@ -23,7 +23,7 @@
 }
 
 .work-list {
-	margin: 0 -25px;
+	margin: 45px -25px 0;
 	-webkit-margin-after: 0 !important;
 }
 
@@ -44,16 +44,20 @@
 }
 
 .card__inner:hover {
-	transform: scale(1.03);
+	transform: scale(1.02);
+
+	.card__back {
+		display: table;
+	}
+
 }
 
 .card__back {
-	display: block;
+	display: none;
 }
 
 //.card__inner:hover
 .card__back {
-	display: table-cell;
 	position: absolute;
 	top: 0;
 	z-index: 100;

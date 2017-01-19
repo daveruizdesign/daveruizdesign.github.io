@@ -71,27 +71,6 @@
 						</a>
 					</li>
 				
-					<li class="card card--work card--animated" data-number="2" id="card--marketing-pages" >
-						<a href="#" class="card__inner chocolat-image">
-							
-								<div class="card__layout">
-									<div class="card__front">
-										<img src="/img/work/mixpanel-marketing-pages.png" alt="" />
-									</div>
-									<div class="card__back">
-										<div class="card__back__inner">
-											<h3>
-												Marketing Pages
-											</h3>
-											Mixpanel
-											2013
-										</div>
-									</div>
-								</div>
-							
-						</a>
-					</li>
-				
 			</ul>
 		</div>
 	</div>
@@ -116,25 +95,6 @@
 				/* Gallery: 360 Mobile App */
 				$('#card--360-mobile-app').Chocolat({
 					setTitle: 'Desk.com 2015',
-					enableZoom: true,
-					images : [
-						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
-						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
-					],
-					afterMarkup: function () {
-						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
-
-						console.log(this.elems);
-					}
-				});
-			
-				/* Gallery: Marketing Pages */
-				$('#card--marketing-pages').Chocolat({
-					setTitle: 'Mixpanel 2013',
 					enableZoom: true,
 					images : [
 						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
