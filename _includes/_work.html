@@ -25,12 +25,13 @@
 										<img src="/img/work/{{ work.featured-image }}" alt="" />
 									</div>
 									<div class="card__back">
-										<h3>
-											{{ work.title }}
-										</h3>
-										{{ work.customer }}
-										{{ work.year }}
-										{{ work.content }}
+										<div class="card__back__inner">
+											<h3>
+												{{ work.title }}
+											</h3>
+											{{ work.customer }}
+											{{ work.year }}
+										</div>
 									</div>
 								</div>
 							{% else %}

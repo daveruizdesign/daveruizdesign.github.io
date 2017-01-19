@@ -43,19 +43,35 @@
 
 }
 
-.card__back {
-	display: none;
+.card__inner:hover {
+	transform: scale(1.03);
 }
 
-.card__inner:hover .card__back {
+.card__back {
+	display: block;
+}
+
+//.card__inner:hover
+.card__back {
 	display: table-cell;
 	position: absolute;
 	top: 0;
 	z-index: 100;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #FEA33B;
+	background: rgba(254,163,59,.95);
+}
+
+.card__back__inner {
+	padding: 30px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .card__layout {
-
+	position: relative;
 }
 
 	.card__front,
@@ -75,6 +91,7 @@
 		text-decoration: none;
 		color: #fff;
 		text-align: left;
+		-webkit-transition: all .2s ease;
 	}
 
 .card__inner img {
