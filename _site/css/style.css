@@ -963,6 +963,9 @@ ol, ul {
 @media (min-width: 550px) {
   .container {
     width: 100%; } }
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px; } }
 @media (min-width: 1400px) {
   .container {
     max-width: 1380px; } }
@@ -1555,7 +1558,11 @@ header[role="banner"] {
 
   #card--mixpanel-analytics {
     left: 740px;
-    top: 350px; } }
+    top: 350px; }
+
+  #card--illustrations {
+    left: 1110px;
+    top: 469px; } }
 /* =========================================
 
 	Lightbox
