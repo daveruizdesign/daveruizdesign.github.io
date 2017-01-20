@@ -1528,7 +1528,7 @@ header[role="banner"] {
 
 @media (min-width: 1650px) {
   .work-list {
-    height: 1000px;
+    height: 1400px;
     position: relative; }
 
   .card--work {
@@ -1562,7 +1562,11 @@ header[role="banner"] {
 
   #card--illustrations {
     left: 1110px;
-    top: 469px; } }
+    top: 469px; }
+
+  #card--website-templates {
+    top: 820px;
+    left: 0; } }
 /* =========================================
 
 	Lightbox

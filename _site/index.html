@@ -245,6 +245,32 @@
 						</a>
 					</li>
 				
+					<li class="card card--work card--animated" data-number="9" id="card--website-templates" >
+						<a href="#card--website-templates" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<div class="card__front">
+										<img src="/img/work//9/feature@1x.png" alt="" class="card__featured-image"/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													Website Templates
+												</h3>
+												<div class="card__back__content">
+													eSite
+													2011
+												</div>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+						</a>
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -402,6 +428,25 @@
 				/* Gallery: Illustrations */
 				$('#card--illustrations').Chocolat({
 					setTitle: 'Various 2012-2014',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: Website Templates */
+				$('#card--website-templates').Chocolat({
+					setTitle: 'eSite 2011',
 					enableZoom: true,
 					images : [
 						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
