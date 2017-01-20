@@ -1871,7 +1871,9 @@ footer[role="contentinfo"] {
 /* Signature */
 .signature--footer {
   position: relative;
-  top: 20px; }
+  top: 20px;
+  max-width: 100%;
+  height: auto; }
 
 /* Copyright */
 .copyright {
