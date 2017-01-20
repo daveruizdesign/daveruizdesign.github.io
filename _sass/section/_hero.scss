@@ -28,14 +28,17 @@
 	margin: 0;
 	padding: 0;
 	line-height: 1em;
-	img {
-		height: auto;
-		max-width: 100%;
-		//width: 100%;
-		margin: 0 0 -14px 0px;
-		vertical-align: bottom;
-	}
 }
+
+	.site__title__signature {
+		height: 102px;
+		width: 336px;
+		background: url('/img/brand/signature--light@1x.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0 0 -14px 0px;
+		display: inline-block;
+	}
 
 /* Site description */
 

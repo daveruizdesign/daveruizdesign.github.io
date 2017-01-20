@@ -1076,11 +1076,15 @@ header[role="banner"] {
   margin: 0;
   padding: 0;
   line-height: 1em; }
-  .site__title img {
-    height: auto;
-    max-width: 100%;
-    margin: 0 0 -14px 0px;
-    vertical-align: bottom; }
+
+.site__title__signature {
+  height: 102px;
+  width: 336px;
+  background: url("/img/brand/signature--light@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 -14px 0px;
+  display: inline-block; }
 
 /* Site description */
 .site__description--large {
@@ -1444,6 +1448,9 @@ header[role="banner"] {
 
 /* Card types */
 .card--default .card__layout {
+  padding: 25px; }
+
+.card--quote .card__layout {
   padding: 25px; }
 
 .card__featured-image {
@@ -1950,6 +1957,10 @@ footer[role="contentinfo"] {
   vertical-align: middle;
   position: relative;
   top: -3px; }
+
+.divider__arrow__icon:before {
+  content: '↓';
+  display: block; }
 
 .divider--history {
   background: #FEA33B;

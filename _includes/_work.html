@@ -19,9 +19,9 @@
 				{% assign sorted_work = (site.portfolio | sort: 'weight') %}
 				{% for work in sorted_work %}
 					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}" id="card--{{ work.title|slugify }}" >
-						<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
-							<div class="card__layout">
-								{% if work.featured-image %}
+						{% if work.type == "animated" %}
+							<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
+								<div class="card__layout">
 									<div class="card__front">
 										<img src="/img/work/{{ work.featured-image }}" alt="" class="card__featured-image"/>
 									</div>
@@ -39,7 +39,22 @@
 											</div>
 										</div>
 									</div>
-								{% else %}
+								</div>
+							</a>
+						{% elsif work.type == "quote" %}
+							<div class="card__inner">
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										{{ work.title }}
+									</h3>
+									<div class="card__content card--work__content">
+										{{ work.content }}
+									</div>
+								</div>
+							</div>
+						{% else %}
+							<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
+								<div class="card__layout">
 									<h3 class="card__heading card--work__heading">
 										{{ work.title }}
 									</h3>
@@ -52,9 +67,9 @@
 									<span class="card__view-project-cta">
 										View Project →
 									</span>
-								{% endif %}
-							</div>
-						</a>
+								</div>
+							</a>
+						{% endif %}
 					</li>
 				{% endfor %}
 			</ul>

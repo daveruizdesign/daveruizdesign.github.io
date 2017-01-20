@@ -169,6 +169,11 @@ ol, ul {
 		top: -3px;
 	}
 
+		.divider__arrow__icon:before {
+			content: '↓';
+			display: block;
+		}
+
 	.divider--history {
 		background: $yellow;
 		-webkit-transform: rotate(-45deg);
