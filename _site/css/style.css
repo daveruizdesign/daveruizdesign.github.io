@@ -1451,7 +1451,7 @@ header[role="banner"] {
   padding: 25px; }
 
 .card--quote .card__layout {
-  padding: 25px; }
+  padding: 30px 36px; }
 
 .card__featured-image {
   width: 100%;
@@ -1514,7 +1514,7 @@ header[role="banner"] {
     content: '“';
     display: block;
     position: absolute;
-    top: 0;
+    top: -2px;
     left: -10px;
     color: #B5C2DE;
     opacity: .55; }
@@ -1529,11 +1529,13 @@ header[role="banner"] {
 .card__blockquote__author {
   font-family: "baskerville", "Libre Baskerville", serif;
   color: #B5C2DE;
-  letter-spacing: .2em; }
+  letter-spacing: .2em;
+  margin: 24px 1px 0; }
 
 .card__blockquote__title {
   color: #FEA33B;
-  letter-spacing: .2em; }
+  letter-spacing: .2em;
+  margin: 3px 1px 11px; }
 
 /* =========================================
 
