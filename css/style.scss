@@ -185,6 +185,7 @@ ol, ul {
 
 	.divider--contact {
 		background: $blue1;
+		-webkit-transform: rotate(-45deg);
 		.divider__arrow {
 			-webkit-transform: rotate(-45deg);
 			-webkit-transform-origin: 50% 50%;

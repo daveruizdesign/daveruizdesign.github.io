@@ -2007,7 +2007,8 @@ footer[role="contentinfo"] {
     -webkit-transform-origin: 50% 50%; }
 
 .divider--contact {
-  background: #2553B1; }
+  background: #2553B1;
+  -webkit-transform: rotate(-45deg); }
   .divider--contact .divider__arrow {
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 50% 50%; }
