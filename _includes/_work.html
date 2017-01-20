@@ -44,12 +44,19 @@
 						{% elsif work.type == "quote" %}
 							<div class="card__inner">
 								<div class="card__layout">
-									<h3 class="card__heading card--work__heading">
-										{{ work.title }}
-									</h3>
-									<div class="card__content card--work__content">
-										{{ work.content }}
-									</div>
+									<blockquote class="card__blockquote">
+										<div class="card__blockquote__text">
+											{{ work.content }}
+										</div>
+										<cite>
+											<span class="card__blockquote__author">
+												{{ work.quote.author }}
+											</span>
+											<span class="card__blockquote__title">
+												{{ work.quote.title }}
+											</span>
+										</cite>
+									</blockquote>
 								</div>
 							</div>
 						{% else %}
