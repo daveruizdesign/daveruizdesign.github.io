@@ -1503,6 +1503,26 @@ header[role="banner"] {
 #card--360-mobile-app .card__layout {
   padding: 25px 32px; }
 
+#card--marketing-site .card__inner {
+  padding-top: 97px;
+  background-image: url("/img/backgrounds/work/desktop/desktop@1x.png");
+  background-position: -265px -35px;
+  background-repeat: no-repeat; }
+#card--marketing-site .card__layout {
+  padding: 25px 32px; }
+#card--marketing-site .card__view-project-cta {
+  margin: 19px 0 21px; }
+
+#card--mixpanel-analytics .card__inner {
+  padding-top: 78px;
+  background-image: url("/img/backgrounds/work/laptop/laptop@1x.png");
+  background-position: -265px -35px;
+  background-repeat: no-repeat; }
+#card--mixpanel-analytics .card__layout {
+  padding: 25px 32px; }
+#card--mixpanel-analytics .card__view-project-cta {
+  margin: 19px 0 21px; }
+
 @media (min-width: 1650px) {
   .work-list {
     height: 1000px;
