@@ -196,7 +196,7 @@
 
 @media(min-width: 1650px) {
 	.work-list {
-		height: 3000px;
+		height: 1000px;
 		position: relative;
 	}
 	.card--work {
@@ -205,28 +205,28 @@
 
 		#card--360-mobile-app {
 			top: 0;
-			left: -18px;
+			left: 0;
 		}
 		#card--marketing-pages {
 			top: 0;
-			left: 351px;
+			left: 370px;
 		}
 		#card--mobile-concepts {
-			left: 721px;
+			left: 740px;
 		}
 		#card--marketing-site {
-			left: 1091px;
+			left: 1110px;
 		}
 		#card--photography-themes {
 			top: 470px;
-			left: -18px;
+			left: 0;
 		}
 		#card--business-insights {
 			top: 410px;
-			left: 351px;
+			left: 370px;
 		}
 		#card--mixpanel-analytics {
-			left: 721px;
+			left: 740px;
 			top: 350px;
 		}
 }
