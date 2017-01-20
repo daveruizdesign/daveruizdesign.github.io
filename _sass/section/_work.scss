@@ -52,11 +52,14 @@
 		width: 25%;
 	}
 
-	&:hover .card__inner {
-		transform: scale(1.02);
-		color: #fff;
+	&:hover {
+		.card__inner {
+			transform: scale(1.02);
+			color: #fff;
+			background: #405582;
+		}
 		.card__back {
-			display: table;
+			opacity: 1;
 		}
 	}
 
@@ -71,7 +74,7 @@
 		text-decoration: none;
 		color: #fff;
 		text-align: left;
-		-webkit-transition: all .2s ease;
+		-webkit-transition: all .25s ease;
 	}
 
 		.card__layout {
@@ -86,7 +89,7 @@
 			}
 
 			.card__back {
-				display: none;
+				display: block;
 				position: absolute;
 				top: 0;
 				z-index: 100;
@@ -95,19 +98,28 @@
 				bottom: 0;
 				background: #FEA33B;
 				background: rgba(254,163,59,.95);
+				opacity: 0;
+				-webkit-transition: all .25s ease;
 			}
 
 				.card__back__inner {
-					padding: 30px;
-					text-align: center;
-					vertical-align: middle;
+					display: table;
+					width: 100%;
+					height: 100%;
 				}
 
+					.card__back__inner__content {
+						display: table-cell;
+						text-align: center;
+						vertical-align: middle;
+						padding: 30px;
+					}
 
+				/* Card types */
 
-
-
-
+				.card--default .card__layout {
+					padding: 25px;
+				}
 
 
 .card__featured-image {
@@ -117,16 +129,6 @@
 	padding: 0 !important;
 	margin: 0 !important;
 	display: block;
-}
-
-.card--work__content {
-	font-size: 18px;
-	line-height: 26px;
-	color: #B6C2DF;
-}
-
-.card--default .card__layout {
-	padding: 25px;
 }
 
 .card--work__heading {
@@ -143,6 +145,12 @@
 	margin: -1px 0 15px 0;
 	color: #FEA33B;
 	letter-spacing: .195em;
+}
+
+.card--work__content {
+	font-size: 18px;
+	line-height: 26px;
+	color: #B6C2DF;
 }
 
 .card__view-project-cta {
