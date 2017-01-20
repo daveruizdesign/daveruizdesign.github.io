@@ -1064,7 +1064,7 @@ header[role="banner"] {
   color: #fff;
   text-align: center;
   padding: 160px 0 125px; }
-  @media (min-width: 992px) {
+  @media (min-width: 1140px) {
     .section--hero {
       padding: 209px 0 384px; } }
   @media (min-width: 2300px) {
@@ -1111,6 +1111,10 @@ header[role="banner"] {
     margin-left: -80px; }
 
 @media (min-width: 992px) {
+  .site__description--large {
+    font-size: 125px;
+    letter-spacing: 3px; } }
+@media (min-width: 1140px) {
   .site__description--large {
     font-size: 175px;
     letter-spacing: 3px; } }
