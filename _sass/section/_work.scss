@@ -194,6 +194,43 @@
 	}
 }
 
+@media(min-width: 1650px) {
+	.work-list {
+		height: 3000px;
+		position: relative;
+	}
+	.card--work {
+		position: absolute;
+	}
+
+		#card--360-mobile-app {
+			top: 0;
+			left: -18px;
+		}
+		#card--marketing-pages {
+			top: 0;
+			left: 351px;
+		}
+		#card--mobile-concepts {
+			left: 721px;
+		}
+		#card--marketing-site {
+			left: 1091px;
+		}
+		#card--photography-themes {
+			top: 470px;
+			left: -18px;
+		}
+		#card--business-insights {
+			top: 410px;
+			left: 351px;
+		}
+		#card--mixpanel-analytics {
+			left: 721px;
+			top: 350px;
+		}
+}
+
 /* =========================================
 
 	Lightbox

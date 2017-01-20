@@ -197,6 +197,28 @@
 						</a>
 					</li>
 				
+					<li class="card card--work card--project" data-number="7" id="card--mixpanel-analytics" >
+						<a href="#card--mixpanel-analytics" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<h3 class="card__heading card--work__heading">
+										Mixpanel Analytics
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Mixpanel 2013
+									</p>
+									<div class="card__content card--work__content">
+										
+
+									</div>
+									<span class="card__view-project-cta">
+										View Project →
+									</span>
+								
+							</div>
+						</a>
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -316,6 +338,25 @@
 				/* Gallery: Business Insights */
 				$('#card--business-insights').Chocolat({
 					setTitle: 'Desk.com 2014',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: Mixpanel Analytics */
+				$('#card--mixpanel-analytics').Chocolat({
+					setTitle: 'Mixpanel 2013',
 					enableZoom: true,
 					images : [
 						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
