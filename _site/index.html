@@ -273,7 +273,13 @@
 							<a href="#card--marketing-pages" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//2/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//2/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -299,7 +305,13 @@
 							<a href="#card--mobile-concepts" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//3/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//3/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -347,7 +359,13 @@
 							<a href="#card--photography-themes" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//5/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//5/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -373,7 +391,13 @@
 							<a href="#card--business-insights" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//6/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//6/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -421,7 +445,13 @@
 							<a href="#card--illustrations" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//8/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//8/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -447,7 +477,13 @@
 							<a href="#card--website-templates" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//9/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//9/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -496,7 +532,13 @@
 							<a href="#card--ecommerce-sites" class="card__inner chocolat-image">
 								<div class="card__layout">
 									<div class="card__front">
-										<img src="/img/work//11/feature@1x.png" alt="" class="card__featured-image"/>
+										<img
+											src="/img/work//11/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+											data-href="img/work/2/slides/1.jpg"
+										/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
@@ -685,75 +727,80 @@
 				/* Gallery: 360 Mobile App */
 				$('#card--360-mobile-app').Chocolat({
 					setTitle: 'Desk.com 2015',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--360-mobile-app').data('href'),
 					images : [
 						
-							{ src:'/img/work/1/slides/1.png', title: 'A title for #1.' },
+							{ src:'/img/work/1/slides/1.png', title: '360 Opportunities' },
 						
-							{ src:'/img/work/1/slides/2.png', title: 'A title for #2.' },
+							{ src:'/img/work/1/slides/2.png', title: '360 Apps' },
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Joey Lomanto */
 				$('#card--joey-lomanto').Chocolat({
 					setTitle: ' ',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--joey-lomanto').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: eCommerce Sites */
 				$('#card--ecommerce-sites').Chocolat({
 					setTitle: 'Various 2011-2013',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--ecommerce-sites').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Watch Concept */
 				$('#card--watch-concept').Chocolat({
 					setTitle: 'Desk.com 2015',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--watch-concept').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Marketing Pages */
 				$('#card--marketing-pages').Chocolat({
 					setTitle: 'Mixpanel 2013',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--marketing-pages').data('href'),
 					images : [
 						
 							{ src:'/img/work/2/slides/1.jpg', title: 'A title for #1.' },
@@ -767,122 +814,129 @@
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Mobile Concepts */
 				$('#card--mobile-concepts').Chocolat({
 					setTitle: 'Various 2012-2016',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--mobile-concepts').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Marketing site */
 				$('#card--marketing-site').Chocolat({
 					setTitle: 'Desk.com 2014',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--marketing-site').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Photography Themes */
 				$('#card--photography-themes').Chocolat({
 					setTitle: 'Various 2012-2013',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--photography-themes').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Business Insights */
 				$('#card--business-insights').Chocolat({
 					setTitle: 'Desk.com 2014',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--business-insights').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Mixpanel Analytics */
 				$('#card--mixpanel-analytics').Chocolat({
 					setTitle: 'Mixpanel 2013',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--mixpanel-analytics').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Illustrations */
 				$('#card--illustrations').Chocolat({
 					setTitle: 'Various 2012-2014',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--illustrations').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			
 				/* Gallery: Website Templates */
 				$('#card--website-templates').Chocolat({
 					setTitle: 'eSite 2011',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--website-templates').data('href'),
 					images : [
 						
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			

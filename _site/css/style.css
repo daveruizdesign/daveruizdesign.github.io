@@ -1668,14 +1668,6 @@ header[role="banner"] {
   background-color: #000 !important;
   opacity: 0.65 !important; }
 
-.chocolat-bottom {
-  display: none !important; }
-
-.chocolat-wrapper .chocolat-left,
-.chocolat-wrapper .chocolat-right {
-  top: 0% !important;
-  z-index: 9999; }
-
 /* =========================================
 
 	Section: Contact

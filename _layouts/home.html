@@ -58,7 +58,8 @@
 				/* Gallery: {{ work.title }} */
 				$('#card--{{ work.title|slugify }}').Chocolat({
 					setTitle: '{{ work.customer }} {{ work.year }}',
-					enableZoom: true,
+					// imageSource: "[data-href]",
+					imageSource: $('#card--{{ work.title|slugify }}').data('href'),
 					images : [
 						{% for slide in work.slides %}
 							{ src:'/img/work/{{work.weight}}/slides/{{ slide.src }}', title: '{{ slide.title }}' },
@@ -66,10 +67,10 @@
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				});
 			{% endfor %}
