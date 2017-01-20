@@ -1078,9 +1078,9 @@ header[role="banner"] {
   line-height: 1em; }
   .site__title img {
     height: auto;
-    max-width: 400px;
-    width: 100%;
-    margin: 0 0 -14px 0px; }
+    max-width: 100%;
+    margin: 0 0 -14px 0px;
+    vertical-align: bottom; }
 
 /* Site description */
 .site__description--large {
