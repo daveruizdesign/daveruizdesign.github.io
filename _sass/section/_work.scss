@@ -23,7 +23,7 @@
 }
 
 .work-list {
-	margin: 54px -25px 0;
+	margin: 54px -26px 0;
 	-webkit-margin-after: 0 !important;
 }
 
@@ -169,9 +169,12 @@
 
 #card--360-mobile-app {
 	.card__inner {
-		padding-top: 110px;
+		padding-top: 137px;
 		background-image: url('/img/backgrounds/work/phone/phone@1x.png');
 		background-position: -60px 30px;
 		background-repeat: no-repeat;
+	}
+	.card__layout {
+		padding: 25px 31px;
 	}
 }
