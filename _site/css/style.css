@@ -1112,6 +1112,10 @@ header[role="banner"] {
 
 @media (min-width: 992px) {
   .site__description--large {
+    font-size: 175px;
+    letter-spacing: 3px; } }
+@media (min-width: 1400px) {
+  .site__description--large {
     font-size: 194px;
     letter-spacing: 3px; } }
 /* Site bio */
@@ -1155,7 +1159,7 @@ header[role="banner"] {
   letter-spacing: 10px;
   text-transform: uppercase;
   font-weight: 900; }
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
     .section--history__heading {
       padding: 2px 0 70px 0; } }
 
@@ -1167,7 +1171,7 @@ header[role="banner"] {
     .section--history__subheading {
       font-size: 48px;
       line-height: 62px; } }
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
     .section--history__subheading {
       padding: 0 280px 83px; } }
 

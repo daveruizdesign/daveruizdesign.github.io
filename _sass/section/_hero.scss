@@ -70,10 +70,18 @@
 
 	@media(min-width: 992px) {
 		.site__description--large {
+			font-size: 175px;
+			letter-spacing: 3px;
+		}
+	}
+
+	@media(min-width: 1400px) {
+		.site__description--large {
 			font-size: 194px;
 			letter-spacing: 3px;
 		}
 	}
+
 
 /* Site bio */
 
