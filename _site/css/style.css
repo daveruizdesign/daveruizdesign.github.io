@@ -1425,7 +1425,7 @@ header[role="banner"] {
   bottom: 0;
   background: #FEA33B;
   background: rgba(254, 163, 59, 0.95);
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: all .25s ease; }
 
 .card__back__inner {
