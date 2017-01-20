@@ -22,7 +22,7 @@
 						class="card card--work card--{{ work.type }}"
 						data-number="{{ work.weight }}"
 						id="card--{{ work.title|slugify }}"
-						data-chocolat-title="set title"
+						data-chocolat-title="{{ work.customer }} {{ work.year }}"
 					>
 						{% if work.type == "animated" %}
 							<a href="#card--{{ work.title|slugify }}" class="card__inner">
