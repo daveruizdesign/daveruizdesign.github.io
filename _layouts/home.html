@@ -61,8 +61,9 @@
 					setTitle: '{{ work.customer }} {{ work.year }}',
 					enableZoom: true,
 					images : [
-						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
-						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+						{% for slide in work.slides %}
+							{ src:'/img/work/{{work.weight}}/slides/{{ slide.src }}', title: '{{ slide.title }}' },
+						{% endfor %}
 					],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
