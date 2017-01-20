@@ -1342,14 +1342,6 @@ header[role="banner"] {
 .blockquote__cite__author {
   display: block; }
 
-.chocolat-description,
-.chocolat-set-title {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  text-align: center; }
-
 /* =========================================
 
 	Section: Work
@@ -1362,73 +1354,6 @@ header[role="banner"] {
   padding: 79px 0;
   background-size: cover;
   background-position: center center; }
-
-.work-list {
-  margin: 54px -26px 0;
-  -webkit-margin-after: 0 !important; }
-
-.card--work {
-  width: 100%;
-  float: left;
-  margin: 0;
-  padding: 0;
-  display: block;
-  position: relative; }
-  @media (min-width: 992px) {
-    .card--work {
-      width: 25%; } }
-
-.card__inner:hover {
-  transform: scale(1.02);
-  color: #fff; }
-  .card__inner:hover .card__back {
-    display: table; }
-
-.card__back {
-  display: none; }
-
-.card__back {
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #FEA33B;
-  background: rgba(254, 163, 59, 0.95); }
-
-.card__back__inner {
-  padding: 30px;
-  text-align: center;
-  vertical-align: middle; }
-
-.card__layout {
-  position: relative; }
-
-.card__front,
-.card__back {
-  width: 100%;
-  height: 100%;
-  vertical-align: middle; }
-
-.card__inner {
-  background: #304064;
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
-  padding: 0px;
-  margin: 25px;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  text-align: left;
-  -webkit-transition: all .2s ease; }
-
-.card__inner img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: block; }
 
 .section--work__heading {
   font-size: 48px;
@@ -1444,6 +1369,83 @@ header[role="banner"] {
   font-family: "baskerville", "Libre Baskerville", serif;
   letter-spacing: .002em; }
 
+/* =========================================
+
+	Card styles
+
+========================================= */
+.work-list {
+  margin: 54px -26px 0;
+  -webkit-margin-after: 0 !important; }
+
+.card--work {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative; }
+  @media (min-width: 992px) {
+    .card--work {
+      width: 25%; } }
+  .card--work:hover .card__inner {
+    transform: scale(1.02);
+    color: #fff; }
+    .card--work:hover .card__inner .card__back {
+      display: table; }
+
+.card__inner {
+  background: #304064;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  margin: 25px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-align: left;
+  -webkit-transition: all .2s ease; }
+
+.card__layout {
+  position: relative; }
+
+.card__front,
+.card__back {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle; }
+
+.card__back {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FEA33B;
+  background: rgba(254, 163, 59, 0.95); }
+
+.card__back__inner {
+  padding: 30px;
+  text-align: center;
+  vertical-align: middle; }
+
+.card__featured-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block; }
+
+.card--work__content {
+  font-size: 18px;
+  line-height: 26px;
+  color: #B6C2DF; }
+
+.card--default .card__layout {
+  padding: 25px; }
+
 .card--work__heading {
   font-size: 24px;
   line-height: 30px;
@@ -1458,21 +1460,6 @@ header[role="banner"] {
   color: #FEA33B;
   letter-spacing: .195em; }
 
-.card--work__content {
-  font-size: 18px;
-  line-height: 26px;
-  color: #B6C2DF; }
-
-.card--default .card__layout {
-  padding: 25px; }
-
-.chocolat-open .section .container {
-  -webkit-filter: blur(4px); }
-
-.chocolat-overlay {
-  background-color: #000 !important;
-  opacity: 0.65 !important; }
-
 .card__view-project-cta {
   font-family: "baskerville", "Libre Baskerville", serif;
   font-size: 15px;
@@ -1482,6 +1469,11 @@ header[role="banner"] {
   margin: 15px 0 11px;
   display: block; }
 
+/* =========================================
+
+	Unique tiles
+
+========================================= */
 #card--360-mobile-app .card__inner {
   padding-top: 137px;
   background-image: url("/img/backgrounds/work/phone/phone@1x.png");
@@ -1489,6 +1481,26 @@ header[role="banner"] {
   background-repeat: no-repeat; }
 #card--360-mobile-app .card__layout {
   padding: 25px 32px; }
+
+/* =========================================
+
+	Lightbox
+
+========================================= */
+.chocolat-description,
+.chocolat-set-title {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.chocolat-open .section .container {
+  -webkit-filter: blur(4px); }
+
+.chocolat-overlay {
+  background-color: #000 !important;
+  opacity: 0.65 !important; }
 
 /* =========================================
 

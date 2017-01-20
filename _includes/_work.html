@@ -18,24 +18,25 @@
 			<ul class="work-list">
 				{% for work in site.portfolio %}
 					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}" id="card--{{ work.title|slugify }}" >
-						<a href="#" class="card__inner chocolat-image">
-							{% if work.featured-image %}
-								<div class="card__layout">
+						<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
+							<div class="card__layout">
+								{% if work.featured-image %}
 									<div class="card__front">
-										<img src="/img/work/{{ work.featured-image }}" alt="" />
+										<img src="/img/work/{{ work.featured-image }}" alt="" class="card__featured-image"/>
 									</div>
 									<div class="card__back">
 										<div class="card__back__inner">
+											<i class="card__back__icon--eye"></i>
 											<h3>
 												{{ work.title }}
 											</h3>
-											{{ work.customer }}
-											{{ work.year }}
+											<div class="card__back__content">
+												{{ work.customer }}
+												{{ work.year }}
+											</div>
 										</div>
 									</div>
-								</div>
-							{% else %}
-								<div class="card__layout">
+								{% else %}
 									<h3 class="card__heading card--work__heading">
 										{{ work.title }}
 									</h3>
@@ -48,8 +49,8 @@
 									<span class="card__view-project-cta">
 										View Project →
 									</span>
-								</div>
-							{% endif %}
+								{% endif %}
+							</div>
 						</a>
 					</li>
 				{% endfor %}
