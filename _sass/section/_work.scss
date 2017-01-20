@@ -45,6 +45,7 @@
 
 .card__inner:hover {
 	transform: scale(1.02);
+	color: #fff;
 
 	.card__back {
 		display: table;
@@ -113,7 +114,6 @@
 	font-weight: 700;
 	letter-spacing: .002em;
 	margin: 0 0 1px 0;
-
 }
 
 .section--work__subheading {
@@ -128,6 +128,7 @@
 	font-size: 24px;
 	line-height: 30px;
 	margin: 0 0 0 0;
+	letter-spacing: 0;
 }
 
 .card--work__subheading {
