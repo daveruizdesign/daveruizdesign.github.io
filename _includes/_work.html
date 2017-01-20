@@ -25,14 +25,6 @@
 						data-chocolat-title="set title"
 					>
 						{% if work.type == "animated" %}
-
-						<a href="/img/work/2/slides/1.jpg" class="hide chocolat-image" title="ttt">
-							<img src="/img/work/2/slides/1.jpg" alt="" width="100"/>
-						</a>
-						<a href="/img/work/2/slides/2.jpg" class="hide chocolat-image" title="ttt">
-							<img src="/img/work/2/slides/2.jpg" alt="" width="100"/>
-						</a>
-
 							<a href="#card--{{ work.title|slugify }}" class="card__inner">
 								<div class="card__layout">
 									<div class="card__front">
@@ -59,6 +51,13 @@
 									</div>
 								</div>
 							</a>
+							<div class="hide chocolat-image-list">
+								{% for slide in work.slides %}
+									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}">
+										<img src="/img/work/{{ work.weight }}/slides/{{ slide.src }}" alt="" width="100" />
+									</a>
+								{% endfor %}
+							</div>
 						{% elsif work.type == "quote" %}
 							<div class="card__inner">
 								<div class="card__layout">
@@ -78,15 +77,6 @@
 								</div>
 							</div>
 						{% else %}
-
-						<a href="/img/work/2/slides/1.jpg" class="hide chocolat-image" title="ttt">
-							<img src="/img/work/2/slides/1.jpg" alt="" width="100"/>
-						</a>
-						<a href="/img/work/2/slides/2.jpg" class="hide chocolat-image" title="ttt">
-							<img src="/img/work/2/slides/2.jpg" alt="" width="100"/>
-						</a>
-
-
 							<a href="#card--{{ work.title|slugify }}" class="card__inner">
 								<div class="card__layout">
 									<h3 class="card__heading card--work__heading">
@@ -103,6 +93,13 @@
 									</span>
 								</div>
 							</a>
+							<div class="hide chocolat-image-list">
+								{% for slide in work.slides %}
+									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}">
+										<img src="/img/work/{{ work.weight }}/slides/{{ slide.src }}" alt="" width="100" />
+									</a>
+								{% endfor %}
+							</div>
 						{% endif %}
 					</li>
 				{% endfor %}

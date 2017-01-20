@@ -55,16 +55,12 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			{% for work in site.portfolio %}
-				/* Gallery: {{ work.title }} */
+				/* ====================================
+
+					Gallery: {{ work.title }}
+
+				==================================== */
 				var $lightbox{{ work.weight }} = $('#card--{{ work.title|slugify }}').Chocolat({
-					//setTitle: '{{ work.customer }} {{ work.year }}',
-					// imageSource: "[data-href]",
-					//imageSelector: '.chocolat-image',
-					// images : [
-					// 	{% for slide in work.slides %}
-					// 		{ src:'/img/work/{{work.weight}}/slides/{{ slide.src }}', title: '{{ slide.title }}' },
-					// 	{% endfor %}
-					// ],
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
 						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
@@ -73,11 +69,9 @@
 						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				}).data('chocolat');
-
 				$('#card--{{ work.title|slugify }}').click(function() {
 					$lightbox{{ work.weight }}.api().open();
 				});
-
 			{% endfor %}
 		});
 	</script>
