@@ -354,31 +354,31 @@
 
 ========================================= */
 
-.chocolat-description,
-.chocolat-set-title {
-	position: relative;
-	//top: -100px;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	padding: 0 !important;
-	display: block !important;
-	line-height: 1em;
-	border: none !important;
-	float: none !important;
-}
-
-	.chocolat-description{
-		font-size: 36px;
-		font-weight: 600;
-	}
-
-	.chocolat-set-title {
-		color: #FEA33B;
-		font-size: 16px;
-		text-transform: uppercase;
-		margin: 10px 0 40px;
-	}
+// .chocolat-description,
+// .chocolat-set-title {
+// 	position: relative;
+// 	//top: -100px;
+// 	left: 0;
+// 	width: 100%;
+// 	text-align: center;
+// 	padding: 0 !important;
+// 	display: block !important;
+// 	line-height: 1em;
+// 	border: none !important;
+// 	float: none !important;
+// }
+//
+// 	.chocolat-description{
+// 		font-size: 36px;
+// 		font-weight: 600;
+// 	}
+//
+// 	.chocolat-set-title {
+// 		color: #FEA33B;
+// 		font-size: 16px;
+// 		text-transform: uppercase;
+// 		margin: 10px 0 40px;
+// 	}
 
 .chocolat-open .section .container {
 	-webkit-filter: blur(4px);
@@ -389,9 +389,9 @@
     opacity: 0.65 !important;
 }
 
-.chocolat-bottom {
-	display: none !important;
-}
+// .chocolat-bottom {
+// 	display: none !important;
+// }
 //
 // .chocolat-wrapper .chocolat-left,
 // .chocolat-wrapper .chocolat-right {
