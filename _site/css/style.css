@@ -1668,6 +1668,9 @@ header[role="banner"] {
   background-color: #000 !important;
   opacity: 0.65 !important; }
 
+.chocolat-bottom {
+  display: none !important; }
+
 /* =========================================
 
 	Section: Contact

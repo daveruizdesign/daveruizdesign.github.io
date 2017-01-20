@@ -63,10 +63,10 @@
 				var $lightbox{{ work.weight }} = $('#card--{{ work.title|slugify }}').Chocolat({
 					afterMarkup: function () {
 						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
 						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				}).data('chocolat');
 				$('#card--{{ work.title|slugify }}').click(function() {
