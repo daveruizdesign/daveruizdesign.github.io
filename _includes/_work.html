@@ -18,9 +18,22 @@
 			<ul class="work-list">
 				{% assign sorted_work = (site.portfolio | sort: 'weight') %}
 				{% for work in sorted_work %}
-					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}" id="card--{{ work.title|slugify }}" >
+					<li
+						class="card card--work card--{{ work.type }}"
+						data-number="{{ work.weight }}"
+						id="card--{{ work.title|slugify }}"
+						data-chocolat-title="set title"
+					>
 						{% if work.type == "animated" %}
-							<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
+
+						<a href="/img/work/2/slides/1.jpg" class="hide chocolat-image" title="ttt">
+							<img src="/img/work/2/slides/1.jpg" alt="" width="100"/>
+						</a>
+						<a href="/img/work/2/slides/2.jpg" class="hide chocolat-image" title="ttt">
+							<img src="/img/work/2/slides/2.jpg" alt="" width="100"/>
+						</a>
+
+							<a href="#card--{{ work.title|slugify }}" class="card__inner">
 								<div class="card__layout">
 									<div class="card__front">
 										<img
@@ -28,7 +41,6 @@
 											title="Yolo"
 											alt="Yolo"
 											class="card__featured-image"
-											data-href="img/work/2/slides/1.jpg"
 										/>
 									</div>
 									<div class="card__back">
@@ -66,7 +78,16 @@
 								</div>
 							</div>
 						{% else %}
-							<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
+
+						<a href="/img/work/2/slides/1.jpg" class="hide chocolat-image" title="ttt">
+							<img src="/img/work/2/slides/1.jpg" alt="" width="100"/>
+						</a>
+						<a href="/img/work/2/slides/2.jpg" class="hide chocolat-image" title="ttt">
+							<img src="/img/work/2/slides/2.jpg" alt="" width="100"/>
+						</a>
+
+
+							<a href="#card--{{ work.title|slugify }}" class="card__inner">
 								<div class="card__layout">
 									<h3 class="card__heading card--work__heading">
 										{{ work.title }}
