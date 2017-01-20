@@ -1566,7 +1566,15 @@ header[role="banner"] {
 
   #card--website-templates {
     top: 820px;
-    left: 0; } }
+    left: 0; }
+
+  #card--joey-lomanto {
+    top: 880px;
+    left: 370px; }
+
+  #card--ecommerce-templates {
+    top: 760px;
+    left: 740px; } }
 /* =========================================
 
 	Lightbox

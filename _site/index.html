@@ -49,6 +49,7 @@
 		<div class="section__body">
 			<ul class="work-list">
 				
+				
 					<li class="card card--work card--default" data-number="1" id="card--360-mobile-app" >
 						<a href="#card--360-mobile-app" class="card__inner chocolat-image">
 							<div class="card__layout">
@@ -271,6 +272,54 @@
 						</a>
 					</li>
 				
+					<li class="card card--work card--default" data-number="10" id="card--joey-lomanto" >
+						<a href="#card--joey-lomanto" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<h3 class="card__heading card--work__heading">
+										Joey Lomanto
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Mixpanel 
+									</p>
+									<div class="card__content card--work__content">
+										<p>Dave has an unparalleled attention to detail and effortless ability to continuously impress and influence our team.</p>
+
+									</div>
+									<span class="card__view-project-cta">
+										View Project →
+									</span>
+								
+							</div>
+						</a>
+					</li>
+				
+					<li class="card card--work card--animated" data-number="11" id="card--ecommerce-templates" >
+						<a href="#card--ecommerce-templates" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<div class="card__front">
+										<img src="/img/work//11/feature@1x.png" alt="" class="card__featured-image"/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													eCommerce Templates
+												</h3>
+												<div class="card__back__content">
+													Various
+													2011-2013
+												</div>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+						</a>
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -295,6 +344,44 @@
 				/* Gallery: 360 Mobile App */
 				$('#card--360-mobile-app').Chocolat({
 					setTitle: 'Desk.com 2015',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: Joey Lomanto */
+				$('#card--joey-lomanto').Chocolat({
+					setTitle: 'Mixpanel ',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: eCommerce Templates */
+				$('#card--ecommerce-templates').Chocolat({
+					setTitle: 'Various 2011-2013',
 					enableZoom: true,
 					images : [
 						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },

@@ -16,7 +16,8 @@
 		</header>
 		<div class="section__body">
 			<ul class="work-list">
-				{% for work in site.portfolio %}
+				{% assign sorted_work = (site.portfolio | sort: 'weight') %}
+				{% for work in sorted_work %}
 					<li class="card card--work card--{{ work.type }}" data-number="{{ work.weight }}" id="card--{{ work.title|slugify }}" >
 						<a href="#card--{{ work.title|slugify }}" class="card__inner chocolat-image">
 							<div class="card__layout">
