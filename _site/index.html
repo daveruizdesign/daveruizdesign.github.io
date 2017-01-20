@@ -97,6 +97,54 @@
 						</a>
 					</li>
 				
+					<li class="card card--work card--animated" data-number="3" id="card--mobile-concepts" >
+						<a href="#card--mobile-concepts" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<div class="card__front">
+										<img src="/img/work/various-mobile-concepts.png" alt="" class="card__featured-image"/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3>
+													Mobile Concepts
+												</h3>
+												<div class="card__back__content">
+													Various
+													2012-2016
+												</div>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+						</a>
+					</li>
+				
+					<li class="card card--work card--default" data-number="4" id="card--marketing-site" >
+						<a href="#card--marketing-site" class="card__inner chocolat-image">
+							<div class="card__layout">
+								
+									<h3 class="card__heading card--work__heading">
+										Marketing site
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Desk.com 2014
+									</p>
+									<div class="card__content card--work__content">
+										<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
+
+									</div>
+									<span class="card__view-project-cta">
+										View Project →
+									</span>
+								
+							</div>
+						</a>
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -140,6 +188,44 @@
 				/* Gallery: Marketing Pages */
 				$('#card--marketing-pages').Chocolat({
 					setTitle: 'Mixpanel 2013',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: Mobile Concepts */
+				$('#card--mobile-concepts').Chocolat({
+					setTitle: 'Various 2012-2016',
+					enableZoom: true,
+					images : [
+						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },
+						{ src:'http://placehold.it/850x800', title: 'Dashboard Concept #2' }
+					],
+					afterMarkup: function () {
+						$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
+						this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
+						this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
+
+						console.log(this.elems);
+					}
+				});
+			
+				/* Gallery: Marketing site */
+				$('#card--marketing-site').Chocolat({
+					setTitle: 'Desk.com 2014',
 					enableZoom: true,
 					images : [
 						{ src:'/img/tiles/Tile 2/2 - Careers Landing Page - Mixpanel 2013.jpg', title: 'Dashboard Concept #1' },

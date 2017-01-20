@@ -98,7 +98,7 @@
 				bottom: 0;
 				background: #FEA33B;
 				background: rgba(254,163,59,.95);
-				opacity: 0;
+				opacity: 1;
 				-webkit-transition: all .25s ease;
 			}
 
@@ -161,6 +161,13 @@
 	letter-spacing: .25em;
 	margin: 15px 0 11px;
 	display: block;
+}
+
+.card__back__content {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #FAD7AE;
+	letter-spacing: 2px;
 }
 
 /* =========================================
