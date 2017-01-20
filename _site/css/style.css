@@ -1526,9 +1526,19 @@ header[role="banner"] {
 #card--mixpanel-analytics .card__view-project-cta {
   margin: 19px 0 32px; }
 
+#card--watch-concept .card__inner {
+  padding-top: 90px;
+  background-image: url("/img/backgrounds/work/watch/watch@1x.png");
+  background-position: -70px -39px;
+  background-repeat: no-repeat; }
+#card--watch-concept .card__layout {
+  padding: 25px 32px; }
+#card--watch-concept .card__view-project-cta {
+  margin: 19px 0 22px; }
+
 @media (min-width: 1650px) {
   .work-list {
-    height: 1400px;
+    height: 1292px;
     position: relative; }
 
   .card--work {
@@ -1574,7 +1584,11 @@ header[role="banner"] {
 
   #card--ecommerce-templates {
     top: 760px;
-    left: 740px; } }
+    left: 740px; }
+
+  #card--watch-concept {
+    top: 820px;
+    left: 1110px; } }
 /* =========================================
 
 	Lightbox
