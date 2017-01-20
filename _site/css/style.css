@@ -2023,7 +2023,7 @@ footer[role="contentinfo"] {
 
 .divider--history {
   background: #FEA33B;
-  -webkit-transform: rotate(-45deg); }
+  -webkit-transform: rotate(-225deg); }
   .divider--history .divider__arrow {
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 50% 50%; }
