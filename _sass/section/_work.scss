@@ -135,8 +135,9 @@
 	font-size: 14px;
 	text-transform: uppercase;
 	line-height: 30px;
-	margin: 0 0 0 0;
+	margin: -1px 0 15px 0;
 	color: #FEA33B;
+	letter-spacing: .195em;
 }
 
 .card--work__content {
@@ -163,19 +164,21 @@
 .card__view-project-cta {
 	font-family: $serif;
 	font-size: 15px;
-	letter-spacing: .3em;
 	line-height: 29px;
 	text-transform: uppercase;
+	letter-spacing: .25em;
+	margin: 15px 0 11px;
+	display: block;
 }
 
 #card--360-mobile-app {
 	.card__inner {
 		padding-top: 137px;
 		background-image: url('/img/backgrounds/work/phone/phone@1x.png');
-		background-position: -60px 30px;
+		background-position: -52px 43px;
 		background-repeat: no-repeat;
 	}
 	.card__layout {
-		padding: 25px 31px;
+		padding: 25px 32px;
 	}
 }
