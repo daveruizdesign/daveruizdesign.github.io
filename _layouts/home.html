@@ -70,7 +70,7 @@
 						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
 					}
 				}).data('chocolat');
-				$('#card--{{ work.title|slugify }}').click(function() {
+				$('#card--{{ work.title|slugify }} a').click(function() {
 					$lightbox{{ work.weight }}.api().open();
 				});
 			{% endfor %}
