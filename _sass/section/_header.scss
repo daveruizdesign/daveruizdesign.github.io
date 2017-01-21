@@ -15,6 +15,21 @@ header[role="banner"] {
 	text-decoration: none;
 	opacity: 0;
 	visibility: hidden;
+
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	top: 0;
+	margin-left: -35px;
+
+	@media(min-width: 992px) {
+		position: relative;
+		left: auto;
+		right: auto;
+		margin-left: 0;
+	}
+
+
 }
 
 	.logo--initials {

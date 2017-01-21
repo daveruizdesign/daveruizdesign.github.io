@@ -1008,7 +1008,18 @@ header[role="banner"] {
   text-align: center;
   text-decoration: none;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 0;
+  margin-left: -35px; }
+  @media (min-width: 992px) {
+    .logo {
+      position: relative;
+      left: auto;
+      right: auto;
+      margin-left: 0; } }
 
 .logo--initials {
   font-size: 32px;
