@@ -13,6 +13,8 @@ header[role="banner"] {
 	display: block;
 	text-align: center;
 	text-decoration: none;
+	opacity: 0;
+	visibility: hidden;
 }
 
 	.logo--initials {
@@ -35,6 +37,8 @@ header[role="banner"] {
 	text-align: right;
 	display: none;
 	margin: 45px -4px 0 0;
+	opacity: 0;
+	visibility: hidden;
 
 	@media(min-width: 992px) {
 		display: block;
