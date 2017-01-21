@@ -1037,9 +1037,7 @@ header[role="banner"] {
   list-style: none;
   text-align: right;
   display: none;
-  margin: 45px -4px 0 0;
-  opacity: 0;
-  visibility: hidden; }
+  margin: 45px -4px 0 0; }
   @media (min-width: 992px) {
     .menu--primary {
       display: block; } }
