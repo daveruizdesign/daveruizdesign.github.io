@@ -3,12 +3,13 @@
 
 @media (min-width: 550px) {
 	.container {
-		width: 100%;
+		width: 95%;
 	}
 }
 
 @media (min-width: 1024px) {
 	.container {
+		width: 100%;
 		max-width: 1000px;
 	}
 }

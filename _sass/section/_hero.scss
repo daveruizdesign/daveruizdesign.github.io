@@ -32,8 +32,8 @@
 }
 
 	.site__title__signature {
-		height: 102px;
-		width: 336px;
+		height: 80px;
+		width: 250px;
 		background: url('/img/brand/signature--light@1x.png');
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -41,6 +41,13 @@
 		display: inline-block;
 		opacity: 0;
 		visibility: hidden;
+		-webkit-transition: all .25s ease;
+
+		@media(min-width: 920px) {
+			height: 102px;
+			width: 336px;
+		}
+
 	}
 
 /* Site description */

@@ -963,9 +963,10 @@ ol, ul {
 /* Grid */
 @media (min-width: 550px) {
   .container {
-    width: 100%; } }
+    width: 95%; } }
 @media (min-width: 1024px) {
   .container {
+    width: 100%;
     max-width: 1000px; } }
 @media (min-width: 1400px) {
   .container {
@@ -1092,15 +1093,20 @@ header[role="banner"] {
   line-height: 1em; }
 
 .site__title__signature {
-  height: 102px;
-  width: 336px;
+  height: 80px;
+  width: 250px;
   background: url("/img/brand/signature--light@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 0 -14px 0px;
   display: inline-block;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  -webkit-transition: all .25s ease; }
+  @media (min-width: 920px) {
+    .site__title__signature {
+      height: 102px;
+      width: 336px; } }
 
 /* Site description */
 .site__description--large {
@@ -1168,7 +1174,10 @@ header[role="banner"] {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031235', endColorstr='#041640',GradientType=0 );
   /* IE6-9 */
-  padding-bottom: 140px; }
+  padding: 60px 0 140px; }
+  @media (min-width: 992px) {
+    .section--history {
+      padding-top: 100px; } }
   @media (min-width: 1280px) {
     .section--history {
       padding-bottom: 180px; } }
@@ -1192,7 +1201,8 @@ header[role="banner"] {
 .section--history__subheading {
   font-weight: 600;
   font-size: 32px;
-  line-height: 40px; }
+  line-height: 40px;
+  padding: 20px 5% 30px; }
   @media (min-width: 992px) {
     .section--history__subheading {
       font-size: 38px;
