@@ -32,7 +32,7 @@ quote:
     company: Scrapbook.com
 
 # Copyright
-copyright: © 2016 Dave Ruiz. Please don’t steal.
+copyright: © 2016 Dave Ruiz. <span class="copyright--dont-steal">Please don’t steal.</span>
 
 # Social links
 twitter_username: jekyllrb

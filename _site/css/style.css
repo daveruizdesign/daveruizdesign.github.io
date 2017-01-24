@@ -2133,6 +2133,12 @@ div.error {
     opacity: 0; }
   100% {
     opacity: 0; } }
+.copyright--dont-steal {
+  display: none; }
+  @media (min-width: 1500px) {
+    .copyright--dont-steal {
+      display: inline-block; } }
+
 footer[role="contentinfo"] {
   padding: 20px 0; }
 
