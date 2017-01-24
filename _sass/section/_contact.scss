@@ -19,14 +19,24 @@ input:-webkit-autofill:active {
 	margin: 0 !important;
 
 	@media(min-width: 1280px) {
+		width: 27.4% !important;
+	}
+
+	@media(min-width: 1500px) {
 		width: 30.6666666667% !important;
 	}
 
+
 }
 
+@media(min-width: 1440px) {
+	.column--second,
+	.column--third {
+		margin-left: 110px !important;
+	}
+}
 
-
-@media(min-width: 1650px) {
+@media(min-width: 1500px) {
 	.column--first {
 		padding: 0 20px 0 0px;
 		margin: 0 -8px !important;
@@ -67,6 +77,12 @@ input:-webkit-autofill:active {
 	@media(min-width: 1440px) {
 		.container {
 			max-width: 1240px;
+		}
+	}
+
+	@media(min-width: 1500px) {
+		.container {
+			max-width: 1435px;
 		}
 	}
 
@@ -281,6 +297,16 @@ form {
 	max-width: 418px;
 	position: relative;
 	margin: 40px 0 6px;
+
+	@media(min-width: 1440px) {
+		margin: 60px 0 -14px;
+	}
+
+	@media(min-width: 1640px) {
+		margin: 40px 0 6px;
+	}
+
+
 }
 
 	.beacon{
@@ -292,6 +318,15 @@ form {
 		width:8px;
 		border-radius:50%;
 		-webkit-transform:translateX(-50%) translateY(-50%);
+
+		@media(min-width: 1440px) {
+			top: 31%;
+		}
+
+		@media(min-width: 1640px) {
+			top: 38%;
+		}
+
 
 		&:before {
 			position:absolute;

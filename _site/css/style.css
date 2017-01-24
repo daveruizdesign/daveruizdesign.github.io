@@ -1903,9 +1903,18 @@ input:-webkit-autofill:active {
     .column--first,
     .column--second,
     .column--third {
+      width: 27.4% !important; } }
+  @media (min-width: 1500px) {
+    .column--first,
+    .column--second,
+    .column--third {
       width: 30.6666666667% !important; } }
 
-@media (min-width: 1650px) {
+@media (min-width: 1440px) {
+  .column--second,
+  .column--third {
+    margin-left: 110px !important; } }
+@media (min-width: 1500px) {
   .column--first {
     padding: 0 20px 0 0px;
     margin: 0 -8px !important; }
@@ -1936,6 +1945,9 @@ input:-webkit-autofill:active {
   @media (min-width: 1440px) {
     .section--contact .container {
       max-width: 1240px; } }
+  @media (min-width: 1500px) {
+    .section--contact .container {
+      max-width: 1435px; } }
 
 .section--contact__body {
   padding: 110px 0 8px; }
@@ -2104,6 +2116,12 @@ div.error {
   max-width: 418px;
   position: relative;
   margin: 40px 0 6px; }
+  @media (min-width: 1440px) {
+    .map {
+      margin: 60px 0 -14px; } }
+  @media (min-width: 1640px) {
+    .map {
+      margin: 40px 0 6px; } }
 
 .beacon {
   position: absolute;
@@ -2114,6 +2132,12 @@ div.error {
   width: 8px;
   border-radius: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%); }
+  @media (min-width: 1440px) {
+    .beacon {
+      top: 31%; } }
+  @media (min-width: 1640px) {
+    .beacon {
+      top: 38%; } }
   .beacon:before {
     position: absolute;
     content: "";
