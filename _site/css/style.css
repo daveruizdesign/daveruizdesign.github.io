@@ -1396,12 +1396,14 @@ header[role="banner"] {
   color: #FEA33B;
   display: block;
   position: relative;
-  top: -2px; }
+  top: -2px;
+  letter-spacing: .15em; }
 
 .tooltip__subheading {
   position: relative;
   top: 1px;
-  letter-spacing: .15em; }
+  letter-spacing: .15em;
+  color: #D1D5DD; }
 
 .section--quote {
   background: #FEA33B;
