@@ -8,17 +8,29 @@
 	background: $blue7;
 	background-image: url('/img/backgrounds/work/landscape@1x.jpg');
 	color: #fff;
-	padding: 79px 0;
+	padding: 50px 0;
 	background-size: cover;
 	background-position: center center;
+
+	@media(min-width: 992px) {
+		padding: 79px 0;
+	}
+
 }
 
 	.section--work__heading {
-		font-size: 48px;
-		line-height: 60px;
+		font-size: 28px;
+		line-height: 32px;
 		font-weight: 700;
 		letter-spacing: .002em;
-		margin: 0 0 1px 0;
+		margin: 0 0 10px 0;
+
+		@media(min-width: 992px) {
+			font-size: 48px;
+			line-height: 60px;
+			margin: 0 0 1px 0;
+		}
+
 	}
 
 	.section--work__subheading {
@@ -36,8 +48,13 @@
 ========================================= */
 
 .work-list {
-	margin: 54px -26px 0;
+	margin: 25px -26px 0;
 	-webkit-margin-after: 0 !important;
+
+	@media(min-width: 992px) {
+		margin: 54px -26px 0;
+	}
+
 }
 
 .card--work {
