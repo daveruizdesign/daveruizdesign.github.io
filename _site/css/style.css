@@ -1657,7 +1657,8 @@ header[role="banner"] {
   line-height: 30px;
   margin: -1px 0 15px 0;
   color: #FEA33B;
-  letter-spacing: .195em; }
+  letter-spacing: .195em;
+  font-weight: 600; }
 
 .card--work__content {
   font-size: 18px;
