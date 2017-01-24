@@ -46,7 +46,8 @@ $("#drd__form").validate({
 
 /* Gallery layout based on viewport */
 
-enquire.register("screen and (min-width: 0px) and (max-width:1649px)", {
+//enquire.register("screen and (min-width: 0px) and (max-width:1649px)", {
+enquire.register("screen and (min-width: 0px) and (max-width:1439px)", {
 	match : function() {
 		var $grid = $('.work-list');
 		$grid.isotope({

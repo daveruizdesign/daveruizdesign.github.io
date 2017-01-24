@@ -343,6 +343,63 @@
 	}
 }
 
+@media(min-width: 1440px) {
+	.work-list {
+		height: 1220px;
+		position: relative;
+	}
+	.card--work {
+		position: absolute;
+	}
+
+		#card--360-mobile-app {
+			top: 0;
+			left: 0;
+		}
+		#card--marketing-pages {
+			top: 0;
+			left: 340px;
+		}
+		#card--mobile-concepts {
+			left: 680px;
+		}
+		#card--marketing-site {
+			left: 1020px;
+		}
+		#card--photography-themes {
+			top: 440px;
+			left: 0;
+		}
+		#card--business-insights {
+			top: 380px;
+			left: 340px;
+		}
+		#card--mixpanel-analytics {
+			left: 680px;
+			top: 320px;
+		}
+		#card--illustrations {
+			left: 1020px;
+		    top: 439px;
+		}
+		#card--website-templates {
+			top: 760px;
+			left: 0;
+		}
+		#card--joey-lomanto {
+			top: 820px;
+		    left: 340px;
+		}
+		#card--ecommerce-sites {
+			top: 700px;
+		    left: 680px;
+		}
+		#card--watch-concept {
+			top: 760px;
+		    left: 1020px;
+		}
+}
+
 @media(min-width: 1650px) {
 	.work-list {
 		height: 1292px;
