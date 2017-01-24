@@ -2115,7 +2115,8 @@ div.error {
   background-size: contain;
   max-width: 418px;
   position: relative;
-  margin: 40px 0 6px; }
+  margin: 40px 0 6px;
+  -webkit-transition: all .25s ease; }
   @media (min-width: 1440px) {
     .map {
       margin: 60px 0 -14px; } }
@@ -2135,6 +2136,9 @@ div.error {
   @media (min-width: 1440px) {
     .beacon {
       top: 31%; } }
+  @media (min-width: 1500px) {
+    .beacon {
+      top: 39%; } }
   @media (min-width: 1640px) {
     .beacon {
       top: 38%; } }
