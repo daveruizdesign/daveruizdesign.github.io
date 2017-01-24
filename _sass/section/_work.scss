@@ -41,12 +41,16 @@
 }
 
 .card--work {
-	width: 50%;
+	width: 100%;
 	float: left;
 	margin: 0;
 	padding: 0;
 	display: block;
 	position: relative;
+
+	@media(min-width: 552px) {
+		width: 50%;
+	}
 
 	@media(min-width: 992px) {
 		width: 33.333%;
