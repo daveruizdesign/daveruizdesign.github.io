@@ -1671,7 +1671,8 @@ header[role="banner"] {
   text-transform: uppercase;
   letter-spacing: .25em;
   margin: 15px 0 11px;
-  display: block; }
+  display: block;
+  font-weight: 600; }
 
 /* Animated */
 .card__back__heading {
