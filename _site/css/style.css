@@ -1897,9 +1897,18 @@ input:-webkit-autofill:active {
 .column--first,
 .column--second,
 .column--third {
-  width: 100% !important;
-  margin: 0 !important; }
-  @media (min-width: 1280px) {
+  width: 100% !important; }
+  @media (min-width: 0px) and (max-width: 992px) {
+    .column--first,
+    .column--second,
+    .column--third {
+      margin: 0 !important; } }
+  @media (min-width: 992px) {
+    .column--first,
+    .column--second,
+    .column--third {
+      width: 30.5% !important; } }
+  @media (min-width: 1440px) {
     .column--first,
     .column--second,
     .column--third {
