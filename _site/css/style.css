@@ -1298,7 +1298,8 @@ header[role="banner"] {
     font-weight: 400;
     padding-bottom: 19px;
     display: block;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    font-weight: 500; }
   .card--history p {
     font-size: 18px;
     line-height: 29px;
