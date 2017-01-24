@@ -16,6 +16,15 @@
 		padding: 132px 0 119px;
 	}
 
+	@media(min-width: 1440px) {
+		padding: 147px 0 144px;
+	}
+
+	@media(min-width: 1500px) {
+		padding: 132px 0 119px;
+
+	}
+
 	.section__bg-heading:after {
 		content: "Quote";
 		color: #F29F27;
@@ -41,6 +50,10 @@
 	@media(min-width: 992px) {
 		font-size: 32px;
 		line-height: 54px;
+	}
+
+	@media(min-width: 1440px) {
+		padding: 0 150px;
 	}
 
 	@media(min-width: 1500px) {
