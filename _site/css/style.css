@@ -1001,6 +1001,16 @@ header[role="banner"] {
   left: 0;
   right: 0;
   z-index: 2; }
+  @media (min-width: 1440px) {
+    header[role="banner"] .six.columns {
+      width: 47.7%; }
+    header[role="banner"] .container {
+      max-width: 1240px; } }
+  @media (min-width: 1500px) {
+    header[role="banner"] .six.columns {
+      width: 48%; }
+    header[role="banner"] .container {
+      max-width: 1435px; } }
 
 .logo {
   background: #FEA33B;
@@ -1107,6 +1117,12 @@ header[role="banner"] {
     .site__title__signature {
       height: 102px;
       width: 336px; } }
+  @media (min-width: 1440px) {
+    .site__title__signature {
+      margin: 10px 0 -5px 0px; } }
+  @media (min-width: 1500px) {
+    .site__title__signature {
+      margin: 0 0 -14px 0px; } }
 
 /* Site description */
 .site__description--large {
@@ -1128,23 +1144,33 @@ header[role="banner"] {
     height: 3px;
     background: #2553B1;
     width: 160px;
-    bottom: 40px;
+    bottom: 35px;
     left: 50%;
     right: 50%;
     margin-left: -80px; }
+    @media (min-width: 1440px) {
+      .site__description--large:after {
+        bottom: 38px; } }
+    @media (min-width: 1500px) {
+      .site__description--large:after {
+        bottom: 40px; } }
+  @media (min-width: 992px) {
+    .site__description--large {
+      font-size: 125px;
+      letter-spacing: 3px; } }
+  @media (min-width: 1140px) {
+    .site__description--large {
+      font-size: 175px;
+      letter-spacing: 3px; } }
+  @media (min-width: 1400px) {
+    .site__description--large {
+      font-size: 180px;
+      letter-spacing: 3px; } }
+  @media (min-width: 1500px) {
+    .site__description--large {
+      font-size: 194px;
+      letter-spacing: 3px; } }
 
-@media (min-width: 992px) {
-  .site__description--large {
-    font-size: 125px;
-    letter-spacing: 3px; } }
-@media (min-width: 1140px) {
-  .site__description--large {
-    font-size: 175px;
-    letter-spacing: 3px; } }
-@media (min-width: 1400px) {
-  .site__description--large {
-    font-size: 194px;
-    letter-spacing: 3px; } }
 /* Site bio */
 .site__description--small {
   font-size: 32px;
@@ -1154,6 +1180,12 @@ header[role="banner"] {
   line-height: 45px;
   opacity: 0;
   visibility: hidden; }
+  @media (min-width: 1400px) {
+    .site__description--small {
+      margin: 2px auto; } }
+  @media (min-width: 1500px) {
+    .site__description--small {
+      margin: 0 auto; } }
 
 /* =========================================
 

@@ -5,6 +5,26 @@ header[role="banner"] {
 	left: 0;
 	right: 0;
 	z-index: 2;
+
+
+	@media(min-width: 1440px) {
+		.six.columns {
+			width: 47.7%;
+		}
+		.container {
+			max-width: 1240px;
+		}
+	}
+
+	@media(min-width: 1500px) {
+		.six.columns {
+			width: 48%;
+		}
+		.container {
+			max-width: 1435px;
+		}
+	}
+
 }
 
 .logo {
