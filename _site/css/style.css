@@ -1174,10 +1174,11 @@ header[role="banner"] {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031235', endColorstr='#041640',GradientType=0 );
   /* IE6-9 */
-  padding: 60px 0 140px; }
+  padding: 60px 0 80px; }
   @media (min-width: 992px) {
     .section--history {
-      padding-top: 100px; } }
+      padding-top: 100px;
+      padding: 100px 0 140px; } }
   @media (min-width: 1280px) {
     .section--history {
       padding-bottom: 180px; } }
