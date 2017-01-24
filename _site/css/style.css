@@ -1938,13 +1938,15 @@ input:-webkit-autofill:active {
     text-shadow: 0 75px 300px rgba(0, 0, 0, 0.6); }
   @media (min-width: 1440px) {
     .section--contact {
-      padding: 101px 0; } }
+      padding: 101px 0 103px; } }
   @media (min-width: 1500px) {
     .section--contact {
       padding: 103px 0; } }
   @media (min-width: 1440px) {
-    .section--contact .container {
-      max-width: 1240px; } }
+    .section--contact {
+      padding: 103px 0; }
+      .section--contact .container {
+        max-width: 1240px; } }
   @media (min-width: 1500px) {
     .section--contact .container {
       max-width: 1435px; } }
@@ -2181,6 +2183,12 @@ div.error {
 
 footer[role="contentinfo"] {
   padding: 20px 0; }
+  @media (min-width: 1440px) {
+    footer[role="contentinfo"] .container {
+      max-width: 1230px; } }
+  @media (min-width: 1500px) {
+    footer[role="contentinfo"] .container {
+      max-width: 1450px; } }
 
 /* Availability */
 .availability {
