@@ -16,7 +16,7 @@
 		<div class="section__body">
 			<ol class="history row">
 				{% for job in site.jobs %}
-				<li class="history__item four columns animated fadeIn wow" data-wow-delay="{% cycle '0s', '.25s', '.5s' %}">
+				<li class="history__item four columns animated fadeIn wow history__item--{% cycle '1', '2', '3' %}" data-wow-delay="{% cycle '0s', '.25s', '.5s' %}">
 					<article class="card card--history card--history-{% cycle '1', '2', '3' %}">
 						<header>
 							<h3 class="card__title card__title--history">

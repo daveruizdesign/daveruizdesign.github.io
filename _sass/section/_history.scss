@@ -24,12 +24,36 @@
 		padding-bottom: 180px;
 	}
 
+	@media(min-width: 1440px) {
+		padding-bottom: 151px;
+	}
+
+	@media(min-width: 1500px) {
+		padding-bottom: 180px;
+	}
+
 	.section__bg-heading:after {
 		content: "History";
 		color: #04153C;
 		text-shadow: 0 75px 300px rgba(0,0,0,.6);
 	}
 
+}
+
+.history.row {
+	@media(min-width: 1440px) and (max-width: 1499px) {
+		margin: 0 auto;
+		max-width: 1240px;
+		.history__item--2,
+		.history__item--3 {
+			margin-left: 5.6%;
+			width: 27%;
+		}
+		.history__item--2 {
+			position: relative;
+			left: 47px;
+		}
+	}
 }
 
 
@@ -164,15 +188,22 @@
 			left: 79px;
 
 			@media(min-width: 1280px) {
-				left: 219px;
+				left: 114px;
 			}
 
+			@media(min-width: 1500px) {
+				left: 219px;
+			}
 		}
 
 		&.tooltip--mixpanel {
 			left: 289px;
 
 			@media(min-width: 1280px) {
+				left: 324px;
+			}
+
+			@media(min-width: 1500px) {
 				left: 429px;
 			}
 
@@ -181,6 +212,9 @@
 		&.tooltip--salesforce {
 			left: 849px;
 			@media(min-width: 1280px) {
+				left: 954px;
+			}
+			@media(min-width: 1500px) {
 				left: 1059px;
 			}
 		}
