@@ -13,7 +13,11 @@
 	background: -webkit-linear-gradient(top,  #031235 0%,#041640 60%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #031235 0%,#041640 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031235', endColorstr='#041640',GradientType=0 ); /* IE6-9 */
-	padding-bottom: 180px;
+	padding-bottom: 140px;
+
+	@media(min-width: 1280px) {
+		padding-bottom: 180px;
+	}
 
 	.section__bg-heading:after {
 		content: "History";
@@ -46,8 +50,15 @@
 	line-height: 40px;
 
 	@media(min-width: 992px) {
+		font-size: 38px;
+		line-height: 43px;
+		padding: 20px 10% 60px;
+	}
+
+	@media(min-width: 1280px) {
 		font-size: 48px;
 		line-height: 62px;
+		padding: 20px 10% 60px;
 	}
 
 	@media(min-width: 1400px) {
@@ -134,15 +145,28 @@
 		}
 
 		&.tooltip--f6 {
-			left: 219px;
+			left: 79px;
+
+			@media(min-width: 1280px) {
+				left: 219px;
+			}
+
 		}
 
 		&.tooltip--mixpanel {
-			left: 429px;
+			left: 289px;
+
+			@media(min-width: 1280px) {
+				left: 429px;
+			}
+
 		}
 
 		&.tooltip--salesforce {
-			left: 1059px;
+			left: 849px;
+			@media(min-width: 1280px) {
+				left: 1059px;
+			}
 		}
 
 		&:after {

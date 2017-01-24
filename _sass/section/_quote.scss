@@ -6,7 +6,11 @@
 	background: linear-gradient(to bottom,  #f19a25 0%,#f2a228 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f19a25', endColorstr='#f2a228',GradientType=0 ); /* IE6-9 */
 	text-align: center;
-	padding: 132px 0 119px;
+	padding: 60px 0 40px;
+
+	@media(min-width: 1280px) {
+		padding: 132px 0 119px;
+	}
 
 	.section__bg-heading:after {
 		content: "Quote";

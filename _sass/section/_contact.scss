@@ -12,6 +12,20 @@ input:-webkit-autofill:active {
 	-webkit-transition-delay: 9999s;
 }
 
+.column--first,
+.column--second,
+.column--third {
+	width: 100% !important;
+	margin: 0 !important;
+
+	@media(min-width: 1280px) {
+		width: 30.6666666667% !important;
+	}
+
+}
+
+
+
 @media(min-width: 1650px) {
 	.column--first {
 		padding: 0 20px 0 0px;
@@ -113,7 +127,12 @@ form {
 	/* Inputs */
 
 	.input-group {
-		margin-bottom: 71px;
+		margin-bottom: 10px;
+
+		@media(min-width: 1280px) {
+			margin-bottom: 71px;
+		}
+
 		&:last-child {
 			margin-bottom: 0;
 		}
