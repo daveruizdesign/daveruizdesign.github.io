@@ -16,6 +16,18 @@
 		padding: 79px 0;
 	}
 
+	@media(min-width: 1440px) {
+		.container {
+			max-width: 1309px !important;
+		}
+	}
+
+	@media(min-width: 1500px) {
+		.container {
+			max-width: 1435px !important;
+		}
+	}
+
 }
 
 	.section--work__heading {
@@ -52,6 +64,14 @@
 	-webkit-margin-after: 0 !important;
 
 	@media(min-width: 992px) {
+		margin: 54px -26px 0;
+	}
+
+	@media(min-width: 1440px) {
+		margin: 69px -26px 0;
+	}
+
+	@media(min-width: 1500px) {
 		margin: 54px -26px 0;
 	}
 
@@ -95,12 +115,18 @@
 		background: #304064;
 		box-shadow: 0 30px 30px rgba(0,0,0,.1);
 		padding: 0px;
-		margin: 25px;
+		margin: 10px;
 		display: block;
 		text-decoration: none;
 		color: #fff;
 		text-align: left;
 		-webkit-transition: all .25s ease;
+
+		@media(min-width: 1500px) {
+			margin: 25px;
+		}
+
+
 	}
 
 		.card__layout {
