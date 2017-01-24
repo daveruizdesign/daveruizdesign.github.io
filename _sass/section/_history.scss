@@ -67,6 +67,16 @@
 
 }
 
+.history__item {
+	@media(min-width: 0px) and (max-width: 992px) {
+		width: 100% !important;
+		margin: 0 0 30px 0;
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
 /* Cards */
 
 .card--history {

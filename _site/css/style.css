@@ -1207,6 +1207,13 @@ header[role="banner"] {
     .section--history__subheading {
       padding: 0 280px 83px; } }
 
+@media (min-width: 0px) and (max-width: 992px) {
+  .history__item {
+    width: 100% !important;
+    margin: 0 0 30px 0; }
+    .history__item:last-child {
+      margin-bottom: 0 !important; } }
+
 /* Cards */
 .card--history {
   text-align: left; }
