@@ -6,7 +6,11 @@
 	background: linear-gradient(to bottom,  #f19a25 0%,#f2a228 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f19a25', endColorstr='#f2a228',GradientType=0 ); /* IE6-9 */
 	text-align: center;
-	padding: 60px 0 40px;
+	padding: 20px 0 40px;
+
+	@media(min-width: 992px) {
+		padding: 60px 0 40px;
+	}
 
 	@media(min-width: 1280px) {
 		padding: 132px 0 119px;
@@ -22,13 +26,22 @@
 
 }
 
+.blockquote {
+	margin: 0;
+}
+
 .blockquote__quote {
-	font-size: 32px;
 	font-family: 'Circular Std';
-	line-height: 54px;
+	font-size: 22px;
+	line-height: 34px;
 	font-weight: 300;
 	color: #fff;
 	padding: 0px;
+
+	@media(min-width: 992px) {
+		font-size: 32px;
+		line-height: 54px;
+	}
 
 	@media(min-width: 1500px) {
 		padding: 0 140px;
@@ -40,20 +53,31 @@
 	font-size: 100px;
 	color: #fff;
 	position: relative;
-	margin: 45px auto 0;
+	margin: 15px auto -35px;
 	display: block;
-	width: 740px;
+	width: 240px;
 	line-height: 1em;
+
+		@media(min-width: 1280px) {
+			width: 740px;
+			margin: 45px auto 0;
+		}
+
 	&:before,
 	&:after {
 		content: '';
 		display: block;
-		width: 320px;
+		width: 90px;
 		height: 2px;
 		background: #fff;
 		background: rgba(255,255,255,.25);
 		position: absolute;
 		top: 27px;
+
+		@media(min-width: 1280px) {
+			width: 320px;
+		}
+
 	}
 	&:before {
 		left: 0;
