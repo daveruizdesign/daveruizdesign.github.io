@@ -56,6 +56,20 @@ input:-webkit-autofill:active {
 		text-shadow: 0 75px 300px rgba(0,0,0,.6);
 	}
 
+	@media(min-width: 1440px) {
+		padding: 101px 0;
+	}
+
+	@media(min-width: 1500px) {
+		padding: 103px 0;
+	}
+
+	@media(min-width: 1440px) {
+		.container {
+			max-width: 1240px;
+		}
+	}
+
 }
 
 	.section--contact__body {
@@ -86,6 +100,10 @@ input:-webkit-autofill:active {
 	line-height: 34px;
 	color: #8899BD;
 	font-family: $serif;
+	@media(min-width: 1440px) {
+		padding: 0 16%;
+	}
+
 	@media(min-width: 1650px) {
 		padding: 0 265px;
 	}

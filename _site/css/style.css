@@ -1927,6 +1927,15 @@ input:-webkit-autofill:active {
     content: "Contact";
     color: #04153C;
     text-shadow: 0 75px 300px rgba(0, 0, 0, 0.6); }
+  @media (min-width: 1440px) {
+    .section--contact {
+      padding: 101px 0; } }
+  @media (min-width: 1500px) {
+    .section--contact {
+      padding: 103px 0; } }
+  @media (min-width: 1440px) {
+    .section--contact .container {
+      max-width: 1240px; } }
 
 .section--contact__body {
   padding: 110px 0 8px; }
@@ -1952,6 +1961,9 @@ input:-webkit-autofill:active {
   line-height: 34px;
   color: #8899BD;
   font-family: "baskerville", "Libre Baskerville", serif; }
+  @media (min-width: 1440px) {
+    .section--contact__lead {
+      padding: 0 16%; } }
   @media (min-width: 1650px) {
     .section--contact__lead {
       padding: 0 265px; } }
