@@ -1555,7 +1555,7 @@ header[role="banner"] {
   -webkit-margin-after: 0 !important; }
   @media (min-width: 992px) {
     .work-list {
-      margin: 54px -26px 0; } }
+      margin: 54px 0 0; } }
   @media (min-width: 1440px) {
     .work-list {
       margin: 69px -26px 0; } }
@@ -1575,7 +1575,7 @@ header[role="banner"] {
       width: 50%; } }
   @media (min-width: 992px) {
     .card--work {
-      width: 33.333%; } }
+      width: 25%; } }
   @media (min-width: 1280px) {
     .card--work {
       width: 25%; } }
