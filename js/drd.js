@@ -48,19 +48,19 @@ $( document ).ready(function() {
 
 	/* Gallery layout based on viewport */
 
+
 	enquire.register("(min-width: 0px) and (max-width:1439px)", {
 		match : function() {
 			var $grid = $('.work-list');
 			$grid.isotope({
 				itemSelector: '.card--work',
-				layoutMode: 'packery',
+				//layoutMode: 'packery',
 				getSortData: {
 					number: '[data-number] parseInt',
 				},
 				sortBy : 'number',
 				sortAscending: true
 			});
-
 		},
 		unmatch : function() {
 			var $grid = $('.work-list');
