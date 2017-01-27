@@ -54,12 +54,17 @@ $( document ).ready(function() {
 			var $grid = $('.work-list');
 			$grid.isotope({
 				itemSelector: '.card--work',
-				//layoutMode: 'packery',
 				getSortData: {
 					number: '[data-number] parseInt',
 				},
 				sortBy : 'number',
-				sortAscending: true
+				sortAscending: true,
+				itemSelector: '.card--work',
+			    transitionDuration: 0,
+			    isResizeBound: false
+			});
+			$(window).resize(function(){
+			    $grid.isotope('layout');
 			});
 		},
 		unmatch : function() {
@@ -68,5 +73,9 @@ $( document ).ready(function() {
 			console.log("Unmatched");
 		}
 	});
+
+
+
+
 
 });
