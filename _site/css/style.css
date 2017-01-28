@@ -1128,7 +1128,7 @@ header[role="banner"] {
 /* Site description */
 .site__description--large {
   display: block;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 900;
   text-shadow: 0 0 40px rgba(22, 50, 92, 0.21);
   line-height: 1em;
@@ -1545,7 +1545,7 @@ header[role="banner"] {
 
 ========================================= */
 .work-list {
-  margin: 25px -26px 0;
+  margin: 25px -10px 0;
   -webkit-margin-after: 0 !important; }
   @media (min-width: 992px) {
     .work-list {
@@ -1579,6 +1579,22 @@ header[role="banner"] {
     background: #405582; }
   .card--work:hover .card__back {
     opacity: 1; }
+
+.card__back__icon--eye {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 32px;
+  background-image: url("/img/sprites/sprites.png");
+  background-repeat: no-repeat;
+  background-position: -5px -134px;
+  background-size: 60px 180px; }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+    .card__back__icon--eye {
+      background: url("/img/sprites/sprites@2x.png") !important;
+      background-size: 60px 180px !important;
+      background-repeat: no-repeat !important;
+      background-position: -4px -134px !important; } }
 
 .card__inner {
   background: #304064;

@@ -60,7 +60,7 @@
 ========================================= */
 
 .work-list {
-	margin: 25px -26px 0;
+	margin: 25px -10px 0;
 	-webkit-margin-after: 0 !important;
 
 	@media(min-width: 992px) {
@@ -106,6 +106,29 @@
 		.card__back {
 			opacity: 1;
 		}
+	}
+
+}
+
+.card__back__icon--eye {
+	position: relative;
+	display: inline-block;
+	width: 52px;
+	height: 32px;
+	//background-color: rgba(255,255,255,.2);
+	background-image: url('/img/sprites/sprites.png');
+	background-repeat: no-repeat;
+	background-position: -5px -134px;
+	background-size: 60px 180px;
+
+	@media all and (-webkit-min-device-pixel-ratio : 1.5),
+	 all and (-o-min-device-pixel-ratio: 3/2),
+	 all and (min--moz-device-pixel-ratio: 1.5),
+	 all and (min-device-pixel-ratio: 1.5) {
+		background: url('/img/sprites/sprites@2x.png') !important;
+		background-size: 60px 180px !important;
+		background-repeat: no-repeat !important;
+		background-position: -4px -134px !important;
 	}
 
 }
@@ -175,6 +198,7 @@
 				.card--quote .card__layout {
 					padding: 30px 36px;
 				}
+
 
 
 
