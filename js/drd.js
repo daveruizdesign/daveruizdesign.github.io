@@ -37,27 +37,27 @@
 	/* Gallery layout based on viewport */
 
 
-	// enquire.register("(min-width: 0px) and (max-width:1439px)", {
-	// 	match : function() {
-	// 		var $grid = $('.work-list');
-	// 		$grid.isotope({
-	// 			itemSelector: '.card--work',
-	// 			getSortData: {
-	// 				number: '[data-number] parseInt',
-	// 			},
-	// 			sortBy : 'number',
-	// 			sortAscending: true,
-	// 			itemSelector: '.card--work',
-	// 			transitionDuration: 0,
-	// 			isResizeBound: false
-	// 		});
-	// 		$(window).resize(function(){
-	// 			$grid.isotope('layout');
-	// 		});
-	// 	},
-	// 	unmatch : function() {
-	// 		var $grid = $('.work-list');
-	// 		$grid.isotope('destroy');
-	// 		console.log("Unmatched");
-	// 	}
-	// });
+	enquire.register("(min-width: 0px) and (max-width:1439px)", {
+		match : function() {
+			var $grid = $('.work-list');
+			$grid.isotope({
+				itemSelector: '.card--work',
+				getSortData: {
+					number: '[data-number] parseInt',
+				},
+				sortBy : 'number',
+				sortAscending: true,
+				itemSelector: '.card--work',
+				transitionDuration: 0,
+				isResizeBound: false
+			});
+			$(window).resize(function(){
+				$grid.isotope('layout');
+			});
+		},
+		unmatch : function() {
+			var $grid = $('.work-list');
+			$grid.isotope('destroy');
+			console.log("Unmatched");
+		}
+	});
