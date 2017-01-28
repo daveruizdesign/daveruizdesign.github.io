@@ -1445,17 +1445,13 @@ header[role="banner"] {
   line-height: 34px;
   font-weight: 300;
   color: #fff;
-  padding: 0px; }
+  padding: 0px;
+  max-width: 1080px;
+  margin: 0 auto; }
   @media (min-width: 992px) {
     .blockquote__quote {
       font-size: 32px;
       line-height: 54px; } }
-  @media (min-width: 1440px) {
-    .blockquote__quote {
-      padding: 0 150px; } }
-  @media (min-width: 1500px) {
-    .blockquote__quote {
-      padding: 0 140px; } }
 
 .blockquote__divider {
   font-size: 100px;

@@ -46,6 +46,8 @@
 	font-weight: 300;
 	color: #fff;
 	padding: 0px;
+	max-width: 1080px;
+	margin: 0 auto;
 
 	@media(min-width: 992px) {
 		font-size: 32px;
@@ -53,11 +55,9 @@
 	}
 
 	@media(min-width: 1440px) {
-		padding: 0 150px;
 	}
 
 	@media(min-width: 1500px) {
-		padding: 0 140px;
 	}
 
 }
