@@ -2,14 +2,14 @@ $( document ).ready(function() {
 
 	/* WOW */
 
-	new WOW().init();
+	//new WOW().init();
 
-	skrollr.init({
-	    render: function(data) {
-	        //Log the current scroll position.
-	        //console.log(data.curTop);
-	    }
-	});
+	// skrollr.init({
+	//     render: function(data) {
+	//         //Log the current scroll position.
+	//         //console.log(data.curTop);
+	//     }
+	// });
 
 	/* Form validation */
 
