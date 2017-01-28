@@ -2148,6 +2148,9 @@ div.error {
   width: 8px;
   border-radius: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%); }
+  @media (min-width: 1024px) {
+    .beacon {
+      top: 26%; } }
   @media (min-width: 1440px) {
     .beacon {
       top: 31%; } }
