@@ -60,11 +60,11 @@ $( document ).ready(function() {
 				sortBy : 'number',
 				sortAscending: true,
 				itemSelector: '.card--work',
-			    transitionDuration: 0,
-			    isResizeBound: false
+				transitionDuration: 0,
+				isResizeBound: false
 			});
 			$(window).resize(function(){
-			    $grid.isotope('layout');
+				$grid.isotope('layout');
 			});
 		},
 		unmatch : function() {
