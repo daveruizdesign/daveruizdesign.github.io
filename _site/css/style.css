@@ -1289,7 +1289,8 @@ header[role="banner"] {
     color: #FEA33B;
     letter-spacing: .2em;
     text-transform: uppercase;
-    padding-bottom: 6px; }
+    padding-bottom: 6px;
+    font-weight: 600; }
   .card--history .card__title__subheading {
     font-size: 24px;
     font-weight: 400;
