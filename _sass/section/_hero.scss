@@ -33,15 +33,26 @@
 
 	.site__title__signature {
 		height: 80px;
-		width: 250px;
+		width: 100%;
 		background: url('/img/brand/signature--light@1x.png');
-		background-size: cover;
+		//background-size: cover;
 		background-repeat: no-repeat;
+		background-position: center center;
 		margin: 0 0 -14px 0px;
 		display: inline-block;
 		opacity: 0;
 		visibility: hidden;
 		-webkit-transition: all .25s ease;
+		background-size: 336px 102px;
+
+		@media all and (-webkit-min-device-pixel-ratio : 1.5),
+		 all and (-o-min-device-pixel-ratio: 3/2),
+		 all and (min--moz-device-pixel-ratio: 1.5),
+		 all and (min-device-pixel-ratio: 1.5) {
+			background: url('/img/brand/signature--light@2x.png') !important;
+			background-size: 336px 102px !important;
+			background-repeat: no-repeat !important;
+		}
 
 		@media(min-width: 920px) {
 			height: 102px;
