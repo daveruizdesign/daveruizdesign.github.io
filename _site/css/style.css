@@ -1118,7 +1118,8 @@ header[role="banner"] {
     .site__title__signature {
       background: url("/img/brand/signature--light@2x.png") !important;
       background-size: 336px 102px !important;
-      background-repeat: no-repeat !important; } }
+      background-repeat: no-repeat !important;
+      background-position: center center !important; } }
   @media (min-width: 920px) {
     .site__title__signature {
       height: 102px;
