@@ -347,6 +347,33 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--default"
+						data-number="4"
+						id="card--marketing-site"
+						data-chocolat-title="Desk.com 2014"
+					>
+						
+							<a href="#card--marketing-site" class="card__inner">
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										Marketing site
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Desk.com 2014
+									</p>
+									<div class="card__content card--work__content">
+										<p>Desk.com looks great and is easy to use. It was time that the marketing site mirrored all that went into making the best support software on the planet.</p>
+
+									</div>
+									<span class="card__view-project-cta">
+										View Project →
+									</span>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -717,6 +744,83 @@
 			];
 			var options = {
 				galleryUID: 3,
+				index: 0,
+				shareEl: false,
+				fullscreenEl: false,
+				zoomEl: false,
+				counterEl: false,
+				captionEl: true,
+				closeOnScroll: false,
+				addCaptionHTMLFn: function(item, captionEl, isFake) {
+					if(!item.title) {
+						captionEl.children[0].innerText = '';
+						return false;
+					}
+					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+					return true;
+				},
+			};
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:0
+			}, 0, false, function(now) {});
+			gallery.listen('afterChange', function(index, item) {
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+			});
+		});
+	
+		$("#card--marketing-site").click(function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				
+				{
+					src: '/img/work/4/slides/1.jpg',
+					w: 1440,
+					h: 3254,
+					title: 'Home Page',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/4/slides/2.png',
+					w: 1440,
+					h: 5260,
+					title: 'Product Page',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/4/slides/3.jpg',
+					w: 1440,
+					h: 2868,
+					title: 'Blog Home',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/4/slides/4.png',
+					w: 1440,
+					h: 3430,
+					title: 'Pricing Page',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/4/slides/5.png',
+					w: 1440,
+					h: 2710,
+					title: 'Success Center Home',
+					author: "Dave Ruiz",
+				},
+				
+			];
+			var options = {
+				galleryUID: 4,
 				index: 0,
 				shareEl: false,
 				fullscreenEl: false,
