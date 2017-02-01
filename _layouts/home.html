@@ -28,17 +28,17 @@
 <body id="skrollr-body">
 
 	{% comment %}
-	{% endcomment %}
-
 	{% include _header.html %}
 	{% include _hero.html %}
 	{% include _history.html %}
 	{% include _quote.html %}
+	{% endcomment %}
+
 	{% include _work.html %}
 
+	{% comment %}
 	{% include _contact.html %}
 	{% include _footer.html %}
-	{% comment %}
 	{% endcomment %}
 
 	<!-- @TODO: minifiy via Gulp -->
@@ -49,30 +49,6 @@
 	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/Chocolat-0.4.14/dist/js/jquery.chocolat.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			{% for work in site.portfolio %}
-				/* ====================================
-
-					Gallery: {{ work.title }}
-
-				==================================== */
-				var $lightbox{{ work.weight }} = $('#card--{{ work.title|slugify }}').Chocolat({
-					//imageSize: 'cover',
-					afterMarkup: function () {
-						//$("<div class='gallery--toolbar'></div>").prependTo(this.elems.content);
-						//this.elems.left.prependTo(this.elems.content.find(".gallery--toolbar"));
-						//this.elems.setTitle.prependTo(this.elems.content.find(".gallery--toolbar"));
-						//this.elems.description.prependTo(this.elems.content.find(".gallery--toolbar"));
-						//this.elems.right.prependTo(this.elems.content.find(".gallery--toolbar"));
-					}
-				}).data('chocolat');
-				$('#card--{{ work.title|slugify }} a').click(function() {
-					$lightbox{{ work.weight }}.api().open();
-				});
-			{% endfor %}
-		});
-	</script>
 
 </body>
 </html>

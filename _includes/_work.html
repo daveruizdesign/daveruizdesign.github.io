@@ -8,11 +8,9 @@
 			<p class="section__subheading section--work__subheading">
 				Here are some projects that I really enjoyed working on.
 			</p>
-			<!--
-			<button class="btn">
+			<a href="#" class="btn">
 				View all
-			</button>
-			-->
+			</a>
 		</header>
 		<div class="section__body">
 			<ul class="work-list">
@@ -53,8 +51,7 @@
 							</a>
 							<div class="hide chocolat-image-list">
 								{% for slide in work.slides %}
-									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}">
-									</a>
+									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}"></a>
 								{% endfor %}
 							</div>
 						{% elsif work.type == "quote" %}
@@ -94,8 +91,7 @@
 							</a>
 							<div class="hide chocolat-image-list">
 								{% for slide in work.slides %}
-									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}">
-									</a>
+									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}"></a>
 								{% endfor %}
 							</div>
 						{% endif %}

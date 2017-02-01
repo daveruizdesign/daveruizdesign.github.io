@@ -61,3 +61,14 @@
 			console.log("Unmatched");
 		}
 	});
+
+
+	/* Chocolat Lightbox */
+
+	$(document).ready(function(){
+		$('.card--work').click(function(){
+			var $portfolio_id = $(this).attr('id');
+			var $lightbox = $('#'+$portfolio_id).Chocolat({}).data('chocolat');
+			$lightbox.api().open();
+		});
+	});
