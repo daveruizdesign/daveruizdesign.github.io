@@ -1,22 +1,22 @@
 
-<div class="divider divider--history" data-0="-webkit-transform[swing]: rotate(-225deg);" data-1000="-webkit-transform[swing]: rotate(-315deg);">
+<div class="divider divider--history">
 	<span class="divider__arrow"><span class="divider__arrow__icon"></span></span>
 </div>
 <div class="section section--history">
-	<div class="section__bg-heading"></div>
+	<div class="section__bg-heading wow fadeIn" data-wow-duration="3s" data-wow-delay="0s" style="visibility:hidden;"></div>
 	<div class="container">
 		<header class="section__header">
-			<h2 class="section__heading section--history__heading">
+			<h2 class="section__heading section--history__heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0s" style="visibility:hidden;">
 				{{ site.history.heading }}
 			</h2>
-			<p class="section__subheading section--history__subheading">
+			<p class="section__subheading section--history__subheading wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s" style="visibility:hidden;">
 				{{ site.history.subheading }}
 			</p>
 		</header>
 		<div class="section__body">
 			<ol class="history row">
 				{% for job in site.jobs %}
-				<li class="history__item four columns history__item--{% cycle '1', '2', '3' %}">
+				<li class="history__item four columns history__item--{% cycle '1', '2', '3' %} wow fadeInUp" data-wow-duration=".75s" data-wow-delay="{% cycle '0s', '.3s', '.6s' %}" style="visibility:hidden;">
 					<article class="card card--history card--history-{% cycle '1', '2', '3' %}">
 						<header>
 							<h3 class="card__title card__title--history">
