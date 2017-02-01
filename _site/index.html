@@ -238,11 +238,9 @@
 			<p class="section__subheading section--work__subheading">
 				Here are some projects that I really enjoyed working on.
 			</p>
-			<!-- <div id="yolo" data-chocolat-title="Set title">
-				<a href="/img/work/3/slides/1.png" class="btn chocolat-image" title="image caption a">
-					View all
-				</a>
-			</div> -->
+			<button type="button" class="btn btn--view-all">
+				View all
+			</button>
 		</header>
 		<div class="section__body">
 			<ul class="work-list">
@@ -1713,6 +1711,524 @@
 				});
 			});
 		
+
+			$(".btn--view-all").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					
+					{
+						src: '/img/work/1/slides/1.png',
+						w: 2500,
+						h: 1700,
+						title: '360 Opportunities',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/1/slides/2.png',
+						w: 2500,
+						h: 1700,
+						title: '360 Apps',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/2/slides/1.jpg',
+						w: 1500,
+						h: 990,
+						title: 'A title for #1.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/2.jpg',
+						w: 1340,
+						h: 5336,
+						title: 'A title for #2.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/3.jpg',
+						w: 1300,
+						h: 3860,
+						title: 'A title for #3.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/4.jpg',
+						w: 1300,
+						h: 3260,
+						title: 'A title for #4.',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/3/slides/1.png',
+						w: 2500,
+						h: 1700,
+						title: 'Dashboard Concepts',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/2.png',
+						w: 2500,
+						h: 1700,
+						title: 'Feed Concepts - FoundThat',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/3.png',
+						w: 1700,
+						h: 1700,
+						title: 'Profile and Onboarding - FoundThat',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/4.png',
+						w: 2828,
+						h: 1918,
+						title: 'Onboarding - Service Cloud',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/4/slides/1.jpg',
+						w: 1440,
+						h: 3254,
+						title: 'Home Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/2.png',
+						w: 1440,
+						h: 5260,
+						title: 'Product Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/3.jpg',
+						w: 1440,
+						h: 2868,
+						title: 'Blog Home',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/4.png',
+						w: 1440,
+						h: 3430,
+						title: 'Pricing Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/5.png',
+						w: 1440,
+						h: 2710,
+						title: 'Success Center Home',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/5/slides/1.jpg',
+						w: 1600,
+						h: 1150,
+						title: 'Photo Theme Tile View - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/2.jpg',
+						w: 1600,
+						h: 1500,
+						title: 'Photo Theme Detail View - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/3.jpg',
+						w: 1600,
+						h: 1130,
+						title: 'Photo Theme Single Entry - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/4.jpg',
+						w: 1320,
+						h: 2100,
+						title: 'Photo Theme Blog Page - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/5.jpg',
+						w: 1400,
+						h: 1020,
+						title: 'Landing Page - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/6.jpg',
+						w: 1200,
+						h: 2175,
+						title: 'Avid Blog Feed - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/7.jpg',
+						w: 1200,
+						h: 2025,
+						title: 'Avid Home Page - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/8.jpg',
+						w: 1200,
+						h: 1340,
+						title: 'Avid Single Entry Page - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/6/slides/1.png',
+						w: 1300,
+						h: 1106,
+						title: 'Dashboard Concept',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/2.png',
+						w: 1366,
+						h: 1120,
+						title: 'Agent Details Report',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/3.png',
+						w: 1300,
+						h: 1300,
+						title: 'Labels Report Filtering',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/4.png',
+						w: 1300,
+						h: 1222,
+						title: 'Stacked Bar Labels Report',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/5.png',
+						w: 1300,
+						h: 1222,
+						title: 'Line Graph Labels Report',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/7/slides/1.jpg',
+						w: 1350,
+						h: 1400,
+						title: 'Funnels',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/2.jpg',
+						w: 1350,
+						h: 1200,
+						title: 'Revenue',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/3.jpg',
+						w: 1350,
+						h: 1450,
+						title: 'Segmentation',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/4.jpg',
+						w: 1350,
+						h: 1250,
+						title: 'Email Editor',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/5.png',
+						w: 1350,
+						h: 1070,
+						title: 'Surveys',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/8/slides/1.jpg',
+						w: 1900,
+						h: 1900,
+						title: 'Data Driven Badges - Mixpanel 2013',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/2.jpg',
+						w: 2000,
+						h: 2000,
+						title: '5 Minute Response Badges - GoFundMe 2013',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/3.jpg',
+						w: 800,
+						h: 800,
+						title: 'Throwback Badge - Mixpanel 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/4.png',
+						w: 800,
+						h: 800,
+						title: 'Android Train Icon',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/9/slides/1.jpg',
+						w: 1000,
+						h: 1650,
+						title: 'Cosmopolitan Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/2.jpg',
+						w: 1000,
+						h: 1500,
+						title: 'Academy Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/3.jpg',
+						w: 1000,
+						h: 1600,
+						title: 'Travel Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/4.jpg',
+						w: 1000,
+						h: 1875,
+						title: 'Letterpress Announcement Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/5.jpg',
+						w: 996,
+						h: 1650,
+						title: 'Damask Wedding Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/6.jpg',
+						w: 1000,
+						h: 1650,
+						title: 'Newspaper Announcement Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/7.jpg',
+						w: 1000,
+						h: 1500,
+						title: 'Cupcake Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/8.jpg',
+						w: 1000,
+						h: 1650,
+						title: 'Wedding Invite Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/9.jpg',
+						w: 1000,
+						h: 1150,
+						title: 'Minimal Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/9/slides/10.jpg',
+						w: 1000,
+						h: 1750,
+						title: 'Blueprint Site Template',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					
+					
+					{
+						src: '/img/work/11/slides/1.jpg',
+						w: 1160,
+						h: 1830,
+						title: 'Ecomarket Account Page - Ecomarket 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/2.jpg',
+						w: 1160,
+						h: 2090,
+						title: 'Ecomarket Product Page - Ecomarket 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/3.jpg',
+						w: 1161,
+						h: 1800,
+						title: 'Alite Product Page - Alite Design 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/4.jpg',
+						w: 1160,
+						h: 1900,
+						title: 'Cheap Favors Product Page - Cheap Favor Shop 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/5.jpg',
+						w: 1160,
+						h: 1500,
+						title: 'Cheap Favors Shopping Cart - Cheap Favor Shop 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/6.jpg',
+						w: 1160,
+						h: 1650,
+						title: 'Scrapbook Product Page - Scrapbook.com 2012',
+						author: "Dave Ruiz",
+					},
+					
+					
+					
+					{
+						src: '/img/work/12/slides/1.png',
+						w: 1780,
+						h: 700,
+						title: 'Dashboards',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/12/slides/2.png',
+						w: 1780,
+						h: 700,
+						title: 'Opportunities',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/12/slides/3.png',
+						w: 1780,
+						h: 700,
+						title: 'Cases',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/12/slides/4.png',
+						w: 1780,
+						h: 700,
+						title: 'Other Screens',
+						author: "Dave Ruiz",
+					},
+					
+					
+				];
+				var options = {
+					galleryUID: 100,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
+			});
+
 	</script>
 
 </body>

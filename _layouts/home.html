@@ -136,6 +136,54 @@
 				});
 			});
 		{% endfor %}
+
+			$(".btn--view-all").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					{% for work in sorted_work %}
+					{% for slide in work.slides %}
+					{
+						src: '/img/work/{{ work.weight }}/slides/{{ slide.src }}',
+						w: {{ slide.w }},
+						h: {{ slide.h }},
+						title: '{{ slide.title }}',
+						author: "Dave Ruiz",
+					},
+					{% endfor %}
+					{% endfor %}
+				];
+				var options = {
+					galleryUID: 100,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
+			});
+
 	</script>
 
 </body>

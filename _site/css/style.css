@@ -1892,12 +1892,20 @@ header[role="banner"] {
 	Lightbox
 
 ========================================= */
-.chocolat-open .section .container {
-  -webkit-filter: blur(4px); }
-
-.chocolat-overlay {
-  background-color: #000 !important;
-  opacity: 0.65 !important; }
+.btn.btn--view-all {
+  border-color: #3E5178;
+  padding: 10px 20px;
+  font-family: "Circular Std", "Work Sans", sans-serif;
+  font-weight: 800;
+  height: auto;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  float: right;
+  border-width: 3px;
+  border-radius: 0;
+  position: relative;
+  top: -75px; }
 
 /* =========================================
 
