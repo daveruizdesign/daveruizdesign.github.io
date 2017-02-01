@@ -545,6 +545,70 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--quote"
+						data-number="10"
+						id="card--joey-lomanto"
+						data-chocolat-title=" "
+					>
+						
+							<div class="card__inner">
+								<div class="card__layout">
+									<blockquote class="card__blockquote">
+										<div class="card__blockquote__text">
+											<p>Dave has an unparalleled attention to detail and effortless ability to continuously impress and influence our team.</p>
+
+										</div>
+										<cite>
+											<span class="card__blockquote__author">
+												Joey Lomanto
+											</span>
+											<span class="card__blockquote__title">
+												Creative Director
+											</span>
+										</cite>
+									</blockquote>
+								</div>
+							</div>
+						
+					</li>
+				
+					<li
+						class="card card--work card--animated"
+						data-number="11"
+						id="card--ecommerce-sites"
+						data-chocolat-title="Various 2011 - 2013"
+					>
+						
+							<a href="#card--ecommerce-sites" class="card__inner">
+								<div class="card__layout">
+									<div class="card__front">
+										<img
+											src="/img/work//11/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+										/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													eCommerce Sites
+												</h3>
+												<div class="card__back__content">
+													Various
+													2011 - 2013
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -1402,6 +1466,128 @@
 				];
 				var options = {
 					galleryUID: 9,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
+			});
+		
+			$("#card--joey-lomanto").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+				];
+				var options = {
+					galleryUID: 10,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
+			});
+		
+			$("#card--ecommerce-sites").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/11/slides/1.jpg',
+						w: 1160,
+						h: 1830,
+						title: 'Ecomarket Account Page - Ecomarket 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/2.jpg',
+						w: 1160,
+						h: 2090,
+						title: 'Ecomarket Product Page - Ecomarket 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/3.jpg',
+						w: 1161,
+						h: 1800,
+						title: 'Alite Product Page - Alite Design 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/4.jpg',
+						w: 1160,
+						h: 1900,
+						title: 'Cheap Favors Product Page - Cheap Favor Shop 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/5.jpg',
+						w: 1160,
+						h: 1500,
+						title: 'Cheap Favors Shopping Cart - Cheap Favor Shop 2011',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/11/slides/6.jpg',
+						w: 1160,
+						h: 1650,
+						title: 'Scrapbook Product Page - Scrapbook.com 2012',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 11,
 					index: 0,
 					shareEl: false,
 					fullscreenEl: false,
