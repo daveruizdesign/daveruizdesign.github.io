@@ -78,103 +78,39 @@ $(function(){
 
 
 
-	// var pswpElement = document.querySelectorAll('.pswp')[0];
-	// var items = [
-	// 	{
-	// 		src: '/img/work/3/slides/1.png',
-	// 		w: 2500,
-	// 		h: 1700,
-	// 		title: 'Dashboards',
-	// 		author: "Dave Ruiz"
-	// 	},
-	// 	{
-	// 		src: '/img/work/11/slides/1.jpg',
-	// 		w: 1160,
-	// 		h: 1830,
-	// 		title: 'Image Caption'
-	// 	}
-	// ];
-	// var options = {
-		// index: 0,
-		// shareEl: false,
-		// fullscreenEl: false,
-		// zoomEl: false,
-		// counterEl: false,
-		// captionEl: true,
-		// closeOnScroll: false,
-		// addCaptionHTMLFn: function(item, captionEl, isFake) {
-		// 	if(!item.title) {
-		// 		captionEl.children[0].innerText = '';
-		// 		return false;
-		// 	}
-		// 	captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-		// 	return true;
-		// },
-	// };
-	// var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-	// gallery.init();
-	// gallery.zoomTo(1, {
-	// 	x:gallery.viewportSize.x/2,
-	// 	y:0
-	// }, 0, false, function(now) {});
-	// gallery.listen('afterChange', function(index, item) {
-	// 	gallery.zoomTo(1, {
-	// 		x:gallery.viewportSize.x/2,
-	// 		y:0
-	// 	}, 0, false, function(now) {});
-	//
-	// });
-
 
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
+		var parseThumbnailElements = function(el) {
+			var thumbElements = el.childNodes,
+			numNodes = thumbElements.length,
+			items = [],
+			figureEl,
+			linkEl,
+			size,
+			item;
 
-	    // parse slide data (url, title, size ...) from DOM elements
-	    // (children of gallerySelector)
-	    var parseThumbnailElements = function(el) {
-	        var thumbElements = el.childNodes,
-	            numNodes = thumbElements.length,
-	            items = [],
-	            figureEl,
-	            linkEl,
-	            size,
-	            item;
-
-	        for(var i = 0; i < numNodes; i++) {
-
-	            figureEl = thumbElements[i]; // <figure> element
-
-	            // include only element nodes
-	            if(figureEl.nodeType !== 1) {
-	                continue;
-	            }
-
-	            linkEl = figureEl.children[0]; // <a> element
-
-	            size = linkEl.getAttribute('data-size').split('x');
-
-	            // create slide object
-	            item = {
-	                src: linkEl.getAttribute('href'),
-	                w: parseInt(size[0], 10),
-	                h: parseInt(size[1], 10)
-	            };
-
-
-
-	            if(figureEl.children.length > 1) {
-	                // <figcaption> content
-	                item.title = figureEl.children[1].innerHTML;
-	            }
-
-	            if(linkEl.children.length > 0) {
-	                // <img> thumbnail element, retrieving thumbnail url
-	                item.msrc = linkEl.children[0].getAttribute('src');
-	            }
-
-	            item.el = figureEl; // save link to element for getThumbBoundsFn
-	            items.push(item);
-	        }
+			for(var i = 0; i < numNodes; i++) {
+				figureEl = thumbElements[i];
+				if(figureEl.nodeType !== 1) {
+					continue;
+				}
+				linkEl = figureEl.children[0];
+				size = linkEl.getAttribute('data-size').split('x');
+				item = {
+					src: linkEl.getAttribute('href'),
+					w: parseInt(size[0], 10),
+					h: parseInt(size[1], 10)
+				};
+				if(figureEl.children.length > 1) {
+					item.title = figureEl.children[1].innerHTML;
+				}
+				if(linkEl.children.length > 0) {
+					item.msrc = linkEl.children[0].getAttribute('src');
+				}
+				item.el = figureEl;
+				items.push(item);
+			}
 
 	        return items;
 	    };
@@ -364,3 +300,4 @@ $(function(){
 
 	// execute above function
 	initPhotoSwipeFromDOM('.my-gallery');
+	initPhotoSwipeFromDOM('.my-gallery2');
