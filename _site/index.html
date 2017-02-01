@@ -311,6 +311,42 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--animated"
+						data-number="3"
+						id="card--mobile-concepts"
+						data-chocolat-title="Various 2012 - 2016"
+					>
+						
+							<a href="#card--mobile-concepts" class="card__inner">
+								<div class="card__layout">
+									<div class="card__front">
+										<img
+											src="/img/work//3/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+										/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													Mobile Concepts
+												</h3>
+												<div class="card__back__content">
+													Various
+													2012 - 2016
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -612,6 +648,75 @@
 			];
 			var options = {
 				galleryUID: 2,
+				index: 0,
+				shareEl: false,
+				fullscreenEl: false,
+				zoomEl: false,
+				counterEl: false,
+				captionEl: true,
+				closeOnScroll: false,
+				addCaptionHTMLFn: function(item, captionEl, isFake) {
+					if(!item.title) {
+						captionEl.children[0].innerText = '';
+						return false;
+					}
+					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+					return true;
+				},
+			};
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:0
+			}, 0, false, function(now) {});
+			gallery.listen('afterChange', function(index, item) {
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+			});
+		});
+	
+		$("#card--mobile-concepts").click(function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				
+				{
+					src: '/img/work/3/slides/1.png',
+					w: 2500,
+					h: 1700,
+					title: 'Dashboard Concepts',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/3/slides/2.png',
+					w: 2500,
+					h: 1700,
+					title: 'Feed Concepts - FoundThat',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/3/slides/3.png',
+					w: 1700,
+					h: 1700,
+					title: 'Profile and Onboarding - FoundThat',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/3/slides/4.png',
+					w: 2828,
+					h: 1918,
+					title: 'Onboarding - Service Cloud',
+					author: "Dave Ruiz",
+				},
+				
+			];
+			var options = {
+				galleryUID: 3,
 				index: 0,
 				shareEl: false,
 				fullscreenEl: false,
