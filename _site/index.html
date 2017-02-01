@@ -374,6 +374,42 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--animated"
+						data-number="5"
+						id="card--photography-themes"
+						data-chocolat-title="Various 2012 - 2013"
+					>
+						
+							<a href="#card--photography-themes" class="card__inner">
+								<div class="card__layout">
+									<div class="card__front">
+										<img
+											src="/img/work//5/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+										/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													Photography Themes
+												</h3>
+												<div class="card__back__content">
+													Various
+													2012 - 2013
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -821,6 +857,107 @@
 			];
 			var options = {
 				galleryUID: 4,
+				index: 0,
+				shareEl: false,
+				fullscreenEl: false,
+				zoomEl: false,
+				counterEl: false,
+				captionEl: true,
+				closeOnScroll: false,
+				addCaptionHTMLFn: function(item, captionEl, isFake) {
+					if(!item.title) {
+						captionEl.children[0].innerText = '';
+						return false;
+					}
+					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+					return true;
+				},
+			};
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:0
+			}, 0, false, function(now) {});
+			gallery.listen('afterChange', function(index, item) {
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+			});
+		});
+	
+		$("#card--photography-themes").click(function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				
+				{
+					src: '/img/work/5/slides/1.jpg',
+					w: 1600,
+					h: 1150,
+					title: 'Photo Theme Tile View - Snapset',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/2.jpg',
+					w: 1600,
+					h: 1500,
+					title: 'Photo Theme Detail View - Snapset',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/3.jpg',
+					w: 1600,
+					h: 1130,
+					title: 'Photo Theme Single Entry - Snapset',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/4.jpg',
+					w: 1320,
+					h: 2100,
+					title: 'Photo Theme Blog Page - Snapset',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/5.jpg',
+					w: 1400,
+					h: 1020,
+					title: 'Landing Page - Snapset',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/6.jpg',
+					w: 1200,
+					h: 2175,
+					title: 'Avid Blog Feed - Theme Foundry',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/7.jpg',
+					w: 1200,
+					h: 2025,
+					title: 'Avid Home Page - Theme Foundry',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/5/slides/8.jpg',
+					w: 1200,
+					h: 1340,
+					title: 'Avid Single Entry Page - Theme Foundry',
+					author: "Dave Ruiz",
+				},
+				
+			];
+			var options = {
+				galleryUID: 5,
 				index: 0,
 				shareEl: false,
 				fullscreenEl: false,
