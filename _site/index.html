@@ -410,6 +410,69 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--animated"
+						data-number="6"
+						id="card--business-insights"
+						data-chocolat-title="Desk.com 2014"
+					>
+						
+							<a href="#card--business-insights" class="card__inner">
+								<div class="card__layout">
+									<div class="card__front">
+										<img
+											src="/img/work//6/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+										/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													Business Insights
+												</h3>
+												<div class="card__back__content">
+													Desk.com
+													2014
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						
+					</li>
+				
+					<li
+						class="card card--work card--default"
+						data-number="7"
+						id="card--mixpanel-analytics"
+						data-chocolat-title="Mixpanel 2013"
+					>
+						
+							<a href="#card--mixpanel-analytics" class="card__inner">
+								<div class="card__layout">
+									<h3 class="card__heading card--work__heading">
+										Mixpanel Analytics
+									</h3>
+									<p class="card__subheading card--work__subheading">
+										Mixpanel 2013
+									</p>
+									<div class="card__content card--work__content">
+										<p>Actions speak louder than page views - the most advanced mobile &amp; web analytics.</p>
+
+									</div>
+									<span class="card__view-project-cta">
+										View Project →
+									</span>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -958,6 +1021,160 @@
 			];
 			var options = {
 				galleryUID: 5,
+				index: 0,
+				shareEl: false,
+				fullscreenEl: false,
+				zoomEl: false,
+				counterEl: false,
+				captionEl: true,
+				closeOnScroll: false,
+				addCaptionHTMLFn: function(item, captionEl, isFake) {
+					if(!item.title) {
+						captionEl.children[0].innerText = '';
+						return false;
+					}
+					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+					return true;
+				},
+			};
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:0
+			}, 0, false, function(now) {});
+			gallery.listen('afterChange', function(index, item) {
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+			});
+		});
+	
+		$("#card--business-insights").click(function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				
+				{
+					src: '/img/work/6/slides/1.png',
+					w: 1300,
+					h: 1106,
+					title: 'Dashboard Concept',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/6/slides/2.png',
+					w: 1366,
+					h: 1120,
+					title: 'Agent Details Report',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/6/slides/3.png',
+					w: 1300,
+					h: 1300,
+					title: 'Labels Report Filtering',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/6/slides/4.png',
+					w: 1300,
+					h: 1222,
+					title: 'Stacked Bar Labels Report',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/6/slides/5.png',
+					w: 1300,
+					h: 1222,
+					title: 'Line Graph Labels Report',
+					author: "Dave Ruiz",
+				},
+				
+			];
+			var options = {
+				galleryUID: 6,
+				index: 0,
+				shareEl: false,
+				fullscreenEl: false,
+				zoomEl: false,
+				counterEl: false,
+				captionEl: true,
+				closeOnScroll: false,
+				addCaptionHTMLFn: function(item, captionEl, isFake) {
+					if(!item.title) {
+						captionEl.children[0].innerText = '';
+						return false;
+					}
+					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+					return true;
+				},
+			};
+			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:0
+			}, 0, false, function(now) {});
+			gallery.listen('afterChange', function(index, item) {
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+			});
+		});
+	
+		$("#card--mixpanel-analytics").click(function() {
+			var pswpElement = document.querySelectorAll('.pswp')[0];
+			var items = [
+				
+				{
+					src: '/img/work/7/slides/1.jpg',
+					w: 1350,
+					h: 1400,
+					title: 'Funnels',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/7/slides/2.jpg',
+					w: 1300,
+					h: 1106,
+					title: 'Revenue',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/7/slides/3.jpg',
+					w: 1300,
+					h: 1106,
+					title: 'Segmentation',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/7/slides/4.jpg',
+					w: 1300,
+					h: 1106,
+					title: 'Email Editor',
+					author: "Dave Ruiz",
+				},
+				
+				{
+					src: '/img/work/7/slides/5.png',
+					w: 1300,
+					h: 1106,
+					title: 'Surveys',
+					author: "Dave Ruiz",
+				},
+				
+			];
+			var options = {
+				galleryUID: 7,
 				index: 0,
 				shareEl: false,
 				fullscreenEl: false,
