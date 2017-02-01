@@ -300,8 +300,11 @@ $(function(){
 	};
 
 	// execute above function
+
 	initPhotoSwipeFromDOM('.my-gallery');
 
-	$( ".card--work" ).click(function() {
+
+	$(".card--work").click(function() {
+
 		console.log("Hey! Clicked.");
 	});
