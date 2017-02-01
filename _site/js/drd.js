@@ -4,13 +4,9 @@ $(function(){
 	$(document).scroll(function(){
 		if($(this).scrollTop() >= $('.divider--history').offset().top - 350) {
 			$(".divider--history").addClass('divider--animated');
-		} else {
-			$(".divider--history").removeClass("divider--animated");
 		}
 		if($(this).scrollTop() >= $('.divider--contact').offset().top - 350) {
 			$(".divider--contact").addClass('divider--animated');
-		} else {
-			$(".divider--contact").removeClass("divider--animated");
 		}
 	});
 });
