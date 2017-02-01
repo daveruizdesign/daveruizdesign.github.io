@@ -127,13 +127,9 @@ input:-webkit-autofill:active {
 	line-height: 34px;
 	color: #8899BD;
 	font-family: $serif;
-	@media(min-width: 1440px) {
-		padding: 0 16%;
-	}
+	margin: 0 auto;
+	max-width: 850px;
 
-	@media(min-width: 1650px) {
-		padding: 0 265px;
-	}
 }
 
 	.section--contact__lead a {
