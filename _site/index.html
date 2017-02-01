@@ -473,6 +473,42 @@
 						
 					</li>
 				
+					<li
+						class="card card--work card--animated"
+						data-number="8"
+						id="card--illustrations"
+						data-chocolat-title="Various 2012-2014"
+					>
+						
+							<a href="#card--illustrations" class="card__inner">
+								<div class="card__layout">
+									<div class="card__front">
+										<img
+											src="/img/work//8/feature@1x.png"
+											title="Yolo"
+											alt="Yolo"
+											class="card__featured-image"
+										/>
+									</div>
+									<div class="card__back">
+										<div class="card__back__inner">
+											<div class="card__back__inner__content">
+												<i class="card__back__icon--eye"></i>
+												<h3 class="card__back__heading">
+													Illustrations
+												</h3>
+												<div class="card__back__content">
+													Various
+													2012-2014
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</a>
+						
+					</li>
+				
 			</ul>
 		</div>
 	</div>
@@ -603,38 +639,8 @@
 
 	
 
-<!-- <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-		<a href="/img/work/3/slides/1.png" itemprop="contentUrl" data-size="2500x1700">
-			<img src="/img/work/3/slides/1.png" width="200" itemprop="thumbnail" alt="Image description" />
-		</a>
-		<figcaption itemprop="caption description">Image caption</figcaption>
-	</figure>
-	<figure class="hide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-		<a href="/img/work/11/slides/1.jpg" itemprop="contentUrl" data-size="1160x1830">
-			<img src="/img/work/11/slides/1.jpg" width="200" itemprop="thumbnail" alt="Image description" />
-		</a>
-		<figcaption itemprop="caption description">Image caption</figcaption>
-	</figure>
-</div>
 
-<div class="my-gallery2" itemscope itemtype="http://schema.org/ImageGallery">
-	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-		<a href="/img/work/3/slides/2.png" itemprop="contentUrl" data-size="2500x1700">
-			<img src="/img/work/3/slides/2.png" width="200" itemprop="thumbnail" alt="Image description 2" />
-		</a>
-		<figcaption itemprop="caption description">Image caption</figcaption>
-	</figure>
-	<figure class="hide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-		<a href="/img/work/11/slides/1.jpg" itemprop="contentUrl" data-size="1160x1830">
-			<img src="/img/work/11/slides/1.jpg" width="200" itemprop="thumbnail" alt="Image description 2" />
-		</a>
-		<figcaption itemprop="caption description">Image caption</figcaption>
-	</figure>
-</div> -->
-
-
-
+	<!-- Gallery lightbox container -->
 	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="pswp__bg"></div>
 		<div class="pswp__scroll-wrap">
@@ -678,536 +684,601 @@
 	<script type="text/javascript" src="/js/PhotoSwipe-master/dist/photoswipe.min.js"></script>
 	<script type="text/javascript" src="/js/PhotoSwipe-master/dist/photoswipe-ui-default.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
-	<script>
-
-
-	
-		$("#card--360-mobile-app").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/1/slides/1.png',
-					w: 2500,
-					h: 1700,
-					title: '360 Opportunities',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/1/slides/2.png',
-					w: 2500,
-					h: 1700,
-					title: '360 Apps',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 1,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+	<script type="text/javascript">
+		/* Portfolio galleries */
+		
+			$("#card--360-mobile-app").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/1/slides/1.png',
+						w: 2500,
+						h: 1700,
+						title: '360 Opportunities',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/1/slides/2.png',
+						w: 2500,
+						h: 1700,
+						title: '360 Apps',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 1,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--marketing-pages").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/2/slides/1.jpg',
-					w: 1500,
-					h: 990,
-					title: 'A title for #1.',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/2/slides/2.jpg',
-					w: 1340,
-					h: 5336,
-					title: 'A title for #2.',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/2/slides/3.jpg',
-					w: 1300,
-					h: 3860,
-					title: 'A title for #3.',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/2/slides/4.jpg',
-					w: 1300,
-					h: 3260,
-					title: 'A title for #4.',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 2,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--marketing-pages").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/2/slides/1.jpg',
+						w: 1500,
+						h: 990,
+						title: 'A title for #1.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/2.jpg',
+						w: 1340,
+						h: 5336,
+						title: 'A title for #2.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/3.jpg',
+						w: 1300,
+						h: 3860,
+						title: 'A title for #3.',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/2/slides/4.jpg',
+						w: 1300,
+						h: 3260,
+						title: 'A title for #4.',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 2,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--mobile-concepts").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/3/slides/1.png',
-					w: 2500,
-					h: 1700,
-					title: 'Dashboard Concepts',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/3/slides/2.png',
-					w: 2500,
-					h: 1700,
-					title: 'Feed Concepts - FoundThat',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/3/slides/3.png',
-					w: 1700,
-					h: 1700,
-					title: 'Profile and Onboarding - FoundThat',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/3/slides/4.png',
-					w: 2828,
-					h: 1918,
-					title: 'Onboarding - Service Cloud',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 3,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--mobile-concepts").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/3/slides/1.png',
+						w: 2500,
+						h: 1700,
+						title: 'Dashboard Concepts',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/2.png',
+						w: 2500,
+						h: 1700,
+						title: 'Feed Concepts - FoundThat',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/3.png',
+						w: 1700,
+						h: 1700,
+						title: 'Profile and Onboarding - FoundThat',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/3/slides/4.png',
+						w: 2828,
+						h: 1918,
+						title: 'Onboarding - Service Cloud',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 3,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--marketing-site").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/4/slides/1.jpg',
-					w: 1440,
-					h: 3254,
-					title: 'Home Page',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/4/slides/2.png',
-					w: 1440,
-					h: 5260,
-					title: 'Product Page',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/4/slides/3.jpg',
-					w: 1440,
-					h: 2868,
-					title: 'Blog Home',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/4/slides/4.png',
-					w: 1440,
-					h: 3430,
-					title: 'Pricing Page',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/4/slides/5.png',
-					w: 1440,
-					h: 2710,
-					title: 'Success Center Home',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 4,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--marketing-site").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/4/slides/1.jpg',
+						w: 1440,
+						h: 3254,
+						title: 'Home Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/2.png',
+						w: 1440,
+						h: 5260,
+						title: 'Product Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/3.jpg',
+						w: 1440,
+						h: 2868,
+						title: 'Blog Home',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/4.png',
+						w: 1440,
+						h: 3430,
+						title: 'Pricing Page',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/4/slides/5.png',
+						w: 1440,
+						h: 2710,
+						title: 'Success Center Home',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 4,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--photography-themes").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/5/slides/1.jpg',
-					w: 1600,
-					h: 1150,
-					title: 'Photo Theme Tile View - Snapset',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/2.jpg',
-					w: 1600,
-					h: 1500,
-					title: 'Photo Theme Detail View - Snapset',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/3.jpg',
-					w: 1600,
-					h: 1130,
-					title: 'Photo Theme Single Entry - Snapset',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/4.jpg',
-					w: 1320,
-					h: 2100,
-					title: 'Photo Theme Blog Page - Snapset',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/5.jpg',
-					w: 1400,
-					h: 1020,
-					title: 'Landing Page - Snapset',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/6.jpg',
-					w: 1200,
-					h: 2175,
-					title: 'Avid Blog Feed - Theme Foundry',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/7.jpg',
-					w: 1200,
-					h: 2025,
-					title: 'Avid Home Page - Theme Foundry',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/5/slides/8.jpg',
-					w: 1200,
-					h: 1340,
-					title: 'Avid Single Entry Page - Theme Foundry',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 5,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--photography-themes").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/5/slides/1.jpg',
+						w: 1600,
+						h: 1150,
+						title: 'Photo Theme Tile View - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/2.jpg',
+						w: 1600,
+						h: 1500,
+						title: 'Photo Theme Detail View - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/3.jpg',
+						w: 1600,
+						h: 1130,
+						title: 'Photo Theme Single Entry - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/4.jpg',
+						w: 1320,
+						h: 2100,
+						title: 'Photo Theme Blog Page - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/5.jpg',
+						w: 1400,
+						h: 1020,
+						title: 'Landing Page - Snapset',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/6.jpg',
+						w: 1200,
+						h: 2175,
+						title: 'Avid Blog Feed - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/7.jpg',
+						w: 1200,
+						h: 2025,
+						title: 'Avid Home Page - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/5/slides/8.jpg',
+						w: 1200,
+						h: 1340,
+						title: 'Avid Single Entry Page - Theme Foundry',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 5,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--business-insights").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/6/slides/1.png',
-					w: 1300,
-					h: 1106,
-					title: 'Dashboard Concept',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/6/slides/2.png',
-					w: 1366,
-					h: 1120,
-					title: 'Agent Details Report',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/6/slides/3.png',
-					w: 1300,
-					h: 1300,
-					title: 'Labels Report Filtering',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/6/slides/4.png',
-					w: 1300,
-					h: 1222,
-					title: 'Stacked Bar Labels Report',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/6/slides/5.png',
-					w: 1300,
-					h: 1222,
-					title: 'Line Graph Labels Report',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 6,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--business-insights").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/6/slides/1.png',
+						w: 1300,
+						h: 1106,
+						title: 'Dashboard Concept',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/2.png',
+						w: 1366,
+						h: 1120,
+						title: 'Agent Details Report',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/3.png',
+						w: 1300,
+						h: 1300,
+						title: 'Labels Report Filtering',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/4.png',
+						w: 1300,
+						h: 1222,
+						title: 'Stacked Bar Labels Report',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/6/slides/5.png',
+						w: 1300,
+						h: 1222,
+						title: 'Line Graph Labels Report',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 6,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-		$("#card--mixpanel-analytics").click(function() {
-			var pswpElement = document.querySelectorAll('.pswp')[0];
-			var items = [
-				
-				{
-					src: '/img/work/7/slides/1.jpg',
-					w: 1350,
-					h: 1400,
-					title: 'Funnels',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/7/slides/2.jpg',
-					w: 1300,
-					h: 1106,
-					title: 'Revenue',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/7/slides/3.jpg',
-					w: 1300,
-					h: 1106,
-					title: 'Segmentation',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/7/slides/4.jpg',
-					w: 1300,
-					h: 1106,
-					title: 'Email Editor',
-					author: "Dave Ruiz",
-				},
-				
-				{
-					src: '/img/work/7/slides/5.png',
-					w: 1300,
-					h: 1106,
-					title: 'Surveys',
-					author: "Dave Ruiz",
-				},
-				
-			];
-			var options = {
-				galleryUID: 7,
-				index: 0,
-				shareEl: false,
-				fullscreenEl: false,
-				zoomEl: false,
-				counterEl: false,
-				captionEl: true,
-				closeOnScroll: false,
-				addCaptionHTMLFn: function(item, captionEl, isFake) {
-					if(!item.title) {
-						captionEl.children[0].innerText = '';
-						return false;
-					}
-					captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
-					return true;
-				},
-			};
-			var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-			gallery.init();
-			gallery.zoomTo(1, {
-				x:gallery.viewportSize.x/2,
-				y:0
-			}, 0, false, function(now) {});
-			gallery.listen('afterChange', function(index, item) {
+		
+			$("#card--mixpanel-analytics").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/7/slides/1.jpg',
+						w: 1350,
+						h: 1400,
+						title: 'Funnels',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/2.jpg',
+						w: 1350,
+						h: 1200,
+						title: 'Revenue',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/3.jpg',
+						w: 1350,
+						h: 1450,
+						title: 'Segmentation',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/4.jpg',
+						w: 1350,
+						h: 1250,
+						title: 'Email Editor',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/7/slides/5.png',
+						w: 1350,
+						h: 1070,
+						title: 'Surveys',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 7,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
 				gallery.zoomTo(1, {
 					x:gallery.viewportSize.x/2,
 					y:0
 				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
 			});
-		});
-	
-
-
-
+		
+			$("#card--illustrations").click(function() {
+				var pswpElement = document.querySelectorAll('.pswp')[0];
+				var items = [
+					
+					{
+						src: '/img/work/8/slides/1.jpg',
+						w: 1350,
+						h: 1400,
+						title: 'Data Driven Badges - Mixpanel 2013',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/2.jpg',
+						w: 1350,
+						h: 1400,
+						title: '5 Minute Response Badges - GoFundMe 2013',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/3.jpg',
+						w: 1350,
+						h: 1400,
+						title: 'Throwback Badge - Mixpanel 2012',
+						author: "Dave Ruiz",
+					},
+					
+					{
+						src: '/img/work/8/slides/4.png',
+						w: 1350,
+						h: 1400,
+						title: 'Android Train Icon',
+						author: "Dave Ruiz",
+					},
+					
+				];
+				var options = {
+					galleryUID: 8,
+					index: 0,
+					shareEl: false,
+					fullscreenEl: false,
+					zoomEl: false,
+					counterEl: false,
+					captionEl: true,
+					closeOnScroll: false,
+					addCaptionHTMLFn: function(item, captionEl, isFake) {
+						if(!item.title) {
+							captionEl.children[0].innerText = '';
+							return false;
+						}
+						captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+						return true;
+					},
+				};
+				var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+				gallery.init();
+				gallery.zoomTo(1, {
+					x:gallery.viewportSize.x/2,
+					y:0
+				}, 0, false, function(now) {});
+				gallery.listen('afterChange', function(index, item) {
+					gallery.zoomTo(1, {
+						x:gallery.viewportSize.x/2,
+						y:0
+					}, 0, false, function(now) {});
+				});
+			});
+		
 	</script>
 
 </body>
