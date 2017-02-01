@@ -20,8 +20,20 @@
 	}
 }
 
+@media(min-width: 1440px) {
+	.container {
+		max-width: 1309px !important;
+	}
+}
+
 @media(min-width: 1450px) {
 	.container {
 		max-width: 1435px;
+	}
+}
+
+@media(min-width: 1500px) {
+	.container {
+		max-width: 1435px !important;
 	}
 }

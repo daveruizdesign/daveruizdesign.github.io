@@ -969,9 +969,15 @@ ol, ul {
 @media (min-width: 1400px) {
   .container {
     max-width: 1380px; } }
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1309px !important; } }
 @media (min-width: 1450px) {
   .container {
     max-width: 1435px; } }
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1435px !important; } }
 /* Sections */
 .section {
   padding: 100px 0;
@@ -1513,16 +1519,13 @@ header[role="banner"] {
   @media (min-width: 992px) {
     .section--work {
       padding: 79px 0; } }
-  @media (min-width: 1440px) {
-    .section--work .container {
-      max-width: 1309px !important; } }
-  @media (min-width: 1500px) {
-    .section--work .container {
-      max-width: 1435px !important; } }
 
 @media (min-width: 1440px) {
   .section__header {
     margin: 0 -15px; } }
+@media (min-width: 1500px) {
+  .section__header {
+    margin: 0 -5px; } }
 
 .section--work__heading {
   font-size: 28px;
