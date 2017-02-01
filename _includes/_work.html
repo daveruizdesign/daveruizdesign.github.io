@@ -51,20 +51,6 @@
 									</div>
 								</div>
 							</a>
-							<div class="chocolat-image-list">
-								<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-									{% for slide in work.slides %}
-										<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-											<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" itemprop="contentUrl" data-size="{{ slide.w }}x{{ slide.h }}">
-												<img src="/img/work/3/slides/1.png" width="200" itemprop="thumbnail" alt="{{ slide.title }}" />
-											</a>
-											<figcaption itemprop="caption description">
-												Image caption 2
-											</figcaption>
-										</figure>
-									{% endfor %}
-								</div>
-							</div>
 						{% elsif work.type == "quote" %}
 							<div class="card__inner">
 								<div class="card__layout">
@@ -100,20 +86,6 @@
 									</span>
 								</div>
 							</a>
-							<div class="chocolat-image-list">
-								<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-									{% for slide in work.slides %}
-										<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-											<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" itemprop="contentUrl" data-size="{{ slide.w }}x{{ slide.h }}">
-												<img src="/img/work/{{ work.weight }}/slides/{{ slide.src }}" width="100" itemprop="thumbnail" alt="{{ slide.title }}" />
-											</a>
-											<figcaption itemprop="caption description">
-												{{ slide.title }}
-											</figcaption>
-										</figure>
-									{% endfor %}
-								</div>
-							</div>
 						{% endif %}
 					</li>
 				{% endfor %}
