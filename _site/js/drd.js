@@ -301,7 +301,6 @@ $(function(){
 
 	// execute above function
 	initPhotoSwipeFromDOM('.my-gallery');
-	initPhotoSwipeFromDOM('.my-gallery2');
 
 	$( ".card--work" ).click(function() {
 		console.log("Hey! Clicked.");
