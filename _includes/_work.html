@@ -51,7 +51,25 @@
 									</div>
 								</div>
 							</a>
-							<div class="hide chocolat-image-list">
+							<div class="chocolat-image-list">
+
+								<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+									<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+										<a href="/img/work/3/slides/1.png" itemprop="contentUrl" data-size="2500x1700">
+											<img src="/img/work/3/slides/1.png" width="200" itemprop="thumbnail" alt="Image description" />
+										</a>
+										<figcaption itemprop="caption description">Image caption</figcaption>
+									</figure>
+									<figure class="hide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+										<a href="/img/work/11/slides/1.jpg" itemprop="contentUrl" data-size="1160x1830">
+											<img src="/img/work/11/slides/1.jpg" width="200" itemprop="thumbnail" alt="Image description" />
+										</a>
+										<figcaption itemprop="caption description">Image caption</figcaption>
+									</figure>
+								</div>
+
+
+
 								{% for slide in work.slides %}
 									<a href="/img/work/{{ work.weight }}/slides/{{ slide.src }}" class="chocolat-image" title="{{ slide.title }}"></a>
 								{% endfor %}

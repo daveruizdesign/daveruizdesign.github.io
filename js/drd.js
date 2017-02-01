@@ -296,8 +296,13 @@ $(function(){
 	    if(hashData.pid && hashData.gid) {
 	        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
 	    }
+
 	};
 
 	// execute above function
 	initPhotoSwipeFromDOM('.my-gallery');
 	initPhotoSwipeFromDOM('.my-gallery2');
+
+	$( ".card--work" ).click(function() {
+		console.log("Hey! Clicked.");
+	});
