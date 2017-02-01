@@ -965,7 +965,7 @@ ol, ul {
 @media (min-width: 1024px) {
   .container {
     width: 100%;
-    max-width: 1000px; } }
+    max-width: 95%; } }
 @media (min-width: 1400px) {
   .container {
     max-width: 1380px; } }
@@ -1520,6 +1520,10 @@ header[role="banner"] {
     .section--work .container {
       max-width: 1435px !important; } }
 
+@media (min-width: 1440px) {
+  .section__header {
+    margin: 0 -15px; } }
+
 .section--work__heading {
   font-size: 28px;
   line-height: 32px;
@@ -1538,6 +1542,35 @@ header[role="banner"] {
   color: #91A2C9;
   font-family: "baskerville", "Libre Baskerville", serif;
   letter-spacing: .002em; }
+
+.btn.btn--view-all {
+  border-color: #3E5178;
+  padding: 13px 75px 13px;
+  font-family: "Circular Std", "Work Sans", sans-serif;
+  font-weight: 800;
+  height: auto;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-width: 3px;
+  border-radius: 0;
+  position: relative;
+  margin: 20px 0 0; }
+  @media (min-width: 1280px) {
+    .btn.btn--view-all {
+      float: right;
+      top: -82px;
+      right: 0px;
+      margin: 0; } }
+  @media (min-width: 1400px) {
+    .btn.btn--view-all {
+      right: 0px; } }
+  @media (min-width: 1500px) {
+    .btn.btn--view-all {
+      right: 85px; } }
+  @media (min-width: 1650px) {
+    .btn.btn--view-all {
+      right: 0; } }
 
 /* =========================================
 
@@ -1887,40 +1920,6 @@ header[role="banner"] {
   #card--watch-concept {
     top: 820px;
     left: 1110px; } }
-/* =========================================
-
-	Lightbox
-
-========================================= */
-.btn.btn--view-all {
-  border-color: #3E5178;
-  padding: 13px 75px 13px;
-  font-family: "Circular Std", "Work Sans", sans-serif;
-  font-weight: 800;
-  height: auto;
-  color: #fff;
-  font-size: 18px;
-  text-transform: uppercase;
-  border-width: 3px;
-  border-radius: 0;
-  position: relative;
-  margin: 20px 0 0; }
-  @media (min-width: 1400px) {
-    .btn.btn--view-all {
-      float: right;
-      top: -82px;
-      right: 10px;
-      margin: 0; } }
-  @media (min-width: 1440px) {
-    .btn.btn--view-all {
-      right: -20px; } }
-  @media (min-width: 1500px) {
-    .btn.btn--view-all {
-      right: 85px; } }
-  @media (min-width: 1650px) {
-    .btn.btn--view-all {
-      right: 0; } }
-
 /* =========================================
 
 	Section: Contact
