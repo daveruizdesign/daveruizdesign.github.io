@@ -2341,3 +2341,5 @@ footer[role="contentinfo"] {
   .divider--contact .divider__arrow {
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 50% 50%; }
+  .divider--contact.divider--animated {
+    -webkit-transform: rotate(45deg); }

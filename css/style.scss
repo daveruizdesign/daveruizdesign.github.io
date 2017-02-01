@@ -181,11 +181,9 @@ ol, ul {
 			-webkit-transform: rotate(-45deg);
 			-webkit-transform-origin: 50% 50%;
 		}
-
 		&.divider--animated {
 			-webkit-transform: rotate(-315deg);
 		}
-
 	}
 
 	.divider--contact {
@@ -194,5 +192,8 @@ ol, ul {
 		.divider__arrow {
 			-webkit-transform: rotate(-45deg);
 			-webkit-transform-origin: 50% 50%;
+		}
+		&.divider--animated {
+			-webkit-transform: rotate(45deg);
 		}
 	}
