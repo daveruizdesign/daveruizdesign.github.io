@@ -1894,18 +1894,32 @@ header[role="banner"] {
 ========================================= */
 .btn.btn--view-all {
   border-color: #3E5178;
-  padding: 10px 20px;
+  padding: 13px 75px 13px;
   font-family: "Circular Std", "Work Sans", sans-serif;
   font-weight: 800;
   height: auto;
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
-  float: right;
   border-width: 3px;
   border-radius: 0;
   position: relative;
-  top: -75px; }
+  margin: 20px 0 0; }
+  @media (min-width: 1400px) {
+    .btn.btn--view-all {
+      float: right;
+      top: -82px;
+      right: 10px;
+      margin: 0; } }
+  @media (min-width: 1440px) {
+    .btn.btn--view-all {
+      right: -20px; } }
+  @media (min-width: 1500px) {
+    .btn.btn--view-all {
+      right: 85px; } }
+  @media (min-width: 1650px) {
+    .btn.btn--view-all {
+      right: 0; } }
 
 /* =========================================
 

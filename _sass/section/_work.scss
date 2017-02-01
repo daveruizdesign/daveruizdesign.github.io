@@ -492,16 +492,34 @@
 
 .btn.btn--view-all {
 	border-color: #3E5178;
-	padding: 10px 20px;
+	padding: 13px 75px 13px;
 	font-family: $sans-serif;
 	font-weight: 800;
 	height: auto;
 	color: #fff;
 	font-size: 18px;
 	text-transform: uppercase;
-	float: right;
 	border-width: 3px;
 	border-radius: 0;
 	position: relative;
-	top: -75px;
+	margin: 20px 0 0;
+
+	@media(min-width: 1400px) {
+		float: right;
+		top: -82px;
+		right: 10px;
+		margin: 0;
+	}
+
+	@media(min-width: 1440px) {
+		right: -20px;
+	}
+
+	@media(min-width: 1500px) {
+		right: 85px;
+	}
+
+	@media(min-width: 1650px) {
+		right: 0;
+	}
 }
