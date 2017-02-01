@@ -166,6 +166,10 @@
 		};
 		var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
 		gallery.init();
+		gallery.zoomTo(1, {
+			x:gallery.viewportSize.x/2,
+			y:0
+		}, 0, false, function(now) {});
 		gallery.listen('afterChange', function(index, item) {
 			gallery.zoomTo(1, {
 				x:gallery.viewportSize.x/2,
