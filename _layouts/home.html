@@ -22,6 +22,9 @@
 
 	<link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="/js/Chocolat-0.4.14/dist/css/chocolat.css" />
+	<link rel="stylesheet" href="/js/PhotoSwipe-master/dist/photoswipe.css" />
+	<link rel="stylesheet" href="/js/PhotoSwipe-master/dist/default-skin/default-skin.css" />
+
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Work+Sans:400,500,700,900" rel="stylesheet">
 
 </head>
@@ -41,6 +44,87 @@
 	{% comment %}
 	{% endcomment %}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+		  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+		      <!-- Background of PhotoSwipe.
+		           It's a separate element as animating opacity is faster than rgba(). -->
+		      <div class="pswp__bg"></div>
+
+		      <!-- Slides wrapper with overflow:hidden. -->
+		      <div class="pswp__scroll-wrap">
+
+		          <!-- Container that holds slides.
+		              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		              Don't modify these 3 pswp__item elements, data is added later on. -->
+		          <div class="pswp__container">
+		              <div class="pswp__item"></div>
+		              <div class="pswp__item"></div>
+		              <div class="pswp__item"></div>
+		          </div>
+
+		          <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		          <div class="pswp__ui pswp__ui--hidden">
+
+		              <div class="pswp__top-bar">
+
+		                  <!--  Controls are self-explanatory. Order can be changed. -->
+
+		                  <div class="pswp__counter"></div>
+
+		                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+		                  <button class="pswp__button pswp__button--share" title="Share"></button>
+
+		                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+		                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+		                  <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+		                  <!-- element will get class pswp__preloader--active when preloader is running -->
+		                  <div class="pswp__preloader">
+		                      <div class="pswp__preloader__icn">
+		                        <div class="pswp__preloader__cut">
+		                          <div class="pswp__preloader__donut"></div>
+		                        </div>
+		                      </div>
+		                  </div>
+		              </div>
+
+		              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		                  <div class="pswp__share-tooltip"></div>
+		              </div>
+
+		              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		              </button>
+
+		              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		              </button>
+
+		              <div class="pswp__caption">
+		                  <div class="pswp__caption__center"></div>
+		              </div>
+
+		          </div>
+
+		      </div>
+
+		  </div>
+
 	<!-- @TODO: minifiy via Gulp -->
 	<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="/js/enquire.js"></script>
@@ -48,13 +132,70 @@
 	<script type="text/javascript" src="/js/packery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/Chocolat-0.4.14/dist/js/jquery.chocolat.min.js"></script>
+	<script type="text/javascript" src="/js/PhotoSwipe-master/dist/photoswipe.min.js"></script>
+	<script type="text/javascript" src="/js/PhotoSwipe-master/dist/photoswipe-ui-default.min.js"></script>
+
 	<script type="text/javascript" src="/js/drd.js"></script>
-	<script type="text/javascript" src="/js/drd.js">
+	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#yolo').Chocolat();
-
 		});
 	</script>
+
+<style>
+
+.pswp--animate_opacity,
+.pswp__bg,
+.pswp__caption,
+.pswp__top-bar,
+.pswp--has_mouse .pswp__button--arrow--left,
+.pswp--has_mouse .pswp__button--arrow--right{
+    -webkit-transition: opacity 0ms cubic-bezier(.4,0,.22,1);
+    transition: opacity 0ms cubic-bezier(.4,0,.22,1) !important;
+}
+
+.pswp__zoom-wrap {
+    -webkit-transition: -webkit-transform 0ms cubic-bezier(0.4, 0, 0.22, 1) !important;
+    transition: transform 0ms cubic-bezier(0.4, 0, 0.22, 1) !important;
+}
+
+</style>
+
+
+
+	<script type="text/javascript">
+		var pswpElement = document.querySelectorAll('.pswp')[0];
+		var items = [
+			{
+				src: '/img/work/3/slides/1.png',
+				w: 2500,
+				h: 1700,
+			},
+			{
+				src: '/img/work/11/slides/1.jpg',
+				w: 1160,
+				h: 1830,
+			}
+		];
+		var options = {
+			index: 0,
+		};
+		var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+		gallery.init();
+		gallery.listen('afterChange', function(index, item) {
+			gallery.zoomTo(1, {
+				x:gallery.viewportSize.x/2,
+				y:gallery.viewportSize.y
+			}, 750, false, function(now) {});
+
+		});
+
+	</script>
+
+
+
+
+
 
 </body>
 </html>
