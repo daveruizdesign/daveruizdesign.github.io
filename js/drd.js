@@ -78,15 +78,63 @@ $(function(){
 
 
 
+	var pswpElement = document.querySelectorAll('.pswp')[0];
+	var items = [
+		{
+			src: '/img/work/3/slides/1.png',
+			w: 2500,
+			h: 1700,
+			title: 'Dashboards',
+			author: "Dave Ruiz"
+		},
+		{
+			src: '/img/work/11/slides/1.jpg',
+			w: 1160,
+			h: 1830,
+			title: 'Image Caption'
+		}
+	];
+	var options = {
+		index: 0,
+		shareEl: false,
+		fullscreenEl: false,
+		zoomEl: false,
+		counterEl: false,
+		captionEl: true,
+		closeOnScroll: false,
+		addCaptionHTMLFn: function(item, captionEl, isFake) {
+			if(!item.title) {
+				captionEl.children[0].innerText = '';
+				return false;
+			}
+			captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+			return true;
+		},
+	};
+	var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+	gallery.init();
+	gallery.zoomTo(1, {
+		x:gallery.viewportSize.x/2,
+		y:0
+	}, 0, false, function(now) {});
+	gallery.listen('afterChange', function(index, item) {
+		gallery.zoomTo(1, {
+			x:gallery.viewportSize.x/2,
+			y:0
+		}, 0, false, function(now) {});
+
+	});
+
+
 	/* Chocolat Lightbox */
 
-	$(document).ready(function(){
-		$('.card--work').click(function(){
-			var $portfolio_id = $(this).attr('id');
-			var $lightbox = $('#'+$portfolio_id).Chocolat({
-				imageSize: 'contain',
-				enableZoom: true,
-			}).data('chocolat');
-			$lightbox.api().open();
-		});
-	});
+	// $(document).ready(function(){
+	// 	$('.card--work').click(function(){
+	// 		var $portfolio_id = $(this).attr('id');
+	// 		var $lightbox = $('#'+$portfolio_id).Chocolat({
+	// 			imageSize: 'contain',
+	// 			enableZoom: true,
+	// 		}).data('chocolat');
+	// 		$lightbox.api().open();
+	// 	});
+	// });
