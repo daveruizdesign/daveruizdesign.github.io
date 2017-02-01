@@ -28,17 +28,17 @@
 <body id="skrollr-body">
 
 	{% comment %}
+	{% endcomment %}
+
 	{% include _header.html %}
 	{% include _hero.html %}
 	{% include _history.html %}
 	{% include _quote.html %}
-	{% endcomment %}
-
 	{% include _work.html %}
-
-	{% comment %}
 	{% include _contact.html %}
 	{% include _footer.html %}
+
+	{% comment %}
 	{% endcomment %}
 
 	<!-- @TODO: minifiy via Gulp -->
@@ -49,6 +49,12 @@
 	<script type="text/javascript" src="/js/jquery-validation-1.15.0/dist/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/Chocolat-0.4.14/dist/js/jquery.chocolat.min.js"></script>
 	<script type="text/javascript" src="/js/drd.js"></script>
+	<script type="text/javascript" src="/js/drd.js">
+		$(document).ready(function(){
+			$('#yolo').Chocolat();
+
+		});
+	</script>
 
 </body>
 </html>

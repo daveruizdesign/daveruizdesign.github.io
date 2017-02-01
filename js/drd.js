@@ -1,3 +1,13 @@
+$(function(){
+	$(document).scroll(function(){
+		if($(this).scrollTop() >= $('.divider--history').offset().top - 300) {
+			$(".divider--history").addClass('divider--animated');
+		} else {
+			$(".divider--history").removeClass("divider--animated");
+		}
+	});
+});
+
 
 	/* Form validation */
 

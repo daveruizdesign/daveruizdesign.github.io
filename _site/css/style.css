@@ -2309,7 +2309,8 @@ footer[role="contentinfo"] {
   margin: 0 0 -88px -44px;
   z-index: 5;
   display: table;
-  -webkit-transform-origin: 50% 50%; }
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transition: all 1s ease; }
 
 .divider__arrow {
   font-size: 35px;
@@ -2331,6 +2332,8 @@ footer[role="contentinfo"] {
   .divider--history .divider__arrow {
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 50% 50%; }
+  .divider--history.divider--animated {
+    -webkit-transform: rotate(-315deg); }
 
 .divider--contact {
   background: #2553B1;
