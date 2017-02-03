@@ -33,9 +33,6 @@ header[role="banner"] {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	//opacity: 0;
-	//visibility: hidden;
-
 	position: absolute;
 	left: 50%;
 	right: 50%;
@@ -62,6 +59,7 @@ header[role="banner"] {
 		letter-spacing: -.125em;
 		position: relative;
 		left: -2px;
+		z-index: 3;
 	}
 
 

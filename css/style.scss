@@ -31,8 +31,8 @@ $blue7: #283757;
 
 /* Font families */
 
-$serif: "baskerville", 'Libre Baskerville', serif;
-$sans-serif: 'Circular Std', 'Work Sans', sans-serif;
+$serif: "baskerville", 'Libre Baskerville', serif !important;
+$sans-serif: 'Circular Std', 'Work Sans', sans-serif !important;
 
 /* Font sizes */
 
@@ -78,6 +78,10 @@ html {
 
 body {
 	font-family: $sans-serif;
+}
+
+figure, main, section, aside, header {
+	display: block;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -133,13 +137,13 @@ ol, ul {
 		}
 	}
 
-	@import "section/header";
-	@import "section/hero";
-	@import "section/history";
-	@import "section/quote";
-	@import "section/work";
-	@import "section/contact";
-	@import "section/footer";
+@import "section/header";
+@import "section/hero";
+@import "section/history";
+@import "section/quote";
+@import "section/work";
+@import "section/contact";
+@import "section/footer";
 
 /* Section dividers */
 
@@ -209,3 +213,9 @@ ol, ul {
 .pswp__caption__center {
 	text-align: center;
 }
+
+/*
+.wow {
+	visibility: hidden;
+}
+*/

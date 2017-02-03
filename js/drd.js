@@ -1,3 +1,8 @@
+/* WOW.js */
+
+//new WOW().init();
+
+
 /* Divider animations */
 
 $(function(){
@@ -71,6 +76,3 @@ enquire.register("(min-width: 0px) and (max-width:1439px)", {
 	}
 });
 
-/* WOW.js */
-
-new WOW().init();

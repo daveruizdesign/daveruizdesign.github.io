@@ -32,10 +32,12 @@
 		padding-bottom: 180px;
 	}
 
-	.section__bg-heading:after {
-		content: "History";
-		color: #04153C;
-		text-shadow: 0 75px 300px rgba(0,0,0,.6);
+	@media(min-width: 992px) {
+		.section__bg-heading:after {
+			content: "History";
+			color: #04153C;
+			text-shadow: 0 75px 300px rgba(0,0,0,.6);
+		}
 	}
 
 }

@@ -25,12 +25,14 @@
 
 	}
 
-	.section__bg-heading:after {
-		content: "Quote";
-		color: #F29F27;
-		text-shadow: 0 75px 300px rgba(0,0,0,.12);
-		bottom: -152px;
-		margin-left: -1144px;
+	@media(min-width: 992px) {
+		.section__bg-heading:after {
+			content: "Quote";
+			color: #F29F27;
+			text-shadow: 0 75px 300px rgba(0,0,0,.12);
+			bottom: -152px;
+			margin-left: -1144px;
+		}
 	}
 
 }
