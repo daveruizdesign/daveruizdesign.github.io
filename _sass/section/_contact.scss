@@ -155,7 +155,7 @@ form {
 	.drd__label {
 		font-size: 18px;
 		letter-spacing: 2px;
-		font-family: $serif;
+		font-family: $serif-semibold;
 		text-transform: uppercase;
 	}
 
@@ -242,6 +242,7 @@ form {
 		color: #fff !important;
 		border-radius: 0 !important;
 		max-width: 420px;
+		font-family: $sans-serif-black;
 
 		&:hover,
 		&:focus {
@@ -279,6 +280,7 @@ form {
 	padding: 0;
 	display: block;
 	text-transform: uppercase;
+	font-family: $sans-serif-bold;
 }
 
 .map__coordinates {

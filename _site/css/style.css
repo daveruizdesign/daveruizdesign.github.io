@@ -2128,7 +2128,7 @@ label {
 .drd__label {
   font-size: 18px;
   letter-spacing: 2px;
-  font-family: "Baskerville", "times new roman", serif;
+  font-family: "Baskerville-SemiBold", "times new roman", serif;
   text-transform: uppercase; }
 
 .label__highlight {
@@ -2197,7 +2197,8 @@ label {
   width: 100%;
   color: #fff !important;
   border-radius: 0 !important;
-  max-width: 420px; }
+  max-width: 420px;
+  font-family: "CircularStd-Black", "helvetica neue", helvetica, sans-serif; }
   .btn.drd__button:hover, .btn.drd__button:focus {
     border-color: #fff; }
 
@@ -2224,7 +2225,8 @@ div.error {
   margin: 0;
   padding: 0;
   display: block;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
 
 .map__coordinates {
   font-size: 18px;
@@ -2323,7 +2325,8 @@ footer[role="contentinfo"] {
   margin: 33px 0 0 -8px;
   display: block;
   font-size: 16px;
-  color: #7987A6; }
+  color: #7987A6;
+  font-family: inherit; }
 
 .availability__beacon {
   width: 14px;
@@ -2352,7 +2355,8 @@ footer[role="contentinfo"] {
   display: inline-block;
   position: relative;
   left: -10px;
-  top: 4px; }
+  top: 4px;
+  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
 
 /* Social links */
 .social-links {
