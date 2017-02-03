@@ -2406,6 +2406,12 @@ footer[role="contentinfo"] {
       background-size: 60px 180px !important;
       background-repeat: no-repeat !important; } }
 
+.column--third {
+  display: none; }
+  @media (min-width: 992px) {
+    .column--third {
+      display: block; } }
+
 /* Section dividers */
 .divider {
   width: 88px;
