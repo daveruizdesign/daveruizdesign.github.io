@@ -1525,7 +1525,7 @@ header[role="banner"] {
     margin: 0 -15px; } }
 @media (min-width: 1500px) {
   .section__header {
-    margin: 0 -5px; } }
+    margin: 0 5px; } }
 
 .section--work__heading {
   font-size: 28px;
@@ -1582,7 +1582,9 @@ header[role="banner"] {
 ========================================= */
 .work-list {
   margin: 25px -10px 0;
-  -webkit-margin-after: 0 !important; }
+  -webkit-margin-after: 0 !important;
+  width: 100%;
+  display: block; }
   @media (min-width: 992px) {
     .work-list {
       margin: 54px 0 0; } }
@@ -1591,7 +1593,7 @@ header[role="banner"] {
       margin: 69px -26px 0; } }
   @media (min-width: 1500px) {
     .work-list {
-      margin: 54px -26px 0; } }
+      margin: 54px -17px 0; } }
 
 .card--work {
   width: 100%;
