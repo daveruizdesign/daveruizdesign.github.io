@@ -89,8 +89,8 @@
 .work-list {
 	margin: 25px -10px 0;
 	-webkit-margin-after: 0 !important;
-	width: 100%;
-	display: block;
+	//width: 100%;
+	//display: block;
 
 	@media(min-width: 992px) {
 		margin: 54px 0 0;
@@ -101,7 +101,7 @@
 	}
 
 	@media(min-width: 1500px) {
-		margin: 54px -17px 0;
+		margin: 54px -26px 0;
 	}
 
 }
