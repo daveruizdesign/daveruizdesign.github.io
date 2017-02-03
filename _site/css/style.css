@@ -1347,7 +1347,7 @@ header[role="banner"] {
       padding: 20px 10% 60px; } }
   @media (min-width: 1400px) {
     .section--history__subheading {
-      padding: 0 280px 83px; } }
+      padding: 0 275px 83px; } }
 
 @media (min-width: 0px) and (max-width: 992px) {
   .history__item {
@@ -2356,7 +2356,7 @@ footer[role="contentinfo"] {
   position: relative;
   left: -10px;
   top: 4px;
-  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
+  font-family: inherit; }
 
 /* Social links */
 .social-links {
