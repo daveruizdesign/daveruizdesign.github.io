@@ -1219,9 +1219,11 @@ header[role="banner"] {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031235', endColorstr='#041640',GradientType=0 );
   /* IE6-9 */
   padding: 60px 0 80px; }
+  @media (min-width: 768px) {
+    .section--history {
+      padding: 80px 0; } }
   @media (min-width: 992px) {
     .section--history {
-      padding-top: 100px;
       padding: 100px 0 140px; } }
   @media (min-width: 1280px) {
     .section--history {
@@ -1434,9 +1436,9 @@ header[role="banner"] {
   /* IE6-9 */
   text-align: center;
   padding: 20px 0 40px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .section--quote {
-      padding: 60px 0 40px; } }
+      padding: 60px 0; } }
   @media (min-width: 1280px) {
     .section--quote {
       padding: 132px 0 119px; } }
@@ -1527,6 +1529,9 @@ header[role="banner"] {
   padding: 50px 0;
   background-size: cover;
   background-position: center center; }
+  @media (min-width: 768px) {
+    .section--work {
+      padding: 50px 0 80px; } }
   @media (min-width: 992px) {
     .section--work {
       padding: 79px 0; } }
@@ -2384,8 +2389,5 @@ footer[role="contentinfo"] {
 .pswp__caption__center {
   text-align: center; }
 
-/*
 .wow {
-	visibility: hidden;
-}
-*/
+  visibility: hidden; }

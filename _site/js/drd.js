@@ -1,6 +1,6 @@
 /* WOW.js */
 
-//new WOW().init();
+new WOW().init();
 
 
 /* Divider animations */
@@ -51,6 +51,8 @@ $("#drd__form").validate({
 
 /* Gallery layout based on viewport */
 
+jQuery( function() {
+
 enquire.register("(min-width: 0px) and (max-width:1439px)", {
 	match : function() {
 		var $grid = $('.work-list');
@@ -72,7 +74,8 @@ enquire.register("(min-width: 0px) and (max-width:1439px)", {
 	unmatch : function() {
 		var $grid = $('.work-list');
 		$grid.isotope('destroy');
-		console.log("Unmatched");
 	}
+});
+
 });
 
