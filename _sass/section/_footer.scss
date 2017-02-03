@@ -92,7 +92,7 @@ footer[role="contentinfo"] {
 
 		.social-link__icon {
 			width: 20px;
-			height: 20px;
+			height: 21px;
 			position: absolute;
 			background-image: url('/img/sprites/sprites.png');
 			background-repeat: no-repeat;
@@ -102,18 +102,27 @@ footer[role="contentinfo"] {
 			right: 50%;
 			margin-top: -10px;
 			margin-left: -10px;
+			background-size: 60px 180px;
 
 			&.social-link__icon--twitter {
-				background-position: -9px -51px;
-
+				background-position: -9px -51px !important;
 			}
 
 			&.social-link__icon--dribble {
-				background-position: -10px -10px;
+				background-position: -10px -10px !important;
 			}
 
 			&.social-link__icon--email {
-				background-position: -10px -90px;
+				background-position: -10px -90px !important;
+			}
+
+			@media all and (-webkit-min-device-pixel-ratio : 1.5),
+			 all and (-o-min-device-pixel-ratio: 3/2),
+			 all and (min--moz-device-pixel-ratio: 1.5),
+			 all and (min-device-pixel-ratio: 1.5) {
+				background: url('/img/sprites/sprites@2x.png') !important;
+				background-size: 60px 180px !important;
+				background-repeat: no-repeat !important;
 			}
 
 		}
