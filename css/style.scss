@@ -31,8 +31,20 @@ $blue7: #283757;
 
 /* Font families */
 
-$serif: "baskerville", 'Libre Baskerville', serif !important;
-$sans-serif: 'Circular Std', 'Work Sans', sans-serif !important;
+@import "fonts";
+
+$sans-serif: 'CircularStd-Book', 'helvetica neue', helvetica, sans-serif;
+$sans-serif-italic: 'CircularStd-BookItalic', 'helvetica neue', helvetica, sans-serif;
+$sans-serif-medium: 'CircularStd-Medium', 'helvetica neue', helvetica, sans-serif;
+$sans-serif-bold: 'CircularStd-Bold', 'helvetica neue', helvetica, sans-serif;
+$sans-serif-black: 'CircularStd-Black', 'helvetica neue', helvetica, sans-serif;
+
+$serif: 'Baskerville', 'times new roman', serif;
+$serif-italic: 'Baskerville-Italic', 'times new roman', serif;
+$serif-semibold: 'Baskerville-SemiBold', 'times new roman', serif;
+$serif-semibold-italic: 'Baskerville-SemiBoldItalic', 'times new roman', serif;
+$serif-bold: 'Baskerville-Bold', 'times new roman', serif;
+$serif-bold-italic: 'Baskerville-BoldItalic', 'times new roman', serif;
 
 /* Font sizes */
 
