@@ -35,9 +35,9 @@
 	.section--work__heading {
 		font-size: 28px;
 		line-height: 32px;
-		font-weight: 700;
 		letter-spacing: .002em;
 		margin: 0 0 10px 0;
+		font-family: $sans-serif-bold;
 		@media(min-width: 992px) {
 			font-size: 48px;
 			line-height: 60px;
@@ -56,8 +56,7 @@
 	.btn.btn--view-all {
 		border-color: #3E5178;
 		padding: 13px 75px 13px;
-		font-family: $sans-serif;
-		font-weight: 800;
+		font-family: $sans-serif-black;
 		height: auto;
 		color: #fff;
 		font-size: 18px;
@@ -250,6 +249,7 @@
 	line-height: 30px;
 	margin: 0 0 0 0;
 	letter-spacing: 0;
+	font-family: $sans-serif-medium;
 }
 
 .card--work__subheading {
@@ -259,24 +259,24 @@
 	margin: -1px 0 15px 0;
 	color: #FEA33B;
 	letter-spacing: .195em;
-	font-weight: 600;
+	font-family: $sans-serif-medium;
 }
 
 .card--work__content {
+	font-family: inherit;
 	font-size: 18px;
 	line-height: 26px;
 	color: #B6C2DF;
 }
 
 .card__view-project-cta {
-	font-family: $serif;
+	font-family: $serif-semibold;
 	font-size: 15px;
 	line-height: 29px;
 	text-transform: uppercase;
 	letter-spacing: .25em;
 	margin: 15px 0 11px;
 	display: block;
-	font-weight: 600;
 }
 
 /* Animated */
@@ -285,12 +285,14 @@
 	font-size: 26px;
 	line-height: 33px;
 	letter-spacing: 0;
+	font-family: $sans-serif-medium;
 }
 .card__back__content {
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #FAD7AE;
 	letter-spacing: 2px;
+	font-family: $sans-serif-medium;
 }
 
 /* Quote */
@@ -304,6 +306,7 @@
 	font-size: 22px;
 	line-height: 32px;
 	position: relative;
+	font-family: inherit;
 
 	&:before {
 		content: '“';
@@ -326,18 +329,17 @@
 }
 
 	.card__blockquote__author {
-		font-family: $serif;
+		font-family: $serif-semibold;
 		color: #B5C2DE;
 		letter-spacing: .2em;
 		margin: 24px 1px 0;
-		font-weight: 600;
 	}
 
 	.card__blockquote__title {
 		color: #FEA33B;
 		letter-spacing: .2em;
 		margin: 3px 1px 11px;
-		font-weight: 500;
+		font-family: $sans-serif-medium;
 	}
 
 /* =========================================

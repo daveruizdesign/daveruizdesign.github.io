@@ -43,8 +43,6 @@ input:-webkit-autofill:active {
 	}
 }
 
-
-
 @media(min-width: 1500px) {
 	.column--first {
 		padding: 0 20px 0 0px;
@@ -113,15 +111,15 @@ input:-webkit-autofill:active {
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	line-height: 23px;
-	font-weight: 600;
+	font-family: $sans-serif-black;
 }
 
 .section--contact__subheading {
 	color: #fff;
 	font-size: 48px;
 	line-height: 62px;
-	font-weight: 600;
 	padding: 35px 0;
+	font-family: $sans-serif-bold;
 }
 
 .section--contact__lead {
@@ -131,7 +129,6 @@ input:-webkit-autofill:active {
 	font-family: $serif;
 	margin: 0 auto;
 	max-width: 850px;
-
 }
 
 	.section--contact__lead a {
@@ -160,7 +157,6 @@ form {
 		letter-spacing: 2px;
 		font-family: $serif;
 		text-transform: uppercase;
-		font-weight: 600;
 	}
 
 		.label__highlight {
@@ -241,7 +237,6 @@ form {
 		text-transform: uppercase;
 		letter-spacing: .2em;
 		text-align: center;
-		font-weight: 900;
 		display: block;
 		width: 100%;
 		color: #fff !important;
@@ -266,7 +261,6 @@ form {
 		color: #CF4F43;
 		text-transform: uppercase;
 		letter-spacing: .085em;
-		font-weight: 900;
 		position: absolute;
 	}
 
@@ -285,7 +279,6 @@ form {
 	padding: 0;
 	display: block;
 	text-transform: uppercase;
-	font-weight: 600;
 }
 
 .map__coordinates {

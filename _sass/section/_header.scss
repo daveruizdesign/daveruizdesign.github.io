@@ -51,7 +51,6 @@ header[role="banner"] {
 
 	.logo--initials {
 		font-size: 32px;
-		font-weight: 700;
 		color: #fff;
 		padding: 70px 0px 18px;
 		display: inline-block;
@@ -81,6 +80,7 @@ header[role="banner"] {
 	.menu--primary li {
 		display: inline-block;
 		padding: 23px;
+		font-family: $sans-serif-bold;
 
 		&:last-child {
 			padding-right: 0;
@@ -101,7 +101,6 @@ header[role="banner"] {
 			color: #fff;
 			text-decoration: none;
 			padding: 10px;
-			font-weight: 600;
 			display: inline-block;
 			-webkit-transition: all .375s ease;
 

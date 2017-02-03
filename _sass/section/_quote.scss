@@ -42,10 +42,9 @@
 }
 
 .blockquote__quote {
-	font-family: 'Circular Std';
+	font-family: inherit;
 	font-size: 22px;
 	line-height: 34px;
-	font-weight: 300;
 	color: #fff;
 	padding: 0px;
 	max-width: 1080px;
@@ -65,6 +64,7 @@
 }
 
 .blockquote__divider {
+	font-family: inherit;
 	font-size: 100px;
 	color: #fff;
 	position: relative;
@@ -107,8 +107,7 @@
 	display: block;
 	font-size: 24px;
 	line-height: 46px;
-	font-family: $serif;
-	font-weight: 600;
+	font-family:$serif-semibold;
 	color: #fff;
 	font-style: normal;
 	letter-spacing: .245em;

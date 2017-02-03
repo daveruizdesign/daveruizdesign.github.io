@@ -1105,7 +1105,6 @@ header[role="banner"] {
 
 .logo--initials {
   font-size: 32px;
-  font-weight: 700;
   color: #fff;
   padding: 70px 0px 18px;
   display: inline-block;
@@ -1128,7 +1127,8 @@ header[role="banner"] {
 
 .menu--primary li {
   display: inline-block;
-  padding: 23px; }
+  padding: 23px;
+  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
   .menu--primary li:last-child {
     padding-right: 0; }
     .menu--primary li:last-child a {
@@ -1142,7 +1142,6 @@ header[role="banner"] {
   color: #fff;
   text-decoration: none;
   padding: 10px;
-  font-weight: 600;
   display: inline-block;
   -webkit-transition: all .375s ease; }
   .menu--primary a:hover, .menu--primary a:focus, .menu--primary a.active {
@@ -1206,7 +1205,6 @@ header[role="banner"] {
 .site__description--large {
   display: block;
   font-size: 80px;
-  font-weight: 900;
   text-shadow: 0 0 40px rgba(22, 50, 92, 0.21);
   line-height: 1em;
   text-transform: uppercase;
@@ -1378,7 +1376,6 @@ header[role="banner"] {
     padding-bottom: 6px; }
   .card--history .card__title__subheading {
     font-size: 24px;
-    font-weight: 400;
     padding-bottom: 19px;
     display: block;
     letter-spacing: 0;
@@ -1528,10 +1525,9 @@ header[role="banner"] {
   margin: 0; }
 
 .blockquote__quote {
-  font-family: 'Circular Std';
+  font-family: inherit;
   font-size: 22px;
   line-height: 34px;
-  font-weight: 300;
   color: #fff;
   padding: 0px;
   max-width: 1080px;
@@ -1542,6 +1538,7 @@ header[role="banner"] {
       line-height: 54px; } }
 
 .blockquote__divider {
+  font-family: inherit;
   font-size: 100px;
   color: #fff;
   position: relative;
@@ -1574,8 +1571,7 @@ header[role="banner"] {
   display: block;
   font-size: 24px;
   line-height: 46px;
-  font-family: "Baskerville", "times new roman", serif;
-  font-weight: 600;
+  font-family: "Baskerville-SemiBold", "times new roman", serif;
   color: #fff;
   font-style: normal;
   letter-spacing: .245em;
@@ -1614,9 +1610,9 @@ header[role="banner"] {
 .section--work__heading {
   font-size: 28px;
   line-height: 32px;
-  font-weight: 700;
   letter-spacing: .002em;
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px 0;
+  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
   @media (min-width: 992px) {
     .section--work__heading {
       font-size: 48px;
@@ -1633,8 +1629,7 @@ header[role="banner"] {
 .btn.btn--view-all {
   border-color: #3E5178;
   padding: 13px 75px 13px;
-  font-family: "CircularStd-Book", "helvetica neue", helvetica, sans-serif;
-  font-weight: 800;
+  font-family: "CircularStd-Black", "helvetica neue", helvetica, sans-serif;
   height: auto;
   color: #fff;
   font-size: 18px;
@@ -1782,7 +1777,8 @@ header[role="banner"] {
   font-size: 24px;
   line-height: 30px;
   margin: 0 0 0 0;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  font-family: "CircularStd-Medium", "helvetica neue", helvetica, sans-serif; }
 
 .card--work__subheading {
   font-size: 14px;
@@ -1791,34 +1787,36 @@ header[role="banner"] {
   margin: -1px 0 15px 0;
   color: #FEA33B;
   letter-spacing: .195em;
-  font-weight: 600; }
+  font-family: "CircularStd-Medium", "helvetica neue", helvetica, sans-serif; }
 
 .card--work__content {
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   color: #B6C2DF; }
 
 .card__view-project-cta {
-  font-family: "Baskerville", "times new roman", serif;
+  font-family: "Baskerville-SemiBold", "times new roman", serif;
   font-size: 15px;
   line-height: 29px;
   text-transform: uppercase;
   letter-spacing: .25em;
   margin: 15px 0 11px;
-  display: block;
-  font-weight: 600; }
+  display: block; }
 
 /* Animated */
 .card__back__heading {
   font-size: 26px;
   line-height: 33px;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  font-family: "CircularStd-Medium", "helvetica neue", helvetica, sans-serif; }
 
 .card__back__content {
   font-size: 16px;
   text-transform: uppercase;
   color: #FAD7AE;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-family: "CircularStd-Medium", "helvetica neue", helvetica, sans-serif; }
 
 /* Quote */
 .card__blockquote {
@@ -1828,7 +1826,8 @@ header[role="banner"] {
 .card__blockquote__text {
   font-size: 22px;
   line-height: 32px;
-  position: relative; }
+  position: relative;
+  font-family: inherit; }
   .card__blockquote__text:before {
     content: '“';
     display: block;
@@ -1846,17 +1845,16 @@ header[role="banner"] {
   display: block; }
 
 .card__blockquote__author {
-  font-family: "Baskerville", "times new roman", serif;
+  font-family: "Baskerville-SemiBold", "times new roman", serif;
   color: #B5C2DE;
   letter-spacing: .2em;
-  margin: 24px 1px 0;
-  font-weight: 600; }
+  margin: 24px 1px 0; }
 
 .card__blockquote__title {
   color: #FEA33B;
   letter-spacing: .2em;
   margin: 3px 1px 11px;
-  font-weight: 500; }
+  font-family: "CircularStd-Medium", "helvetica neue", helvetica, sans-serif; }
 
 /* =========================================
 
@@ -2096,14 +2094,14 @@ input:-webkit-autofill:active {
   text-transform: uppercase;
   letter-spacing: 10px;
   line-height: 23px;
-  font-weight: 600; }
+  font-family: "CircularStd-Black", "helvetica neue", helvetica, sans-serif; }
 
 .section--contact__subheading {
   color: #fff;
   font-size: 48px;
   line-height: 62px;
-  font-weight: 600;
-  padding: 35px 0; }
+  padding: 35px 0;
+  font-family: "CircularStd-Bold", "helvetica neue", helvetica, sans-serif; }
 
 .section--contact__lead {
   font-size: 24px;
@@ -2131,8 +2129,7 @@ label {
   font-size: 18px;
   letter-spacing: 2px;
   font-family: "Baskerville", "times new roman", serif;
-  text-transform: uppercase;
-  font-weight: 600; }
+  text-transform: uppercase; }
 
 .label__highlight {
   color: #FEA33B; }
@@ -2196,7 +2193,6 @@ label {
   text-transform: uppercase;
   letter-spacing: .2em;
   text-align: center;
-  font-weight: 900;
   display: block;
   width: 100%;
   color: #fff !important;
@@ -2214,7 +2210,6 @@ div.error {
   color: #CF4F43;
   text-transform: uppercase;
   letter-spacing: .085em;
-  font-weight: 900;
   position: absolute; }
 
 /* Map with beacon */
@@ -2229,8 +2224,7 @@ div.error {
   margin: 0;
   padding: 0;
   display: block;
-  text-transform: uppercase;
-  font-weight: 600; }
+  text-transform: uppercase; }
 
 .map__coordinates {
   font-size: 18px;
