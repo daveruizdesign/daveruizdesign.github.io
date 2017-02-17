@@ -149,6 +149,12 @@ ol, ul {
 		}
 	}
 
+	@media(min-width:1500px) {
+		.section__bg-heading:after {
+			margin-left: -1280px !important;
+		}
+	}
+
 @import "section/header";
 @import "section/hero";
 @import "section/history";
