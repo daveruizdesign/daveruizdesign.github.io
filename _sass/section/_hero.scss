@@ -105,6 +105,8 @@
 	@media(min-width: 992px) {
 		font-size: 125px;
 		letter-spacing: 3px;
+		color: transparent;
+		text-shadow: none;
 	}
 
 	@media(min-width: 1140px) {
@@ -117,6 +119,35 @@
 		letter-spacing: 3px;
 	}
 
+	@media (min-width: 992px) {
+		span {
+
+			&:before,
+			&:after {
+				content: 'UX Design';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				display: block;
+				color: transparent;
+			}
+
+			&:before {
+				-webkit-background-clip: text;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 50% 28%;
+				z-index: 200;
+				background-image: url('/img/backgrounds/hero/landscape@1x-80p.jpg') !important;
+			}
+
+			&:after {
+				text-shadow: 0 40px 60px rgba(0,0,0,.6);
+			}
+		}
+
+	}
 }
 
 

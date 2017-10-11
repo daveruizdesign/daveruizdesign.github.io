@@ -316,7 +316,7 @@ form {
 
 	.beacon{
 		position:absolute;
-		top:38%;
+		top:26%;
 		left:25%;
 		background-color:#FEA33B;
 		height:8px;
@@ -325,11 +325,23 @@ form {
 		-webkit-transform:translateX(-50%) translateY(-50%);
 
 		@media(min-width: 1024px) {
-			top: 26%;
+			top: 27%;
+		}
+
+		@media(min-width: 1120px) {
+			top: 30%;
+		}
+
+		@media(min-width: 1240px) {
+			top: 34%;
+		}
+
+		@media(min-width: 1400px) {
+			top: 39%;
 		}
 
 		@media(min-width: 1440px) {
-			top: 31%;
+			top: 32%;
 		}
 
 		@media(min-width: 1500px) {
